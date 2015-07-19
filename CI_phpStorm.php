@@ -91,6 +91,8 @@
  * Added or modified by George Shazkho
 *  @property CI_DB_query_builder $db              This is the platform-independent base Active Record implementation class.
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
+ * @property Assets_manager $assets_manager       Assets manager
+ * @property Page_renderer $page_renderer         Page Renderer
  */
 class CI_Controller
 {
@@ -144,6 +146,8 @@ class CI_Controller
  * Added by George Shazkho
  * @property CI_DB_query_builder $db              This is the platform-independent base Active Record implementation class.
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
+ * @property Assets_manager $assets_manager       Assets manager
+ * @property Page_renderer $page_renderer         Page Renderer
  */
 class CI_Model
 {
