@@ -26,8 +26,8 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * Se encarga de gestionar los recursos externos del sitio, con el fin de poder
  * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
- * @author      George Shazkho (anibal.llanos.prado@gmail.com)
- * @version     GIT: $Id$ Prototipo
+ * @author      George Shazkho <anibal.llanos.prado@gmail.com>
+ * @version     0.1.1
  * @since       0.1.0
  */
 class Assets_manager

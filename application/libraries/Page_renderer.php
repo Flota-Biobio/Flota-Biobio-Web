@@ -15,7 +15,6 @@
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
- * @version GIT: $Id$ Prototipo
  */
 
 if (!defined('BASEPATH')) exit('No direct script access allowed');
@@ -27,8 +26,8 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * Se encarga de concentrar la información relevante para la construcción de una
  * vista y, finalmente, generar el código HTML a mostrar.
  *
- * @author      George Shazkho (anibal.llanos.prado@gmail.com)
- * @version     GIT: $Id$ Prototipo
+ * @author      George Shazkho <anibal.llanos.prado@gmail.com>
+ * @version     0.1.1
  * @since       0.1.0
  *
  */
