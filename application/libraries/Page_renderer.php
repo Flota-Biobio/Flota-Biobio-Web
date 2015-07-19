@@ -15,6 +15,7 @@
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
+ * @version     GIT: $Id$ Prototipo
  */
 
 if (!defined('BASEPATH')) exit('No direct script access allowed');
@@ -29,6 +30,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * @author      George Shazkho (anibal.llanos.prado@gmail.com)
  * @version     GIT: $Id$ Prototipo
  * @since       0.1.0
+ *
  */
 class Page_renderer
 {
