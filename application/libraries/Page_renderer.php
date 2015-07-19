@@ -15,7 +15,7 @@
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
- * @version     GIT: $Id$ Prototipo
+ * @version GIT: $Id$ Prototipo
  */
 
 if (!defined('BASEPATH')) exit('No direct script access allowed');
