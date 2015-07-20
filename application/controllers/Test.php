@@ -27,15 +27,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de la página. Permite realizar pruebas exhaustivas y configurables.
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.2
+ * @version 0.1.3
  * @since   0.1.2
  */
 class Test extends CI_Controller
 {
-
-    protected $parts = array(
-        'slider'
-    );
 
     public function slider()
     {
@@ -78,7 +74,6 @@ class Test extends CI_Controller
         $this->page_renderer->add_view('test/parts/slider', $data);
         $this->page_renderer->set_title('Test: SLIDER');
         $this->page_renderer->render('test/simple');
-
     }
 
 }

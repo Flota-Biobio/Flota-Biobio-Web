@@ -20,21 +20,28 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: home
- * Template básico para el home
+ * Vista: header
+ * {VIEW-DESCRIPTION}
  *
  * @author  George Shazkho <shazkho@gmail.com>
  * @version 0.1.5
- * @since   0.1.3
+ * @since   0.1.4
  */
 ?>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title><?=$title?></title>
-    <?=$resources?>
-</head>
-<body>
-    <?=$content?>
-</body>
-</html>
+<div class="header main-background">
+    <div class="container">
+        <div class="header-content row main-background">
+            <div class="logo-box col-lg-4">
+                <h1>Flota Biobío</h1>
+            </div>
+            <div class="session-box col-lg-5 col-lg-offset-3 text-right">
+                <h4>Aníbal Llanos Prado</h4>
+                <ul class="list-inline">
+                    <li>Perfiil</li>
+                    <li>Configuración</li>
+                    <li>Salir</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

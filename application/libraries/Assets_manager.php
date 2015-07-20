@@ -27,7 +27,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.1.1
+ * @version     0.1.3
  * @since       0.1.0
  */
 class Assets_manager
@@ -144,6 +144,9 @@ class Assets_manager
      */
     public function img($name, $sub_path='', $title='', $alt='')
     {
+        if ($alt == '' && $title != '') {
+            $alt = $title;
+        }
         $path = $this->assets_path.'images/'.$sub_path.$name;
         return sprintf($this->format->img, $path, $title, $alt);
     }

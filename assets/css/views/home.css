@@ -1,0 +1,247 @@
+
+/* CLASES GLOBALES */
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #c9d4dd;
+}
+
+.fixed-center {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.fixed-center-margin {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: #006699;
+}
+
+.header a,
+.header a:hover,
+.header a:visited,
+.header a:active,
+.header a:link,
+.header a:focus {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.header a:hover {
+    color: coral;
+}
+
+.header .content-box {
+    height: 100%;
+    color: white;
+}
+
+.header .logo-section {
+    display: inline-block;
+    float: left;
+}
+
+.header .logo-title {
+    line-height: 80px;
+    margin-left: 25px;
+    font-size: 28px;
+}
+
+.header .user-section {
+    height: 50px;
+    margin: 30px 0 0 0;
+    display: inline-block;
+    float: right;
+}
+
+.header .user-name {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.header ul.user-links {
+    margin: 0;
+    padding: 0;
+}
+
+.header .user-links li {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+
+/* NAVMENU */
+
+.navmenu {
+    height: 40px;
+    color: white;
+}
+
+.navmenu .content-box {
+    height: 100%;
+    background-color: #001e3d;
+}
+
+.navmenu ul.link-list {
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+
+.navmenu .link-list li {
+    display: inline-block;
+    margin-right: 15px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+/* CONTENT */
+
+.content {
+    height: auto;
+}
+
+.content .content-box {
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+}
+
+
+/* SLIDER */
+
+.slider .desc-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background-color: black;
+    opacity: .6;
+}
+
+.slider .desc-box span {
+    display: block;
+    color: white;
+}
+
+.slider .desc-box span.desc-title {
+    margin-bottom: 10px;
+}
+
+.slider .desc-box span.desc-desc {
+    font-size: 14px;
+}
+
+
+/* BOXES */
+
+.boxes {
+    margin-top: 25px;
+}
+
+.boxes .box {
+    height: 170px;
+    padding: 15px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px 3px grey;
+}
+
+.boxes .box-1,
+.boxes .box-2 {
+    margin-right: 20px;
+}
+
+.boxes .box-title {
+    width: 190px;
+    display: inline-block;
+    float: right;
+    height: 70px;
+}
+
+.boxes .box-title span {
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    line-height: 70px;
+    font-size: 28px;
+}
+
+.boxes .box-detail {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.boxes .box-img,
+.boxes .box-img img{
+    display: inline-block;
+    float: left;
+    width: 65px;
+    height: 65px;
+}
+
+.boxes .box-1 {
+    background: -webkit-linear-gradient(#00aa4c, #008543); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00aa4c, #008543); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00aa4c, #008543); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00aa4c, #008543); /* Standard syntax */
+}
+
+.boxes .box-2 {
+    background: -webkit-linear-gradient(#c48101, #ae6c01); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c48101, #ae6c01); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c48101, #ae6c01); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c48101, #ae6c01); /* Standard syntax */
+}
+
+.boxes .box-3 {
+    background: -webkit-linear-gradient(#7b05c4, #5f05a4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#7b05c4, #5f05a4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#7b05c4, #5f05a4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#7b05c4, #5f05a4); /* Standard syntax */
+}
+
+/* BLOG */
+
+.blog {
+    margin-top: 30px;
+}
+
+.blog .blog-title {
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #222;
+    border-bottom: solid 2px #ccc;
+}
+
+.blog .blog-feed-post {
+    border-bottom: solid 1px #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.blog .blog-feed-image {
+}
+
+.blog .blog-feed-title {
+    width: 850px;
+    font-size: 20px;
+}
+
+.blog .blog-feed-details {
+    width: 850px;
+}
