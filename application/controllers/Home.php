@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.5
+ * @version 0.1.6
  * @since   0.1.3
  */
 class Home extends CI_Controller
@@ -71,10 +71,12 @@ class Home extends CI_Controller
             $this->assets_manager->js('js-image-slider')."\n    ".
             $this->assets_manager->css('js-image-slider')."\n    ".
             $this->assets_manager->css('templates/home')."\n    ".
-            $this->assets_manager->css('views/header')
+            $this->assets_manager->css('views/header')."\n    ".
+            $this->assets_manager->css('views/boxes')
         );
         $this->page_renderer->add_view('parts/header', array());
         $this->page_renderer->add_view('parts/slider', $data);
+        $this->page_renderer->add_view('parts/boxes', array());
         $this->page_renderer->set_title('Home rebuild - Flota Biobio');
         $this->page_renderer->render('home');
 

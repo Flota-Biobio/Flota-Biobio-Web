@@ -1,0 +1,87 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ * Entregado y presentado el %FECHA%
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * Boxes.css
+ * Hoja de estilos para la vista "boxes"
+ *
+ * @author  George Shazkho <shazkho@gmail.com>
+ * @version 0.1.6
+ * @since   0.1.6
+ */
+
+.boxes .box {
+    height: 180px;
+    padding: 15px;
+    background-color: antiquewhite;
+    box-shadow: 0 0 5px #BBB;
+    border: 1px solid #CCC;
+}
+
+.boxes-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.boxes .box-title {
+    display: inline-block;
+    float: right;
+    height: 70px;
+}
+
+.boxes .box-title span {
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    line-height: 70px;
+    font-size: 28px;
+}
+
+.boxes .box-detail {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.boxes .box-img,
+.boxes .box-img img{
+    display: inline-block;
+    float: left;
+    width: 65px;
+    height: 65px;
+}
+
+.boxes .box-1 {
+    background: -webkit-linear-gradient(#00aa4c, #008543); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00aa4c, #008543); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00aa4c, #008543); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00aa4c, #008543); /* Standard syntax */
+}
+
+.boxes .box-2 {
+    background: -webkit-linear-gradient(#c48101, #ae6c01); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c48101, #ae6c01); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c48101, #ae6c01); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c48101, #ae6c01); /* Standard syntax */
+}
+
+.boxes .box-3 {
+    background: -webkit-linear-gradient(#7b05c4, #5f05a4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#7b05c4, #5f05a4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#7b05c4, #5f05a4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#7b05c4, #5f05a4); /* Standard syntax */
+}
