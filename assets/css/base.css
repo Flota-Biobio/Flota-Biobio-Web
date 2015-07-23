@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/open_sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../fonts/Roboto/Roboto-Thin.ttf');
+}
+
+html, body {
+    background-color: #ddd;
+    font-family: open-sans, sans-serif;
+}
+
+.container {
+    background-color: #eee;
+}
+
+.main-background {
+    background-color: #00a0e3;
+}
+
+.secondary-background {
+    background-color: #5b5b5b;
+}
+
+.soft-background {
+    background-color: #fefefe;
+}
+
+.overall-background {
+    background-color: #ddd;
+}

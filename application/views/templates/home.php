@@ -35,6 +35,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?=$resources?>
 </head>
 <body>
-    <?=$content?>
+<?=$content?>
 </body>
 </html>

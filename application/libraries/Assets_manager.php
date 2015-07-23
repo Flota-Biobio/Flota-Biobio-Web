@@ -27,7 +27,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.1.3
+ * @version     0.2.2
  * @since       0.1.0
  */
 class Assets_manager
@@ -54,7 +54,7 @@ class Assets_manager
      * @var array Arreglo con las dependencias que requiere BootStrap.
      */
     protected $bootstrap_files = array(
-        'css' => array('bootstrap.min'),
+        'css' => array('bootstrap.min', 'base'),
         'js' => array('jquery-1.11.3.min', 'bootstrap.min')
     );
 

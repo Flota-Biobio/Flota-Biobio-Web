@@ -1,4 +1,5 @@
-/*
+<?php
+/**
  * Proyecto Flota Biobío
  * Aplicación WEB
  *
@@ -16,38 +17,24 @@
  * @license     Apache License, Version 2.0
  */
 
-/*
- * Header.css
- * Hoja de estilos para la vista "header"
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+ * Vista: admin
+ * Template para las páginas de administración
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.3
- * @since   0.1.3
+ * @version 0.2.0
+ * @since   0.2.0
  */
-
-.header {
-    height: 100px;
-    margin: 0 auto;
-    color: #fff;
-}
-
-.header .logo-box {
-    margin: auto 0;
-}
-
-.header .logo-box h1 {
-    height: 40px;
-    margin: 30px 0 0;
-    padding: 0;
-    line-height: 40px;
-}
-
-.header .logo-box img {
-    height: 70px;
-    width: auto;
-    margin-top: 15px;
-}
-
-.header .session-box {
-    margin-top: 30px;
-}
+?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><?=$title?></title>
+        <?=$resources?>
+    </head>
+    <body>
+        <?=$content?>
+    </body>
+</html>

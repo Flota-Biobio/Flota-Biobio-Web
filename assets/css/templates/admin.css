@@ -1,0 +1,78 @@
+.container {
+    background-color: #eee;
+}
+
+.main-background {
+    background-color: #00a0e3;
+}
+
+.secondary-background {
+    background-color: #5b5b5b;
+}
+
+.soft-background {
+    background-color: #eee;
+}
+
+
+/* ADMIN MENU */
+
+.admin-body .left-menu {
+    padding: 0;
+    background-color: #23282d;
+}
+
+.admin-body .group-name {
+    padding: 15px 0 5px 0;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.admin-body .category-name {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #bbb;
+    text-transform: capitalize;
+}
+
+.admin-body .category-name a,
+.admin-body .category-name a:link,
+.admin-body .category-name a:hover,
+.admin-body .category-name a:active,
+.admin-body .category-name a:visited {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.admin-body .element {
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    background-color: #444;
+    text-transform: capitalize;
+}
+
+.admin-body .element a,
+.admin-body .element a:link,
+.admin-body .element a:hover,
+.admin-body .element a:active,
+.admin-body .element a:visited {
+    color: #999;
+    text-decoration: none;
+}
+
+.admin-body .left-menu a:hover {
+    color: #00a0e3;
+}
+
+.admin-body .left-menu li.padded,
+.admin-body .left-menu li.hoverable {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.admin-body .left-menu li.hoverable:hover {
+    cursor: pointer;
+    background-color: #191e23;
+}

@@ -20,28 +20,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: header
- * {VIEW-DESCRIPTION}
+ * Vista: base
+ * Template básico
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.2.2
- * @since   0.1.4
+ * @version 0.2.3
+ * @since   0.2.3
  */
 ?>
-<div class="header main-background">
-    <div class="container">
-        <div class="header-content row main-background">
-            <div class="logo-box col-lg-4">
-                <?=$this->assets_manager->img('marca01.png', '', 'Flota Biobio')?>
-            </div>
-            <div class="session-box col-lg-5 col-lg-offset-3 text-right">
-                <h4>Aníbal Llanos Prado</h4>
-                <ul class="list-inline">
-                    <li>Perfiil</li>
-                    <li>Configuración</li>
-                    <li>Salir</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><?=$title?></title>
+    <?=$resources?>
+</head>
+<body>
+<?=$content?>
+</body>
+</html>
