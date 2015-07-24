@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.7
+ * @version 0.3.0
  * @since   0.1.3
  */
 class Home extends CI_Controller
@@ -66,18 +66,21 @@ class Home extends CI_Controller
             )
         );
 
-        $this->page_renderer->set_resources(
-            $this->assets_manager->bootstrap_header()."\n    ".
-            $this->assets_manager->js('js-image-slider')."\n    ".
-            $this->assets_manager->css('js-image-slider')."\n    ".
-            $this->assets_manager->css('templates/home')."\n    ".
-            $this->assets_manager->css('views/header')."\n    ".
-            $this->assets_manager->css('views/boxes')
-        );
+        // Recursos
+        $this->page_renderer->add_basics();
+        $this->page_renderer->add_js('js-image-slider');
+        $this->page_renderer->add_css('js-image-slider');
+        $this->page_renderer->add_css('templates/home');
+        $this->page_renderer->add_css('views/header');
+        $this->page_renderer->add_css('views/boxes');
+
+        // Vistas
         $this->page_renderer->add_view('parts/header', array());
         $this->page_renderer->add_view('parts/slider', $data);
         $this->page_renderer->add_view('parts/boxes', array());
         $this->page_renderer->set_title('Home rebuild - Flota Biobio');
+
+        //Render
         $this->page_renderer->render('templates/home');
 
     }

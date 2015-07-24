@@ -28,13 +28,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since   0.1.3
  */
 ?>
-<html>
+<html class="normal-font">
 <head>
     <meta charset="UTF-8">
     <title><?=$title?></title>
     <?=$resources?>
 </head>
-<body>
+<body class="normal-font">
 <?=$content?>
 </body>
 </html>

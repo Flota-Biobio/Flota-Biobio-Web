@@ -8,10 +8,38 @@
     src: url('../fonts/Roboto/Roboto-Thin.ttf');
 }
 
+@font-face {
+    font-family: 'Helvetica Neue Condensed';
+    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Condensed.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Light.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Roman';
+    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Roman.otf');
+}
+
 html, body {
     background-color: #ddd;
-    font-family: open-sans, sans-serif;
 }
+
+/*html, body {
+    font-family: "HelveticaNeue-Condensed-5Light", sans-serif;
+    font-weight: lighter;
+}*/
+
+.condensed-font {
+    font-family: "Helvetica Neue Condensed", sans-serif;
+}
+
+.normal-font {
+    font-family: "Helvetica Neue Roman", sans-serif;
+}
+
 
 .container {
     background-color: #eee;

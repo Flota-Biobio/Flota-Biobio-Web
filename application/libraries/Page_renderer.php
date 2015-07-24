@@ -27,7 +27,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * vista y, finalmente, generar el código HTML a mostrar.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.1.1
+ * @version     0.3.0
  * @since       0.1.0
  *
  */
@@ -55,6 +55,24 @@ class Page_renderer
      * @var string $resources String con los tags de los recursos a incorporar
      */
     protected $resources;
+
+    /**
+     * @var array Arreglo con los CSS a incluir
+     */
+    protected $css;
+
+    /**
+     * @var array Arreglo con los JavaScript a incluir
+     */
+    protected $js;
+
+    /**
+     * @var array Arreglo con los elementos básicos a incluir
+     */
+    protected $basics = array(
+        'css' => array('bootstrap.min', 'base'),
+        'js' => array('jquery-1.11.3.min', 'bootstrap.min')
+    );
 
 
     /* --- CONSTRUCTOR ------------------------------------------------------ */
@@ -86,9 +104,13 @@ class Page_renderer
      */
     public function render($template)
     {
-        $data['content'] = $this->render_views();
         $data['title'] = $this->title;
+        $this->render_resources();
         $data['resources'] = $this->resources;
+
+        foreach ($this->views as $target => $views) {
+            $data[$target] = $this->render_views($views);
+        }
 
         $this->reset();
         $this->ci->load->view($template, $data);
@@ -101,15 +123,17 @@ class Page_renderer
      * vista global (contenido) en código HTML para ser insertado en el template
      * que sea especificado.
      *
+     * @param array $views
+     *
      * @return string El código HTML de las vistas.
      *
      * @access  public
      * @since   0.1.0
      */
-    public function render_views()
+    public function render_views($views)
     {
         $html = "";
-        foreach ($this->views as $view) {
+        foreach ($views as $view) {
             $view_html = $this->render_view($view[0], $view[1]);
             $html .= $view_html."\n        ";
         }
@@ -132,6 +156,22 @@ class Page_renderer
         return $this->ci->load->view($name, $data, true);
     }
 
+    /**
+     * Obtiene el código HTML de los recursos a incluir
+     *
+     * @access protected
+     * @since  0.3.0
+     */
+    protected function render_resources()
+    {
+        foreach ($this->js as $js) {
+            $this->resources .= $this->ci->assets_manager->js($js)."\n    ";
+        }
+        foreach ($this->css as $css) {
+            $this->resources .= $this->ci->assets_manager->css($css)."\n    ";
+        }
+    }
+
 
     /* --- FUNCIONES DE GESTIÓN DE VISTAS ----------------------------------- */
 
@@ -139,14 +179,21 @@ class Page_renderer
      * Agrega un set de vistas al objeto.
      *
      * Declara como parte del "contenido" de la vista a un grupo de vistas
-     * menores, agrupadas en un arreglo asociativo. Este arreglo debe utilizar
-     * como índices los nombres de las vistas, y como valor para cada índice el
-     * arreglo con variables para la vista (data) que corresponda. Ejemplo:
+     * menores, agrupadas en un arreglo asociativo. Este arreglo debe contener
+     * sub-arreglos asociativos que definan (cada uno) los índices 'view',
+     * 'data' y 'target'. Un arreglo válido ejemplo:
      *
      *      array(
-     *          'vista_1' => $data_1,
-     *          'vista_2' => $data_2,
-     *          . . .
+     *          array(
+     *              'view' => 'vista_1',
+     *              'data' => 'data_1',
+     *              'target' => 'target_1'
+     *          ),
+     *          array(
+     *              'view' => 'vista_2',
+     *              'data' => 'data_2',
+     *              'target' => 'target_2'
+     *          )
      *      )
      *
      * @param array $views Arreglo asociativo con las vistas a incorporar.
@@ -156,8 +203,9 @@ class Page_renderer
      */
     public function add_views($views)
     {
-        foreach ($views as $view => $data) {
-            $this->add_view($view, $data);
+        foreach ($views as $view) {
+            $target = empty($view['target']) ? 'content' : $view['target'];
+            $this->add_view($view['view'], $view['data'], $target);
         }
     }
 
@@ -165,14 +213,16 @@ class Page_renderer
      * Agrega una vista al objeto.
      *
      * @param string $name Nombre de la vista a cargar.
-     * @param array $data Arreglo de variables a utilizar.
+     * @param array  $data Arreglo de variables a utilizar.
+     * @param string $target Objetivo de la vista (para templates específicos)
      *
      * @access  public
      * @since   0.1.0
      */
-    public function add_view($name, $data)
+    public function add_view($name, $data, $target='content')
     {
-        array_push($this->views, array($name, $data));
+        if (empty($this->views[$target])) $this->views[$target] = array();
+        array_push($this->views[$target], array($name, $data));
     }
 
 
@@ -190,24 +240,59 @@ class Page_renderer
     protected function reset()
     {
         $this->views = array();
+        $this->css = array();
+        $this->js = array();
         $this->title = "Untitled Page";
         $this->resources = "";
     }
 
 
-    /* --- SETTERS ---------------------------------------------------------- */
+    /* --- RECURSOS --------------------------------------------------------- */
 
     /**
-     * Define el string de recursos a incorporar en el HEAD.
+     * Agrega los recursos básicos  para el sitio
      *
-     * @param string $resources El string con los tags a incorporar.
+     * Los recursos básicos consisten en los elementos que serán incluidos en la
+     * etiqueta HEAD del HTML, y que son globales para el proyecto completo. En
+     * el presente, corresponde a los recursos de Bootstrap y el CSS básico.
      *
      * @access  public
-     * @since   0.1.0
+     * @since   0.3.0
      */
-    public function set_resources($resources)
+    public function add_basics()
     {
-        $this->resources = $resources;
+        foreach ($this->basics['js'] as $js) {
+            $this->add_js($js);
+        }
+        foreach ($this->basics['css'] as $css) {
+            $this->add_css($css);
+        }
+    }
+
+    /**
+     * Agrega un recurso CSS a la lista de recursos a incluir.
+     *
+     * @param string $css El nombre del CSS a incluir.
+     *
+     * @access  public
+     * @since   0.3.0
+     */
+    public function add_css($css)
+    {
+        array_push($this->css, $css);
+    }
+
+    /**
+     * Agrega un recurso JavaScript a la lista de recursos a incluir.
+     *
+     * @param string $js El nombre del JavaScript a incluir.
+     *
+     * @access  public
+     * @since   0.3.0
+     */
+    public function add_js($js)
+    {
+        array_push($this->js, $js);
     }
 
     /**

@@ -19,10 +19,19 @@
 # Archivo YAML
 # 
 # @author  George Shazkho <shazkho@gmail.com>
-# @version 0.2.3
+# @version 0.3.0
 # @since   0.2.1
 
 version:
+
+  0.3.0:
+      descripcion: Rebuild funcional
+      fecha: 24/07/2015
+      cambios:
+        - Cambios en Page Renderer
+        - Cambios de tipografía
+        - Vista principal módulo de administración
+        - Cambios variados a todo nivel
 
   0.2.3:
       descripción: Módulo usuario

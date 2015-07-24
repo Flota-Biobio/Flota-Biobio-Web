@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * {CLASS-DESCRIPTION}
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.2.3
+ * @version 0.3.0
  * @since   0.2.3
  */
 class User extends CI_Controller
@@ -34,16 +34,17 @@ class User extends CI_Controller
 
     public function profile($id) {
 
-        $this->page_renderer->set_resources(
-            $this->assets_manager->bootstrap_header()."\n    ".
-            $this->assets_manager->js('js-image-slider')."\n    ".
-            $this->assets_manager->css('js-image-slider')."\n    ".
-            $this->assets_manager->css('templates/user')."\n    ".
-            $this->assets_manager->css('views/header')
-        );
+        // Recursos
+        $this->page_renderer->add_basics();
+        $this->page_renderer->add_css('views/header');
+        $this->page_renderer->add_css('views/user_profile');
+
+        // Vistas
         $this->page_renderer->add_view('parts/header', array());
         $this->page_renderer->add_view('parts/user/user_profile', array());
         $this->page_renderer->set_title('Perfil de usuario - Flota Biobio');
+
+        // Render
         $this->page_renderer->render('templates/home');
 
     }

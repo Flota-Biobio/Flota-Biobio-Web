@@ -35,14 +35,16 @@ class Admin extends CI_Controller
     public function index()
     {
 
-        $this->page_renderer->set_resources(
-            $this->assets_manager->bootstrap_header()."\n    ".
-            $this->assets_manager->css('templates/admin')."\n    ".
-            $this->assets_manager->css('views/header')
-        );
+        // Resources
+        $this->page_renderer->add_basics();
+        $this->page_renderer->add_css('templates/admin');
+        $this->page_renderer->add_css('views/header');
+
+        // Views
         $this->page_renderer->add_view('parts/header', array());
         $this->page_renderer->add_view('templates/admin/admin_body', array('content' => 'Bleh'));
 
+        // Render
         $this->page_renderer->set_title('Admin - Flota Biobio');
         $this->page_renderer->render('templates/admin/admin');
 

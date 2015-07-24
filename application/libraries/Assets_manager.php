@@ -27,7 +27,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.2.2
+ * @version     0.3.0
  * @since       0.1.0
  */
 class Assets_manager
@@ -49,14 +49,6 @@ class Assets_manager
      * @var stdClass Objeto que almacena los strings de formato.
      */
     protected $format;
-
-    /**
-     * @var array Arreglo con las dependencias que requiere BootStrap.
-     */
-    protected $bootstrap_files = array(
-        'css' => array('bootstrap.min', 'base'),
-        'js' => array('jquery-1.11.3.min', 'bootstrap.min')
-    );
 
 
     /* --- CONSTRUCTOR ------------------------------------------------------ */
@@ -149,29 +141,6 @@ class Assets_manager
         }
         $path = $this->assets_path.'images/'.$sub_path.$name;
         return sprintf($this->format->img, $path, $title, $alt);
-    }
-
-
-    /* --- FUNCIONES COMPLEMENTARIAS --- */
-
-    /**
-     * Genera los tags HTML básicos para el funcionamiento de BootStrap.
-     *
-     * @return string Los tag HTML
-     *
-     * @access  public
-     * @since   0.1.0
-     */
-    public function bootstrap_header()
-    {
-        $tags = array();
-        foreach ($this->bootstrap_files['js'] as $js) {
-            array_push($tags, $this->js($js));
-        }
-        foreach ($this->bootstrap_files['css'] as $css) {
-            array_push($tags, $this->css($css));
-        }
-        return join("\n    ", $tags);
     }
 
 }
