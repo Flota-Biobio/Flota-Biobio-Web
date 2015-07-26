@@ -20,6 +20,8 @@ Apache License, Version 2.0
   - Cambios de tipografía
   - Vista principal módulo de administración
   - Cambios variados a todo nivel
+* Hotfix 1: Uso de archivo MarkDown (MD) para registro de cambios
+* Hotfix 2: Solucionado conflicto de codificación de archivos
 
 ### Versión 0.2.3: Módulo usuario
 * Fecha: 23/07/2015

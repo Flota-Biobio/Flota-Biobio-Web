@@ -1,7 +1,7 @@
 <?php
 /**
  * Proyecto Flota Biobío
- * Aplicacion WEB
+ * Aplicación WEB
  *
  * Prototipo por Aníbal Llanos Prado
  * Basado en el trabajo del equipo de Flota Biobío
@@ -9,7 +9,7 @@
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
  * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
- * se declaran por el mismo como propiedad de la organizacion presente del
+ * se declaran por el mismo como propiedad de la organización presente del
  * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
  * anteriormente declarada condición.
  *
@@ -20,33 +20,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: admin
- * Template para las páginas de administración
+ * Vista: admin_body
+ * {VIEW-DESCRIPTION}
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.2.0
- * @since   0.2.0
+ * @version 0.2.1
+ * @since   0.2.1
  */
 ?>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title><?=$title?></title>
-    <?=$resources?>
-</head>
-<body>
-<?=$admin_header?>
-<div class="admin-body">
-    <div class="container">
-        <div class="admin-content row">
-            <div class="admin-menu col-lg-3">
-                <?=$admin_menu?>
-            </div>
-            <div class="admin-main col-lg-9">
-                <?=$content?>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+<?=$content?>

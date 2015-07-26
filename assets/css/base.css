@@ -45,12 +45,31 @@ html, body {
     background-color: #eee;
 }
 
+
+/* Backgrounds */
+
 .main-background {
     background-color: #00a0e3;
 }
 
+.main-background-light {
+    background-color: #80cff1;
+}
+
+.main-background-dark {
+    background-color: #015072;
+}
+
 .secondary-background {
     background-color: #5b5b5b;
+}
+
+.secondary-background-light {
+    background-color: #adadad;
+}
+
+.secondary-background-dark {
+    background-color: #2e2e2e;
 }
 
 .soft-background {
@@ -59,4 +78,35 @@ html, body {
 
 .overall-background {
     background-color: #ddd;
+}
+
+
+/* COLORS */
+
+.main-color {
+    color: #00a0e3;
+}
+
+.main-color-light {
+    color: #80cff1;
+}
+
+.main-color-dark {
+    color: #015072;
+}
+
+.secondary-color {
+    color: #5b5b5b;
+}
+
+.secondary-color-light {
+    color: #adadad;
+}
+
+.secondary-color-dark {
+    color: #2e2e2e;
+}
+
+.soft-color {
+    color: #fefefe;
 }

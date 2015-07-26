@@ -41,8 +41,9 @@ class Admin extends CI_Controller
         $this->page_renderer->add_css('views/header');
 
         // Views
-        $this->page_renderer->add_view('parts/header', array());
-        $this->page_renderer->add_view('templates/admin/admin_body', array('content' => 'Bleh'));
+        $this->page_renderer->add_view('parts/admin/admin_header', array(), 'admin_header');
+        $this->page_renderer->add_view('parts/admin/admin_menu', array(), 'admin_menu');
+        $this->page_renderer->add_view('parts/admin/admin_body', array('content' => 'Bleh'));
 
         // Render
         $this->page_renderer->set_title('Admin - Flota Biobio');
@@ -51,5 +52,4 @@ class Admin extends CI_Controller
 
 
     }
-
 }
