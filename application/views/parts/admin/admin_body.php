@@ -28,4 +28,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since   0.2.1
  */
 ?>
-<?=$content?>
+<h1>Páginas</h1><br>
+<div class="secondary-color normal-font">
+    <p>En este lugar se configuran las páginas estáticas del sitio. Las páginas
+    estáticas corresponden a las vistas que no cambian comunmente en el tiempo
+    y tienen un carácter as bien informativo. Ejemplo de estas páginas son el
+    formulario de contacto, misión-visión, el equipo, etc.</p>
+</div>
+<hr>
+<h3>Lista de páginas existentes</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Página</th>
+            <th>Descripción</th>
+            <th class="text-center">Posición</th>
+            <th class="text-center">Estado</th>
+            <th class="text-center">Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Equipo</td>
+            <td>Detalles del equipo</td>
+            <td class="text-center">1</td>
+            <td class="text-center">Publicada</td>
+            <td class="text-center">Opciones</td>
+        </tr>
+        <tr>
+            <td>Organización</td>
+            <td>Detalles de la organización</td>
+            <td class="text-center">2</td>
+            <td class="text-center">Publicada</td>
+            <td class="text-center">Opciones</td>
+        </tr>
+        <tr>
+            <td>Contacto</td>
+            <td>Formulario de contacto</td>
+            <td class="text-center">3</td>
+            <td class="text-center">Publicada</td>
+            <td class="text-center">Opciones</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<div class="text-right col-lg-12">
+    <button type="button" class="btn btn-primary btn- normal-font">Agregar nueva página</button>
+    <hr>
+</div>

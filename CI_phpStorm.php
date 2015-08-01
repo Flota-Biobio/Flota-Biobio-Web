@@ -93,6 +93,7 @@
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
  * @property Assets_manager $assets_manager       Assets manager
  * @property Page_renderer $page_renderer         Page Renderer
+ * @property Menu_generator $menu_generator       Menu generator
  */
 class CI_Controller
 {
@@ -148,6 +149,7 @@ class CI_Controller
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
  * @property Assets_manager $assets_manager       Assets manager
  * @property Page_renderer $page_renderer         Page Renderer
+ * @property Menu_generator $menu_generator       Menu generator
  */
 class CI_Model
 {

@@ -28,14 +28,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since   0.3.0
  */
 ?>
-<div class="admin-header">
-    <div class="container">
-        <div class="admin-header-content row admin-main-background">
-            <div class="admin-header-main col-lg-12">
-                <span class="admin-title condensed-font">FLOTA BIOBIO</span>
-                <span>Administración del sitio</span>
-            </div>
+
+<div class="admin-header secondary-background-dark">
+    <div class="container admin-header-container">
+        <div class="header-content secondary-background-dark">
+            <span class="admin-header-title condensed-font">
+                FLOTA BIOBIO ::&nbsp;&nbsp;
+                <i class="secondary-color-light non-italics">Administración</i>
+            </span>
         </div>
     </div>
 </div>
-
+<div class="admin-header-border main-background-dark"></div>

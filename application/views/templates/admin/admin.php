@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="admin-body">
     <div class="container">
         <div class="admin-content row">
-            <div class="admin-menu col-lg-3">
+            <div class="admin-menu col-lg-3 secondary-background normal-font">
                 <?=$admin_menu?>
             </div>
             <div class="admin-main col-lg-9">

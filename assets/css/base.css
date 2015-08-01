@@ -23,6 +23,11 @@
     src: url('../fonts/Helvetica_Neue/HelveticaNeue-Roman.otf');
 }
 
+@font-face {
+    font-family: 'Helvetica Neue Medium';
+    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Medium.otf');
+}
+
 html, body {
     background-color: #ddd;
 }
@@ -38,6 +43,14 @@ html, body {
 
 .normal-font {
     font-family: "Helvetica Neue Roman", sans-serif;
+}
+
+.light-font {
+    font-family: "Helvetica Neue Light", sans-serif;
+}
+
+.medium-font {
+    font-family: "Helvetica Neue Medium", sans-serif;
 }
 
 
@@ -109,4 +122,14 @@ html, body {
 
 .soft-color {
     color: #fefefe;
+}
+
+.non-italics {
+    font-style: normal;
+}
+
+.bold-text {
+    font-family: "Helvetica Neue Medium", sans-serif;
+    font-weight: bold;
+    color: #2e2e2e;
 }

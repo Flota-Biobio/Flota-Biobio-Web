@@ -17,62 +17,68 @@
 
 /* ADMIN MENU */
 
-.admin-body .left-menu {
-    padding: 0;
-    background-color: #23282d;
+.admin-menu {
+    padding-top: 30px;
+    color: white;
 }
 
-.admin-body .group-name {
-    padding: 15px 0 5px 0;
-    font-size: 16px;
-    color: #fff;
-    text-transform: capitalize;
+.admin-content {
+
 }
 
-.admin-body .category-name {
-    padding: 5px 0;
+.admin-menu .menu-label,
+.admin-menu .menu-sub-element {
+    height: 30px;
+    line-height: 30px;
+}
+
+.admin-menu .menu-label,
+.admin-menu .menu-sub-element,
+.admin-menu .menu-separator,
+.admin-menu .menu-element-title {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.admin-menu .menu-label,
+.admin-menu .menu-element {
     font-size: 14px;
-    color: #bbb;
-    text-transform: capitalize;
 }
 
-.admin-body .category-name a,
-.admin-body .category-name a:link,
-.admin-body .category-name a:hover,
-.admin-body .category-name a:active,
-.admin-body .category-name a:visited {
-    color: #bbb;
-    text-decoration: none;
+.admin-menu .menu-label {
+    padding-left: 30px;
+    text-transform: uppercase;
+ }
+
+.admin-menu .menu-element-title {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
 }
 
-.admin-body .element {
-    padding: 5px 0;
-    font-size: 12px;
-    color: #999;
-    background-color: #444;
-    text-transform: capitalize;
+.admin-menu .menu-sub-element {
+    padding-left: 50px;
 }
 
-.admin-body .element a,
-.admin-body .element a:link,
-.admin-body .element a:hover,
-.admin-body .element a:active,
-.admin-body .element a:visited {
-    color: #999;
-    text-decoration: none;
+.admin-menu .menu-separator {
+    height: 10px;
 }
 
-.admin-body .left-menu a:hover {
-    color: #00a0e3;
-}
-
-.admin-body .left-menu li.padded,
-.admin-body .left-menu li.hoverable {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.admin-body .left-menu li.hoverable:hover {
+.admin-menu .menu-element-title,
+.admin-menu .menu-sub-element {
     cursor: pointer;
-    background-color: #191e23;
+}
+
+.admin-menu .menu-label {
+    border-top: solid 1px #5b5b5b;
+    border-bottom: solid 1px #5b5b5b;
+}
+
+.admin-menu .menu-element-hover {
+    border-right: solid 15px #00a0e3;
+}
+
+.admin-menu .menu-element-hover-sub {
+    border-right: solid 15px #80cff1;
+    background-color: #bbb;
 }

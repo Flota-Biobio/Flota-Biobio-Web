@@ -28,4 +28,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since   0.3.0
  */
 ?>
-<span>Holi</span>
+<?=$menu?>

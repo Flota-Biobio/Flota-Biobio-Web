@@ -1,17 +1,17 @@
 <?php
 /**
- * Proyecto Flota Biobío
- * Aplicación WEB
+ * Proyecto Flota Biobï¿½o
+ * Aplicaciï¿½n WEB
  *
- * Prototipo por Aníbal Llanos Prado
- * Basado en el trabajo del equipo de Flota Biobío
+ * Prototipo por Anï¿½bal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobï¿½o
  * Entregado y presentado el %FECHA%
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
- * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
- * se declaran por el mismo como propiedad de la organización presente del
- * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
- * anteriormente declarada condición.
+ * y diseï¿½ados (en su forma) por Anï¿½bal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organizaciï¿½n presente del
+ * equipo de Flota Biobï¿½o, propiedad que serï¿½ transferida a quienes cumplan la
+ * anteriormente declarada condiciï¿½n.
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
@@ -32,17 +32,139 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller
 {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('menu_generator');
+    }
+
     public function index()
     {
+        //Menu
+        $this->menu_generator->init(2);
+        $this->menu_generator->add_label('ModeraciÃ³n');
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Configurar sitio',
+                'link' => '#',
+                'children' => array(
+                    'ImÃ¡genes de inicio' => '#',
+                    'Cajas de inicio' => '#',
+                    'PÃ¡ginas' => '#',
+                    'Blog' => '#',
+                    'ConfiguraciÃ³n general' => '#'
+                )
+            )
+        );
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Artistas',
+                'link' => '#',
+                'children' => array(
+                    'Solicitudes' => '#',
+                    'Agregar' => '#',
+                    'Lista' => '#'
+                )
+            )
+        );
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Usuarios',
+                'link' => '#',
+                'children' => array(
+                    'Contacto' => '#',
+                    'Lista' => '#'
+                )
+            )
+        );
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Subasta',
+                'link' => '#',
+                'children' => array(
+                    'Actual' => '#',
+                    'Nueva' => '#',
+                    'Historial' => '#'
+                )
+            )
+        );
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'CatÃ¡logo',
+                'link' => '#',
+                'children' => array(
+                    'Nuevo producto' => '#',
+                    'Lista de productos' => '#',
+                    'Historial' => '#'
+                )
+            )
+        );
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Ventas',
+                'link' => '#'
+            )
+        );
+
+        $this->menu_generator->add_separator();
+
+        $this->menu_generator->add_label('ModeraciÃ³n');
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Miembros',
+                'link' => '#',
+                'children' => array(
+                    'Lista' => '#',
+                    'Historial' => '#'
+                )
+            )
+        );
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Mantenimiento',
+                'link' => '#',
+                'children' => array(
+                    'Sitio' => '#',
+                    'Ventas' => '#',
+                    'CatÃ¡logo' => '#',
+                    'Nuevos usuarios' => '#'
+                )
+            )
+        );
+
+        $this->menu_generator->add_separator();
+
+        $this->menu_generator->add_label('Servicio al cliente');
+        $this->menu_generator->add_element(
+            array(
+                'icon' => '',
+                'label' => 'Ventas',
+                'link' => '#',
+                'children' => array(
+                    'Tickets' => '#',
+                    'Lista' => '#',
+                    'Resueltos' => '#',
+                    'Historial' => '#'
+                )
+            )
+        );
 
         // Resources
         $this->page_renderer->add_basics();
         $this->page_renderer->add_css('templates/admin');
-        $this->page_renderer->add_css('views/header');
+        $this->page_renderer->add_css('views/admin_header');
 
         // Views
         $this->page_renderer->add_view('parts/admin/admin_header', array(), 'admin_header');
-        $this->page_renderer->add_view('parts/admin/admin_menu', array(), 'admin_menu');
+        $this->page_renderer->add_view('parts/admin/admin_menu', array('menu' => $this->menu_generator->render()), 'admin_menu');
         $this->page_renderer->add_view('parts/admin/admin_body', array('content' => 'Bleh'));
 
         // Render
