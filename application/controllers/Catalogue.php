@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Se encarga de manejar la información referente al catálogo.
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.5
+ * @version 0.3.7
  * @since   0.3.5
  */
 class Catalogue extends CI_Controller
@@ -60,20 +60,18 @@ class Catalogue extends CI_Controller
 
         // Recursos
         $this->page_renderer->add_basics();
-        //$this->page_renderer->add_css('templates/home');
         $this->page_renderer->add_js('bootstrap-slider.min');
-        $this->page_renderer->add_css('bootstrap-slider.min');
-        $this->page_renderer->add_css('views/header');
-        $this->page_renderer->add_css('views/footer');
-        $this->page_renderer->add_css('views/nav_menu');
-        $this->page_renderer->add_css('views/catalogue');
-
+        $this->page_renderer->add_css('bootstrap/bootstrap-slider.min');
+        $this->page_renderer->add_css('parts/base/header');
+        $this->page_renderer->add_css('parts/base/footer');
+        $this->page_renderer->add_css('parts/base/nav_menu');
+        $this->page_renderer->add_css('parts/catalogue/catalogue');
 
         // Vistas
-        $this->page_renderer->add_view('parts/header', array());
-        $this->page_renderer->add_view('parts/nav_menu', array());
+        $this->page_renderer->add_view('parts/base/header', array());
+        $this->page_renderer->add_view('parts/base/nav_menu', array());
         $this->page_renderer->add_view('parts/catalogue/feed', array('products' => $productos));
-        $this->page_renderer->add_view('parts/footer', array());
+        $this->page_renderer->add_view('parts/base/footer', array());
         $this->page_renderer->set_title('Catálogo - Flota Biobio');
 
         //Render
@@ -133,20 +131,18 @@ class Catalogue extends CI_Controller
 
         // Recursos
         $this->page_renderer->add_basics();
-        //$this->page_renderer->add_css('templates/home');
         $this->page_renderer->add_js('bootstrap-slider.min');
-        $this->page_renderer->add_css('bootstrap-slider.min');
-        $this->page_renderer->add_css('views/header');
-        $this->page_renderer->add_css('views/footer');
-        $this->page_renderer->add_css('views/nav_menu');
-        $this->page_renderer->add_css('views/catalogue');
-
+        $this->page_renderer->add_css('bootstrap/bootstrap-slider.min');
+        $this->page_renderer->add_css('parts/base/header');
+        $this->page_renderer->add_css('parts/base/footer');
+        $this->page_renderer->add_css('parts/base/nav_menu');
+        $this->page_renderer->add_css('parts/catalogue/catalogue');
 
         // Vistas
-        $this->page_renderer->add_view('parts/header', array());
-        $this->page_renderer->add_view('parts/nav_menu', array());
+        $this->page_renderer->add_view('parts/base/header', array());
+        $this->page_renderer->add_view('parts/base/nav_menu', array());
         $this->page_renderer->add_view('parts/catalogue/product', array('slides' => $slides));
-        $this->page_renderer->add_view('parts/footer', array());
+        $this->page_renderer->add_view('parts/base/footer', array());
         $this->page_renderer->set_title('Detalles de producto - Flota Biobio');
 
         //Render

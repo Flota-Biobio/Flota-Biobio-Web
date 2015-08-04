@@ -26,7 +26,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * vista y, finalmente, generar el código HTML a mostrar.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.3.0
+ * @version     0.3.7
  * @since       0.1.0
  *
  */
@@ -69,7 +69,7 @@ class Page_renderer
      * @var array Arreglo con los elementos básicos a incluir
      */
     protected $basics = array(
-        'css' => array('bootstrap.min', 'base'),
+        'css' => array('bootstrap/bootstrap.min', 'base'),
         'js' => array('jquery-1.11.3.min', 'bootstrap.min')
     );
 

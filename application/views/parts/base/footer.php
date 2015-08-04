@@ -23,10 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Footer global.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.5
+ * @version 0.3.7
  * @since   0.3.5
  */
 ?>
+<div class="space-30"></div>
+<div class="space-30"></div>
 <div class="footer secondary-background-dark">
     <div class="container">
         <div class="footer-content row">

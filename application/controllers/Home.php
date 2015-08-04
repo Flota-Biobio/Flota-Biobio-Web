@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.0
+ * @version 0.3.7
  * @since   0.1.3
  */
 class Home extends CI_Controller
@@ -74,17 +74,19 @@ class Home extends CI_Controller
         $this->page_renderer->add_js('js-image-slider');
         $this->page_renderer->add_css('js-image-slider');
         $this->page_renderer->add_css('templates/home');
-        $this->page_renderer->add_css('views/header');
-        $this->page_renderer->add_css('views/nav_menu');
-        $this->page_renderer->add_css('views/boxes');
-        $this->page_renderer->add_css('views/blog_cm');
+        $this->page_renderer->add_css('parts/base/header');
+        $this->page_renderer->add_css('parts/base/nav_menu');
+        $this->page_renderer->add_css('parts/home/boxes');
+        $this->page_renderer->add_css('parts/home/blog_cm');
+        $this->page_renderer->add_css('parts/base/footer');
 
         // Vistas
-        $this->page_renderer->add_view('parts/header', array());
-        $this->page_renderer->add_view('parts/nav_menu', array());
-        $this->page_renderer->add_view('parts/slider', $data);
-        $this->page_renderer->add_view('parts/boxes', array());
-        $this->page_renderer->add_view('parts/blog_cm', array());
+        $this->page_renderer->add_view('parts/base/header', array());
+        $this->page_renderer->add_view('parts/base/nav_menu', array());
+        $this->page_renderer->add_view('parts/home/slider', $data);
+        $this->page_renderer->add_view('parts/home/boxes', array());
+        $this->page_renderer->add_view('parts/home/blog_cm', array());
+        $this->page_renderer->add_view('parts/base/footer', array());
         $this->page_renderer->set_title('Home rebuild - Flota Biobio');
 
         //Render
