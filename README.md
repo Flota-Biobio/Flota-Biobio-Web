@@ -13,6 +13,13 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.3.6: Detalle de producto
+* Fecha: 04/08/2015
+* Cambios:
+  - Se creó la vista de detalle de producto
+  - Optimización de clases de estilos
+  - Inicio refactor de ubicaciones de archivo (toma mucho tiempo)
+
 ### Versión 0.3.5: Catálogo
 * Fecha: 04/08/2015
 * Cambios:

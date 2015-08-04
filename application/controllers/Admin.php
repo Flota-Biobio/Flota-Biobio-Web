@@ -169,10 +169,17 @@ class Admin extends CI_Controller
         $this->page_renderer->add_basics();
         $this->page_renderer->add_css('templates/admin');
         $this->page_renderer->add_css('views/admin_header');
+        $this->page_renderer->add_css('views/footer');
 
         // Views
         $this->page_renderer->add_view('parts/admin/admin_header', array(), 'admin_header');
-        $this->page_renderer->add_view('parts/admin/admin_menu', array('menu' => $this->menu_generator->render()), 'admin_menu');
+        $this->page_renderer->add_view(
+            'parts/admin/admin_menu',
+            array(
+                'menu' => $this->menu_generator->render(),
+                'footer' => $this->load->view('parts/footer', array(), true)
+            ), 'admin_menu'
+        );
         $this->page_renderer->add_view('parts/admin/admin_body', array('content' => 'Bleh'));
 
         // Render

@@ -22,19 +22,9 @@
  * Hoja de estilos base, la que será cargada en cada vista del sitio.
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.3.5
+ * Version: 0.3.6
  * Since:   0.1.1
  */
-
-@font-face {
-    font-family: 'open-sans';
-    src: url('../fonts/open_sans/OpenSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Roboto-Thin';
-    src: url('../fonts/Roboto/Roboto-Thin.ttf');
-}
 
 @font-face {
     font-family: 'Helvetica Neue Condensed';
@@ -65,10 +55,6 @@ html, body {
     background-color: #ddd;
 }
 
-/*html, body {
-    font-family: "HelveticaNeue-Condensed-5Light", sans-serif;
-    font-weight: lighter;
-}*/
 
 .condensed-font {
     font-family: "Helvetica Neue Condensed", sans-serif;
@@ -93,6 +79,10 @@ html, body {
 
 .container {
     background-color: #eee;
+}
+
+.space-30 {
+    height: 30px;
 }
 
 
