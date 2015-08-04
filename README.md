@@ -13,6 +13,22 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.3.5: Catálogo
+* Fecha: 04/08/2015
+* Cambios:
+  - VERSIÓN 0.3.1.3 RENOMBRADA A '0.3.3'
+  - Se crea el template de catálogo
+  - Se crean vistas menu (catálogo), feed (catálogo), footer (base)
+  - Se agrega función 'assets_url' al Assets_manager
+  - Muchas correcciones mayores y menores
+* Hotfix 1: Se actualiza el archivo README.md
+  
+### Versión 0.3.3: Administración (Antigua 0.3.1.2)
+* Fecha: 01/08/2015
+* Cambios:
+  - Correcciones al Menu_generator (Será modificado)
+  - Vista de administración creada con página de prueba
+
 ### Versión 0.3.0: Rebuild funcional
 * Fecha: 24/07/2015
 * Cambios:
@@ -22,6 +38,17 @@ Apache License, Version 2.0
   - Cambios variados a todo nivel
 * Hotfix 1: Uso de archivo MarkDown (MD) para registro de cambios
 * Hotfix 2: Solucionado conflicto de codificación de archivos
+
+### Versión 0.3.0: Rebuild funcional (OBSOLETO)
+* Fecha: 24/07/2015
+* Cambios:
+  - Cambios en Page Renderer
+  - Cambios de tipografía
+  - Vista principal módulo de administración
+  - Cambios variados a todo nivel
+* Hotfix 1: Uso de archivo MarkDown (MD) para registro de cambios
+* Hotfix 2: Solucionado conflicto de codificación de archivos
+* Hotfix 3: Vista de Administración
 
 ### Versión 0.2.3: Módulo usuario
 * Fecha: 23/07/2015
