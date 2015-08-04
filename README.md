@@ -13,6 +13,13 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.3.7: Refactor de ubicaciones de archivo
+* Fecha: 04/08/2015
+* Cambios:
+  - Se actualizaron las rutas internas de los recursos compartidos
+  - Se actualizaron las vistas para soportar la nueva estructura
+* Hotfix 1: Se incorporan cambios en el README (se me había olvidado)
+
 ### Versión 0.3.6: Detalle de producto
 * Fecha: 04/08/2015
 * Cambios:
