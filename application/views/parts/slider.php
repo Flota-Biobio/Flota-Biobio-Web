@@ -1,17 +1,17 @@
 <?php
 /**
- * Proyecto Flota Biobío
- * Aplicación WEB
+ * Proyecto Flota Biobï¿½o
+ * Aplicaciï¿½n WEB
  *
- * Prototipo por Aníbal Llanos Prado
- * Basado en el trabajo del equipo de Flota Biobío
+ * Prototipo por Anï¿½bal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobï¿½o
  * Entregado y presentado el %FECHA%
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
- * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
- * se declaran por el mismo como propiedad de la organización presente del
- * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
- * anteriormente declarada condición.
+ * y diseï¿½ados (en su forma) por Anï¿½bal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organizaciï¿½n presente del
+ * equipo de Flota Biobï¿½o, propiedad que serï¿½ transferida a quienes cumplan la
+ * anteriormente declarada condiciï¿½n.
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0

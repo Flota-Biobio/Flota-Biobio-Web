@@ -5,6 +5,7 @@
  *
  * Prototipo por Aníbal Llanos Prado
  * Basado en el trabajo del equipo de Flota Biobío
+ * Entregado y presentado el %FECHA%
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
  * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
@@ -19,28 +20,30 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: header
- * Vista del header global a ser utilizado en la mayoría de las vistas
+ * Vista: blog-cm
+ * {VIEW-DESCRIPTION}
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.5
- * @since   0.1.4
+ * @version 0.3.4
+ * @since   0.3.4
  */
 ?>
-<div class="header main-background">
+<div class="blog-cm">
     <div class="container">
-        <div class="header-content row main-background">
-            <div class="logo-box col-sm-4">
-                <?=$this->assets_manager->img('marca01.png', '', 'Flota Biobio')?>
+        <div class="blog-cm-separator row soft-background"></div>
+        <div class="blog-cm-content row soft-background">
+            <div class="blog-box col-sm-9">
+                <h1>Noticias y eventos</h1>
+                <div class="blog-row row">
+                    <div class="blog-row-image col-sm-2"></div>
+                    <h3 class="col-sm-offset-2 col-sm-10">Noticia</h3>
+                    <p class="col-sm-offset-2 col-sm-10">Cuerpo de la nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa </p>
+                </div>
             </div>
-            <div class="session-box col-sm-5 col-sm-offset-3 text-right">
-                <h4>Aníbal Llanos Prado</h4>
-                <ul class="list-inline">
-                    <li>Perfiil</li>
-                    <li>Configuración</li>
-                    <li>Salir</li>
-                </ul>
+            <div class="cm-box col-sm-3">
+                CM
             </div>
         </div>
     </div>
 </div>
+

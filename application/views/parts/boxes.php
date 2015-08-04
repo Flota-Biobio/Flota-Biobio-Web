@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="boxes">
     <div class="container">
         <div class="boxes-content row soft-background">
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <div class="box box-1">
                     <div class="box-img">
                         <?=$this->assets_manager->img('auction-inverse-icon.png', '', 'Flota Biobío: Subasta')?>
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <div class="box box-2">
                     <div class="box-img">
                         <?=$this->assets_manager->img('ticket-inverse-icon.png', '', 'Flota Biobío: Rifa')?>
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <div class="box box-3">
                     <div class="box-img">
                         <?=$this->assets_manager->img('shop-inverse-icon.png', '', 'Flota Biobío: Tienda')?>

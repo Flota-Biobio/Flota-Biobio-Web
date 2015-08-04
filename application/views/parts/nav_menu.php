@@ -19,26 +19,25 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: header
- * Vista del header global a ser utilizado en la mayoría de las vistas
+ * Vista: nav_menu
+ * Vista del menu de navegación. Se utiliza en la mayoría de las vistas.
  *
  * @author  George Shazkho <shazkho@gmail.com>
  * @version 0.3.5
- * @since   0.1.4
+ * @since   0.3.4
  */
 ?>
-<div class="header main-background">
+<div class="nav-menu">
     <div class="container">
-        <div class="header-content row main-background">
-            <div class="logo-box col-sm-4">
-                <?=$this->assets_manager->img('marca01.png', '', 'Flota Biobio')?>
-            </div>
-            <div class="session-box col-sm-5 col-sm-offset-3 text-right">
-                <h4>Aníbal Llanos Prado</h4>
-                <ul class="list-inline">
-                    <li>Perfiil</li>
-                    <li>Configuración</li>
-                    <li>Salir</li>
+        <div class="nav-menu-content row secondary-background-dark soft-color light-font">
+            <div class="logo-box col-sm-12">
+                <ul class="list-unstyled menu-lista list-inline">
+                    <li class="menu-element">Home</li>
+                    <li class="menu-element">Nosotros</li>
+                    <li class="menu-element">Organización</li>
+                    <li class="menu-element">Subasta</li>
+                    <li class="menu-element">Catálogo</li>
+                    <li class="menu-element">Contacto</li>
                 </ul>
             </div>
         </div>

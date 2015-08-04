@@ -72,12 +72,16 @@ class Home extends CI_Controller
         $this->page_renderer->add_css('js-image-slider');
         $this->page_renderer->add_css('templates/home');
         $this->page_renderer->add_css('views/header');
+        $this->page_renderer->add_css('views/nav_menu');
         $this->page_renderer->add_css('views/boxes');
+        $this->page_renderer->add_css('views/blog_cm');
 
         // Vistas
         $this->page_renderer->add_view('parts/header', array());
+        $this->page_renderer->add_view('parts/nav_menu', array());
         $this->page_renderer->add_view('parts/slider', $data);
         $this->page_renderer->add_view('parts/boxes', array());
+        $this->page_renderer->add_view('parts/blog_cm', array());
         $this->page_renderer->set_title('Home rebuild - Flota Biobio');
 
         //Render

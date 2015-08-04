@@ -1,3 +1,31 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * base
+ *
+ * Hoja de estilos base, la que será cargada en cada vista del sitio.
+ *
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.3.5
+ * Since:   0.1.1
+ */
+
 @font-face {
     font-family: 'open-sans';
     src: url('../fonts/open_sans/OpenSans-Regular.ttf');
@@ -16,6 +44,11 @@
 @font-face {
     font-family: 'Helvetica Neue Light';
     src: url('../fonts/Helvetica_Neue/HelveticaNeue-Light.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Thin';
+    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Thin.otf');
 }
 
 @font-face {
@@ -53,6 +86,10 @@ html, body {
     font-family: "Helvetica Neue Medium", sans-serif;
 }
 
+.thin-font {
+    font-family: "Helvetica Neue Thin", sans-serif;
+}
+
 
 .container {
     background-color: #eee;
@@ -79,6 +116,10 @@ html, body {
 
 .secondary-background-light {
     background-color: #adadad;
+}
+
+.secondary-background-lighter {
+    color: #e5e5e5;
 }
 
 .secondary-background-dark {
@@ -114,6 +155,10 @@ html, body {
 
 .secondary-color-light {
     color: #adadad;
+}
+
+.secondary-color-lighter {
+    color: #e5e5e5;
 }
 
 .secondary-color-dark {
