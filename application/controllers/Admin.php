@@ -1,17 +1,16 @@
 <?php
 /**
- * Proyecto Flota Biob�o
- * Aplicaci�n WEB
+ * Proyecto Flota Biobío
+ * Aplicación WEB
  *
- * Prototipo por An�bal Llanos Prado
- * Basado en el trabajo del equipo de Flota Biob�o
- * Entregado y presentado el %FECHA%
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
- * y dise�ados (en su forma) por An�bal Llanos Prado, sus derechos de propiedad
- * se declaran por el mismo como propiedad de la organizaci�n presente del
- * equipo de Flota Biob�o, propiedad que ser� transferida a quienes cumplan la
- * anteriormente declarada condici�n.
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
@@ -21,9 +20,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Class Admin
- * {CLASS-TYPE}
+ * Controlador de CodeIgniter
  * 
- * {CLASS-DESCRIPTION}
+ * Maneja las peticiones al módulo de administración
  * 
  * @author  George Shazkho <shazkho@gmail.com>
  * @version 0.2.1
@@ -32,12 +31,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller
 {
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         parent::__construct();
         $this->load->library('menu_generator');
     }
 
+
+    /**
+     * Función index
+     * Recibe llamadas al controlador sin parámetros. Muestra el feed de
+     * administración.
+     */
     public function index()
     {
         //Menu
@@ -170,8 +178,5 @@ class Admin extends CI_Controller
         // Render
         $this->page_renderer->set_title('Admin - Flota Biobio');
         $this->page_renderer->render('templates/admin/admin');
-
-
-
     }
 }

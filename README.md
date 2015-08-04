@@ -1,6 +1,6 @@
 # Proyecto Flota Biobío - Aplicación WEB
 
-### Prototipo por Aníbal Llanos Prado, basado en el trabajo del equipo de Flota Biobío, entregado y presentado el %FECHA%
+### Prototipo por Aníbal Llanos Prado, basado en el trabajo del equipo de Flota Biobío
 
 Los archivos incluidos en el presente proyecto, si bien fueron implementados
 y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
@@ -91,12 +91,12 @@ Apache License, Version 2.0
 * Cambios:
   - Desarrollada interfaz para la prueba de partes de modo aislado
 
-### Versión 0.1.1: Librerias custom listas
+### Versión 0.1.1: Librerías custom listas
 * Fecha: 19/07/2015
 * Cambios:
   - <Assets_manager> y <Page_renderer> depuradas y operando correctamente
 
-### Versión 0.0.2: Depuración y documentación de librerias custom
+### Versión 0.0.2: Depuración y documentación de librerías custom
 * Fecha: 19/07/2015
 * Cambios:
   - Incluida documentación <PhpDoc> para archivos custom

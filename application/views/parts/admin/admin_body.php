@@ -5,7 +5,6 @@
  *
  * Prototipo por Aníbal Llanos Prado
  * Basado en el trabajo del equipo de Flota Biobío
- * Entregado y presentado el %FECHA%
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
  * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
@@ -15,13 +14,14 @@
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
+ * @deprecated  Será eliminado en versión 0.4
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Vista: admin_body
- * {VIEW-DESCRIPTION}
+ * Vista del cuerpo de la interfaz de administración (sección)
  *
  * @author  George Shazkho <shazkho@gmail.com>
  * @version 0.2.1

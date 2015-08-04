@@ -5,7 +5,6 @@
  *
  * Prototipo por Aníbal Llanos Prado
  * Basado en el trabajo del equipo de Flota Biobío
- * Entregado y presentado el %FECHA%
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
  * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
@@ -21,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Vista: boxes
- * {VIEW-DESCRIPTION}
+ * Vista que genera las cajas del inicio
  *
  * @author  George Shazkho <shazkho@gmail.com>
  * @version 0.1.6

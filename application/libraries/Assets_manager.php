@@ -1,17 +1,16 @@
 <?php
 /**
- * Proyecto Flota Biob�o
- * Aplicaci�n WEB
+ * Proyecto Flota Biobío
+ * Aplicación WEB
  *
- * Prototipo por An�bal Llanos Prado
- * Basado en el trabajo del equipo de Flota Biob�o
- * Entregado y presentado el 09 de Julio de 2015
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
- * y dise�ados (en su forma) por An�bal Llanos Prado, sus derechos de propiedad
- * se declaran por el mismo como propiedad de la organizaci�n presente del
- * equipo de Flota Biob�o, propiedad que ser� transferida a quienes cumplan la
- * anteriormente declarada condici�n.
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
@@ -21,10 +20,10 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
  * Clase Assets_manager
- * Librer�a para CodeIgniter
+ * Librería para CodeIgniter
  *
  * Se encarga de gestionar los recursos externos del sitio, con el fin de poder
- * obtener informaci�n relevante de ellos desde cualquier punto de la aplicaci�n.
+ * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
  * @version     0.3.5
@@ -78,9 +77,9 @@ class Assets_manager
      * Genera el tag LINK para el recurso solicitado.
      *
      * Utiliza el nombre del archivo (proporcionado) y el string de formato para
-     * generar un string con el tag HTML adecuado para se utilizado en la secci�n
+     * generar un string con el tag HTML adecuado para se utilizado en la sección
      * HEAD de la vista final.
-     * NO SE DEBE ESPECIFICAR LA EXTENSI�N DEL ARCHIVO, NI EL PUNTO.
+     * NO SE DEBE ESPECIFICAR LA EXTENSIÓN DEL ARCHIVO, NI EL PUNTO.
      *
      * @param string $name Nombre del archivo CSS a incorporar.
      *
@@ -99,9 +98,9 @@ class Assets_manager
      * Genera el tag SCRIPT para el recurso solicitado.
      *
      * Utiliza el nombre del archivo (proporcionado) y el string de formato para
-     * generar un string con el tag HTML adecuado para se utilizado en la secci�n
+     * generar un string con el tag HTML adecuado para se utilizado en la sección
      * HEAD de la vista final.
-     * NO SE DEBE ESPECIFICAR LA EXTENSI�N DEL ARCHIVO, NI EL PUNTO.
+     * NO SE DEBE ESPECIFICAR LA EXTENSIÓN DEL ARCHIVO, NI EL PUNTO.
      *
      * @param string $name Nombre del archivo JavaScript a incorporar.
      *
@@ -120,13 +119,13 @@ class Assets_manager
      * Genera el tag IMG para el recurso solicitado.
      *
      * Utiliza el nombre del archivo (proporcionado) y el string de formato para
-     * generar un string con el tag HTML adecuado para se utilizado en la secci�n
+     * generar un string con el tag HTML adecuado para se utilizado en la sección
      * HEAD de la vista final.
      *
      *
-     * @param   string $name Nombre del archivo (incluye extensi�n).
+     * @param   string $name Nombre del archivo (incluye extensión).
      * @param   string $sub_path Sub-ruta (entre "assets" y el archivo).
-     * @param   string $title T�tulo a definir.
+     * @param   string $title Título a definir.
      * @param   string $alt Texto alternativo a definir.
      *
      * @return  string El tag HTML
@@ -143,6 +142,23 @@ class Assets_manager
         return sprintf($this->format->img, $path, $title, $alt);
     }
 
+
+    /* --- OTRAS FUNCIONES -------------------------------------------------- */
+
+    /**
+     * Genera la URL para algún recurso de la carpeta assets.
+     *
+     * Utiliza el nombre de archivo indicado (debe incluir la ruta relativa a
+     * partir de la carpeta assets) para generar una URL válida para utilizar
+     * en CodeIgniter.
+     *
+     * @param   string $path La ruta relativa y el nombre de archivo
+     *
+     * @return  string La URL completa del recurso.
+     *
+     * @access  public
+     * @since   0.3.5
+     */
     public function asset_url($path)
     {
         return $this->assets_path.$path;

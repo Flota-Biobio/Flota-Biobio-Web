@@ -5,7 +5,6 @@
  *
  * Prototipo por Aníbal Llanos Prado
  * Basado en el trabajo del equipo de Flota Biobío
- * Entregado y presentado el %FECHA%
  *
  * Los archivos incluidos en el presente proyecto, si bien fueron implementados
  * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
@@ -33,6 +32,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller
 {
 
+    /**
+     * Función index
+     * Recibe las llamadas al controlados sin parámetros. Muestra el home.
+     */
     public function index(){
 
         $data['slider_info'] = array(
