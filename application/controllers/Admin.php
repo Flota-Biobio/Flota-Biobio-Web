@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Maneja las peticiones al módulo de administración
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.7
+ * @version 0.4
  * @since   0.2.0
  */
 class Admin extends CI_Controller
@@ -165,25 +165,13 @@ class Admin extends CI_Controller
             )
         );
 
-        // Resources
-        $this->page_renderer->add_basics();
-        $this->page_renderer->add_css('templates/admin');
-        $this->page_renderer->add_css('parts/admin/admin_header');
-        $this->page_renderer->add_css('parts/base/footer');
+        $this->render->add_template('admin');
+        $this->render->add_base('admin');
+        $this->render->set_title('Admin - Flota Biobio');
 
-        // Views
-        $this->page_renderer->add_view('parts/admin/admin_header', array(), 'admin_header');
-        $this->page_renderer->add_view(
-            'parts/admin/admin_menu',
-            array(
-                'menu' => $this->menu_generator->render(),
-                'footer' => $this->load->view('parts/base/footer', array(), true)
-            ), 'admin_menu'
-        );
-        $this->page_renderer->add_view('parts/admin/admin_body', array('content' => 'Bleh'));
+        $this->render->set_value('admin_menu', $this->menu_generator->render());
+        $this->render->add_view('parts/admin/admin_body', array());
 
-        // Render
-        $this->page_renderer->set_title('Admin - Flota Biobio');
-        $this->page_renderer->render('templates/admin');
+        $this->render->render('admin');
     }
 }

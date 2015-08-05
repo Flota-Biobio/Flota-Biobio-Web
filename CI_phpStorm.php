@@ -94,6 +94,7 @@
  * @property Assets_manager $assets_manager       Assets manager
  * @property Page_renderer $page_renderer         Page Renderer
  * @property Menu_generator $menu_generator       Menu generator
+ * @property Render $render                       New page renderer
  */
 class CI_Controller
 {
@@ -150,6 +151,7 @@ class CI_Controller
  * @property Assets_manager $assets_manager       Assets manager
  * @property Page_renderer $page_renderer         Page Renderer
  * @property Menu_generator $menu_generator       Menu generator
+ * @property Render $render                       New page renderer
  */
 class CI_Model
 {

@@ -23,8 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Template para las páginas de administración
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.2.0
+ * @version 0.4
  * @since   0.2.0
+ *
+ * @var string $title Título de la página
+ * @var string $resources Recursos a incorporar
+ * @var string $admin_menu Menu de administración
+ * @var string $content El contenido de la página
  */
 ?>
 <html>
@@ -34,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?=$resources?>
 </head>
 <body>
-<?=$admin_header?>
+<?=$this->load->view('parts/admin/admin_header', array(), true)?>
 <div class="admin-body">
     <div class="container">
         <div class="admin-content row">
@@ -47,6 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 </div>
-<?=$footer?>
+<?=$this->load->view('parts/base/footer', array(), true)?>
 </body>
 </html>

@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Gestiona el acceso y uso al módulo de usuarios
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.7
+ * @version 0.4
  * @since   0.2.3
  */
 class User extends CI_Controller
@@ -37,20 +37,15 @@ class User extends CI_Controller
      *
      * @param string $id Identificador del usuario a consultar
      */
-    public function profile($id) {
+    public function profile($id)
+    {
+        $this->render->add_base();
+        $this->render->add_css('parts/user/user_profile');
+        $this->render->set_title('Perfil de usuario - Flota Biobio');
 
-        // Recursos
-        $this->page_renderer->add_basics();
-        $this->page_renderer->add_css('parts/base/header');
-        $this->page_renderer->add_css('parts/user/user_profile');
+        $this->render->add_view('parts/user/user_profile', array());
 
-        // Vistas
-        $this->page_renderer->add_view('parts/base/header', array());
-        $this->page_renderer->add_view('parts/user/user_profile', array());
-        $this->page_renderer->set_title('Perfil de usuario - Flota Biobio');
-
-        // Render
-        $this->page_renderer->render('templates/home');
+        $this->render->render('base');
 
     }
 

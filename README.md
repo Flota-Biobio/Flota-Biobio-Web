@@ -13,6 +13,12 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.4: Refactor mayor
+* Fecha: 04/08/2015
+* Cambios:
+  - Reconstrucción completa al Page_renderer
+  - Actualización al uso del renderizador
+
 ### Versión 0.3.7: Refactor de ubicaciones de archivo
 * Fecha: 04/08/2015
 * Cambios:

@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.7
+ * @version 0.4
  * @since   0.1.3
  */
 class Home extends CI_Controller
@@ -70,27 +70,23 @@ class Home extends CI_Controller
         );
 
         // Recursos
-        $this->page_renderer->add_basics();
-        $this->page_renderer->add_js('js-image-slider');
-        $this->page_renderer->add_css('js-image-slider');
-        $this->page_renderer->add_css('templates/home');
-        $this->page_renderer->add_css('parts/base/header');
-        $this->page_renderer->add_css('parts/base/nav_menu');
-        $this->page_renderer->add_css('parts/home/boxes');
-        $this->page_renderer->add_css('parts/home/blog_cm');
-        $this->page_renderer->add_css('parts/base/footer');
+        $this->render->add_base();
+        $this->render->add_js('js-image-slider');
+        $this->render->add_css('js-image-slider');
+        $this->render->add_template('home'); //TODO
+        $this->render->add_css('parts/home/boxes');
+        $this->render->add_css('parts/home/blog_cm');
+        $this->render->set_title('Home rebuild - Flota Biobio');
 
         // Vistas
-        $this->page_renderer->add_view('parts/base/header', array());
-        $this->page_renderer->add_view('parts/base/nav_menu', array());
-        $this->page_renderer->add_view('parts/home/slider', $data);
-        $this->page_renderer->add_view('parts/home/boxes', array());
-        $this->page_renderer->add_view('parts/home/blog_cm', array());
-        $this->page_renderer->add_view('parts/base/footer', array());
-        $this->page_renderer->set_title('Home rebuild - Flota Biobio');
+        $this->render->add_view('parts/home/slider', $data);
+        $this->render->add_view('parts/home/boxes', array());
+        $this->render->add_view('parts/home/blog_cm', array());
+
+
 
         //Render
-        $this->page_renderer->render('templates/home');
+        $this->render->render('base');
 
     }
 

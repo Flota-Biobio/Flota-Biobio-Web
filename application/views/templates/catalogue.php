@@ -19,16 +19,18 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: base
- * Template básico
+ * Vista: catalogue
+ * Vista que genera el catálogo completo
  *
  * @author  George Shazkho <shazkho@gmail.com>
  * @version 0.4
- * @since   0.2.3
+ * @since   0.3.5
  *
  * @var string $title Título de la página
- * @var string $resources Recursos a incorporar
- * @var string $content El contenido de la página
+ * @var string $resources Recursos a incorporar en el head
+ * @var string $cat_title Título de la ventana del catálogo
+ * @var string $menu Menu del catálogo
+ * @var string $content Contenido de la vista principal del catálogo
  */
 ?>
 <html>
@@ -40,7 +42,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <?=$this->load->view('parts/base/header', array(), true)?>
 <?=$this->load->view('parts/base/nav_menu', array(), true)?>
-<?=$content?>
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            $("#price").slider({});
+        }
+    );
+</script>
+<div class="catalogue">
+    <div class="container">
+        <div class="catalogue-content row">
+            <div class="catalogue-title col-sm-12">
+                <h1 class="secondary-color light-font">Catálogo :: <?=$cat_title?></h1>
+            </div>
+            <?=$menu?>
+            <?=$content?>
+        </div>
+    </div>
+</div>
 <?=$this->load->view('parts/base/footer', array(), true)?>
 </body>
 </html>
