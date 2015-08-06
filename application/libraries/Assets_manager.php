@@ -26,7 +26,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.3.5
+ * @version     0.4.1
  * @since       0.1.0
  */
 class Assets_manager
@@ -67,7 +67,7 @@ class Assets_manager
         $this->format = new stdClass();
         $this->format->css = '<link rel="stylesheet" type="text/css" href="%s">';
         $this->format->js = '<script type="text/javascript" src="%s"></script>';
-        $this->format->img = '<img src="%s" title="%s" alt="%s">';
+        $this->format->img = '<img class="%s" src="%s" title="%s" alt="%s">';
     }
 
 
@@ -127,19 +127,20 @@ class Assets_manager
      * @param   string $sub_path Sub-ruta (entre "assets" y el archivo).
      * @param   string $title Título a definir.
      * @param   string $alt Texto alternativo a definir.
+     * @param   string $class Las clases a definir en el tag
      *
      * @return  string El tag HTML
      *
      * @access  public
      * @since   0.1.0
      */
-    public function img($name, $sub_path='', $title='', $alt='')
+    public function img($name, $sub_path='', $title='', $alt='', $class='')
     {
         if ($alt == '' && $title != '') {
             $alt = $title;
         }
         $path = $this->assets_path.'images/'.$sub_path.$name;
-        return sprintf($this->format->img, $path, $title, $alt);
+        return sprintf($this->format->img, $class, $path, $title, $alt);
     }
 
 

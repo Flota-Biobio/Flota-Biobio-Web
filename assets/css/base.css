@@ -53,6 +53,7 @@
 
 html, body {
     background-color: #ddd;
+    color: #2e2e2e;
 }
 
 
@@ -167,4 +168,22 @@ html, body {
     font-family: "Helvetica Neue Medium", sans-serif;
     font-weight: bold;
     color: #2e2e2e;
+}
+
+.color-facebook {
+    color: #3b5998;
+}
+
+.color-twitter {
+    color: #9AE4E8;
+}
+
+
+
+a,
+a:link,
+a:visited,
+a:active {
+    font-family: "Helvetica Neue Condensed", sans-serif;
+    color: #5b5b5b;
 }

@@ -1,0 +1,179 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+ 
+/*
+ * HOJA DE ESTILOS
+ * profile
+ *
+ * Estilos para el perfil de usuario
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.4.1
+ * Since:   0.4.1
+ */
+
+.profile .main-col {
+    margin-left: 0;
+    margin-top: 100px;
+}
+
+.profile .shadow-box {
+    width: 100%;
+    height: 135px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: solid 3px #fefefe;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.97);
+    -moz-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    background-color: white;
+}
+
+.profile .row-title h3 {
+    margin: 0 0 15px 0;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+/* CUADRO DE USUARIO */
+
+.profile .user-badge {
+    width: 100%;
+    margin-top:100px;
+    padding-bottom: 15px;
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.97);
+       -moz-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+            box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    background-color: white;
+}
+
+.profile .user-badge .badge-img {
+    display: block;
+}
+
+.profile .user-badge .badge-img img {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-top: -80px;
+    margin-bottom: 15px;
+    left: calc(50% - 80px);
+    border: solid 4px white;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.97);
+    -moz-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+}
+
+.profile .user-badge .badge-data {
+    display: block;
+}
+
+.profile .user-badge .badge-data span {
+    display: block;
+    text-align: center;
+}
+
+.profile .user-badge .badge-data span.user-name {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.profile .user-badge .badge-data span.user-sub-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile .user-badge .badge-data .link-list {
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.profile .user-badge .badge-data .link-list li {
+    line-height: 30px;
+    display: flex;
+}
+
+/* CUADRO DE DETALLES */
+
+.profile .user-details {
+    width: 100%;
+    margin-top:15px;
+    padding: 15px;
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.97);
+    -moz-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    background-color: white;
+}
+
+.profile .user-details dt {
+    font-size: 13px;
+    font-family: "Helvetica Neue Medium", sans-serif;
+    color: #015072;
+}
+
+.profile .user-details dd {
+    margin-bottom: 5px;
+}
+
+/* FEED */
+
+.profile .shadow-post {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: solid 3px #fefefe;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.97);
+    -moz-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    background-color: white;
+}
+
+.profile .feed-post-body {
+    display: inline-block;
+}
+
+.profile .feed-post img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    display: inline-block;
+    float: left;
+    position: absolute;
+}
+
+.profile .feed-post span {
+    font-family: "Helvetica Neue Light", sans-serif;
+    display: block;
+}
+
+.profile span.feed-post-date {
+    font-size: 13px;
+    color: #adadad;
+}
+
+.profile span.feed-post-message {
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "Helvetica Neue Light", sans-serif;
+}
+
+.profile .feed-post-body {
+    margin-left: 60px;
+}
+

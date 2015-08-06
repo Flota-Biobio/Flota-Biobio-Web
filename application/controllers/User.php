@@ -40,10 +40,11 @@ class User extends CI_Controller
     public function profile($id)
     {
         $this->render->add_base();
-        $this->render->add_css('parts/user/user_profile');
+        $this->render->add_css('parts/user/profile');
+        $this->render->add_css('font-awesome.min');
         $this->render->set_title('Perfil de usuario - Flota Biobio');
 
-        $this->render->add_view('parts/user/user_profile', array());
+        $this->render->add_view('parts/user/profile', array());
 
         $this->render->render('base');
 

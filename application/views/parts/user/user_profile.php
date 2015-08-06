@@ -31,15 +31,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="user-profile">
     <div class="container">
         <div class="user-profile-title row soft-background">
-            <div class="col-lg-11">
-                <h2>Usuario Apellido Castro</h2>
+
+            <div class="user-box row col-sm-4">
+                <div class="user-box-box col-sm-12">
+
+                </div>
+                <div class="user-box-img">
+
+                </div>
             </div>
-            <div class="col-lg-1">
-                {*}
-            </div>
-        </div>
-        <div class="user-profile-content row soft-background">
-            
+
         </div>
     </div>
 </div>
