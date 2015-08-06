@@ -26,7 +26,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * vista y, finalmente, generar el código HTML a mostrar.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.4
+ * @version     0.4.2
  * @since       0.4
  *
  */
@@ -99,6 +99,7 @@ class Render
         $this->packs->base->css = array(
             'parts/base/header',
             'parts/base/nav_menu',
+            'parts/base/breadcrumb',
             'parts/base/footer',
             'base'
         );

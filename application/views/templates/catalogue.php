@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera el catálogo completo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4
+ * @version 0.4.2
  * @since   0.3.5
  *
  * @var string $title Título de la página
@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @var string $cat_title Título de la ventana del catálogo
  * @var string $menu Menu del catálogo
  * @var string $content Contenido de la vista principal del catálogo
+ * @var array $breadcrumb_position Indica la posición de la navegación
  */
 ?>
 <html>
@@ -42,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <?=$this->load->view('parts/base/header', array(), true)?>
 <?=$this->load->view('parts/base/nav_menu', array(), true)?>
+<?=$this->load->view('parts/base/breadcrumb', $breadcrumb_position, true)?>
 <script type="text/javascript">
     $(document).ready(
         function () {

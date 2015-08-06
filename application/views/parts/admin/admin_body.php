@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del cuerpo de la interfaz de administración (sección)
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.2.1
+ * @version 0.4.2
  * @since   0.2.1
  */
 ?>
@@ -76,3 +76,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <button type="button" class="btn btn-primary btn- normal-font">Agregar nueva página</button>
     <hr>
 </div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>
+<div class="space-30"></div>

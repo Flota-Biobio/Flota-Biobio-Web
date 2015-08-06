@@ -22,7 +22,7 @@
  * Hoja de estilos para el template de administración
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.3.3
+ * Version: 0.4.2
  * Since:   0.3.3
  */
 
@@ -48,10 +48,6 @@
 .admin-menu {
     padding-top: 30px;
     color: white;
-}
-
-.admin-content {
-
 }
 
 .admin-menu .menu-label,

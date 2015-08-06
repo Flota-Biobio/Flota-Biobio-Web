@@ -23,8 +23,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del perfil de un usuario
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.1
+ * @version 0.4.2
  * @since   0.4.1
+ *
+ * @var string $name
+ * @var string $type
+ * @var string $img
+ * @var array $links
+ * @var array $feed
+ * @var string $nickname
+ * @var string $profession
+ * @var string $lives_in
+ * @var int $level
+ * @var string $auto_desc
+ * @var string $user_variant
  */
 ?>
 <div class="profile">
@@ -35,25 +47,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="user-badge">
                     <div class="badge-img">
-                        <?=$this->assets_manager->img('perfil.png', 'user/', 'Jennifer Lawrance', '', 'img-circle')?>
+                        <?=$this->assets_manager->img($img, 'user/', ucwords($name), '', 'img-circle')?>
                     </div>
                     <div class="badge-data">
-                        <span class="user-name condensed-font">Jennifer Lawrance</span>
-                        <span class="user-sub-name thin-font secondary-color">Artesana</span>
+                        <span class="user-name condensed-font"><?=ucwords($name)?></span>
+                        <span class="user-sub-name thin-font secondary-color"><?=ucwords($type)?></span>
                         <hr>
                         <ul class="link-list list-unstyled normal-font">
+                            <?php foreach ($links as $link): ?>
                             <li>
-                                <i class="fa fa-facebook-official fa-2x color-facebook"></i>&nbsp;&nbsp;&nbsp;
-                                <a href="#">facebook.com/jenny_lapulenta</a>
+                                <i class="fa fa-<?=$link['category']?> fa-2x <?=$link['color']?>"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="<?=$link['link']?>"><?=$link['label']?></a>
                             </li>
-                            <li>
-                                <i class="fa fa-twitter fa-2x color-twitter"></i>&nbsp;&nbsp;&nbsp;
-                                <a href="#">@jenny_lapulenta</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-globe fa-2x"></i>&nbsp;&nbsp;&nbsp;
-                                <a href="#">Página personal</a>
-                            </li>
+                            <?php endforeach ?>
                         </ul>
                     </div>
                 </div>
@@ -61,18 +67,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="user-details light-font">
                     <dl>
                         <dt>NOMBRE REAL</dt>
-                        <dd>Jennifer Lawrance</dd>
+                        <dd><?=ucwords($name)?></dd>
+                        <?php if ($level == 10): ?>
                         <dt>NOMBRE ARTÍSTICO</dt>
-                        <dd>La loquita del arco</dd>
+                        <dd><?=$nickname?></dd>
                         <dt>PROFESIÓN</dt>
-                        <dd>Soldadora de alambres</dd>
+                        <dd><?=$profession?></dd>
+                        <?php endif ?>
                         <dt>RESIDENCIA</dt>
-                        <dd>Penco chico</dd>
+                        <dd><?=$lives_in?></dd>
                         <dt>AUTO-DESCRIPCIÓN</dt>
-                        <dd>Soy latina de corazón, me agrada jugar con el aire para
-                        provocar terror en el aire, el tiempo me ha encontrado
-                        jugando con su hijo, por lo que ahora mato gente en un
-                        programa de la tele.</dd>
+                        <dd><?=$auto_desc?></dd>
                     </dl>
                 </div>
 
@@ -80,6 +85,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="main-col row col-sm-8">
 
+                <?php if ($level == 1): ?>
+                <div class="user-points col-sm-12 shadow-post">
+                    <div class="points-total main-background">14</div>
+                    <div class="points-message">
+                        <span class="points-message-title secondary-color-dark">
+                            Has acumulado muchos puntos
+                        </span>
+                        <span class="points-message-subtitle secondary-color">
+                            Acumula puntos para acceder a beneficios
+                        </span>
+                    </div>
+                    <div class="points-buttons">
+                        <button type="button" class="btn btn-default btn-sm mb-5">¿Para que sirven?</button>
+                        <button type="button" class="btn btn-default btn-sm">Canjear</button>
+                    </div>
+                </div>
+                <div class="space-30 col-sm-12"></div>
+                <?php endif; ?>
+
+                <?php if ($level == 10): ?>
                 <div class="row-title col-sm-12">
                     <h3>Obras populares</h3>
                 </div>
@@ -100,60 +125,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <div class="space-30 col-sm-12"></div>
+                <?php endif; ?>
 
                 <div class="row-title col-sm-12">
+                    <?php if ($user_variant): ?>
+                    <h3>Últimos logros obtenidos</h3>
+                    <?php else: ?>
                     <h3>Actividad reciente</h3>
+                    <?php endif ?>
                 </div>
 
+                <?php foreach ($feed as $post): ?>
                 <div class="feed-post col-sm-12 shadow-post">
-                    <?=$this->assets_manager->img('sold.png', 'user/feed/', '')?>
-                    <div class="feed-post-body">
-                        <span class="feed-post-date">05 de Junio de 2015</span>
-                        <span class="feed-post-message">Se ha concretado una venta
-                        por el artículo <strong>Estampida de roedores</strong>.</span>
+                    <?=$this->assets_manager->img($post['category'].'.png', 'user/feed/', '')?>
+                    <div class="feed-post-body<?=$user_variant?>">
+                        <span class="feed-post-date"><?=$post['date']?></span>
+                        <span class="feed-post-message"><?=$post['message']?></span>
                     </div>
+                    <?php if ($level == 1): ?>
+                    <div class="feed-points main-color">+<?=$post['points']?></div>
+                    <?php endif; ?>
                 </div>
-                <div class="feed-post col-sm-12 shadow-post">
-                    <?=$this->assets_manager->img('new-photos.png', 'user/feed/', '')?>
-                    <div class="feed-post-body">
-                        <span class="feed-post-date">01 de Junio de 2015</span>
-                        <span class="feed-post-message">Se agregaron fotografías para
-                            el artículo <strong>Miguel me cae mal</strong>.</span>
-                    </div>
-                </div>
-                <div class="feed-post col-sm-12 shadow-post">
-                    <?=$this->assets_manager->img('new-product.png', 'user/feed/', '')?>
-                    <div class="feed-post-body">
-                        <span class="feed-post-date">21 de Mayo de 2015</span>
-                        <span class="feed-post-message">Se ha publicado un nuevo
-                            artículo en el catálogo con el nombre
-                            <strong>Estampida de roedores</strong>.</span>
-                    </div>
-                </div>
-                <div class="feed-post col-sm-12 shadow-post">
-                    <?=$this->assets_manager->img('star.png', 'user/feed/', '')?>
-                    <div class="feed-post-body">
-                        <span class="feed-post-date">01 de Mayo de 2015</span>
-                        <span class="feed-post-message">Se ha alcanzado los
-                            <strong>100</strong> favoritos para todos los productos
-                            del artista (en total).</span>
-                    </div>
-                </div>
-                <div class="feed-post col-sm-12 shadow-post">
-                    <?=$this->assets_manager->img('published.png', 'user/feed/', '')?>
-                    <div class="feed-post-body">
-                        <span class="feed-post-date">22 de Abril de 2015</span>
-                        <span class="feed-post-message">Se ha publicado una nueva
-                            entrada en el blog de Flota Biobío.</span>
-                    </div>
-                </div>
-                <div class="feed-post col-sm-12 shadow-post">
-                    <?=$this->assets_manager->img('created.png', 'user/feed/', '')?>
-                    <div class="feed-post-body">
-                        <span class="feed-post-date">31 de Diciembre de 2014</span>
-                        <span class="feed-post-message">Se ha creado el artista.</span>
-                    </div>
-                </div>
+                <?php endforeach ?>
 
             </div>
 

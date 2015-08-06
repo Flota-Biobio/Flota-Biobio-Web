@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.5
+ * @version 0.4.1
  * @since   0.1.4
  */
 ?>
@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="logo-box col-sm-4">
                 <?=$this->assets_manager->img('marca01.png', '', 'Flota Biobio')?>
             </div>
-            <div class="session-box col-sm-5 col-sm-offset-3 text-right">
+            <div class="session-box col-sm-5 col-sm-offset-3 text-right thin-font">
                 <h4>Aníbal Llanos Prado</h4>
                 <ul class="list-inline">
                     <li>Perfiil</li>

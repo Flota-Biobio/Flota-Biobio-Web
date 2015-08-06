@@ -22,7 +22,7 @@
  * Hoja de estilos base, la que será cargada en cada vista del sitio.
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.3.6
+ * Version: 0.4.2
  * Since:   0.1.1
  */
 
@@ -178,6 +178,17 @@ html, body {
     color: #9AE4E8;
 }
 
+.color-google-plus {
+    color: #dc4b39;
+}
+
+.color-deviantart {
+    color: #05cb47;
+}
+
+.color-linkedin {
+    color: #0077b3;
+}
 
 
 a,
@@ -186,4 +197,20 @@ a:visited,
 a:active {
     font-family: "Helvetica Neue Condensed", sans-serif;
     color: #5b5b5b;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
 }

@@ -14,34 +14,35 @@
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
- * @deprecated  Será eliminado en la versión 0.4
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Vista: user_profile
- * Vista del perfil de un usuario
+ * Vista: breadcrumb
+ * Vista del indicador de posición en la navegación
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.2.3
- * @since   0.2.3
+ * @version 0.4.2
+ * @since   0.4.2
+ *
+ * @var array $position
  */
 ?>
-<div class="user-profile">
+<?php if ($position): ?>
+<div class="breadcrumb-row">
     <div class="container">
-        <div class="user-profile-title row soft-background">
-
-            <div class="user-box row col-sm-4">
-                <div class="user-box-box col-sm-12">
-
-                </div>
-                <div class="user-box-img">
-
-                </div>
-            </div>
-
+        <div class="breadcrumb-row-content row soft-background">
+            <ol class="breadcrumb">
+                <?php foreach ($position as $step): ?>
+                    <li<?= empty($step['active']) ? '' : ' class="active"' ?>>
+                        <a href="<?= $step['link'] === false ? '#' : base_url('index.php').'/'.$step['link'] ?>">
+                            <?= $step['label'] ?>
+                        </a>
+                    </li>
+                <?php endforeach ?>
+            </ol>
         </div>
     </div>
 </div>
-
+<?php endif ?>

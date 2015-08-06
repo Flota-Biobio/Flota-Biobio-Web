@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Se encarga de manejar la información referente al catálogo.
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4
+ * @version 0.4.2
  * @since   0.3.5
  */
 class Catalogue extends CI_Controller
@@ -62,17 +62,29 @@ class Catalogue extends CI_Controller
         $this->render->add_css('bootstrap/bootstrap-slider.min');
         $this->render->add_css('parts/catalogue/catalogue');
         $this->render->set_title('Detalles de producto - Flota Biobio');
-        $this->render->set_value('catalogue_title','Últimos productos');
+        $this->render->set_value('cat_title','Últimos productos');
+        $this->render->set_value('breadcrumb_position', array(
+            'position' => array(
+                array(
+                    'link' => '',
+                    'label' => 'Inicio'
+                ),
+                array(
+                    'link' => false,
+                    'label' => 'Catálogo',
+                    'active' => true
+                )
+            )
+        ));
 
         $this->render->add_view(
             'parts/catalogue/catalogue_menu',
             array(),
-            'catalogue_menu'
+            'menu'
         );
         $this->render->add_view(
             'parts/catalogue/catalogue_feed',
-            array('products' => $productos),
-            'catalogue_feed'
+            array('products' => $productos)
         );
         $this->render->render('catalogue');
     }
@@ -133,6 +145,23 @@ class Catalogue extends CI_Controller
         $this->render->add_css('bootstrap/bootstrap-slider.min');
         $this->render->set_title('Detalles de producto - Flota Biobio');
         $this->render->set_value('cat_title','Diskette roto con scotch sobre sacapuntas');
+        $this->render->set_value('breadcrumb_position', array(
+            'position' => array(
+                array(
+                    'link' => '',
+                    'label' => 'Inicio'
+                ),
+                array(
+                    'link' => false,
+                    'label' => 'Catálogo'
+                ),
+                array(
+                    'link' => false,
+                    'label' => 'Producto',
+                    'active' => true
+                )
+            )
+        ));
 
         $this->render->add_view(
             'parts/catalogue/catalogue_menu',

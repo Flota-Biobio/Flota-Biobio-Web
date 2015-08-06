@@ -12,16 +12,24 @@ anteriormente declarada condición.
 Apache License, Version 2.0
 
 ## Resumen de versiones
-### Versiones 0: Estructura base, maqueta HTML
-### Versiones 1: Aplicación base y soporte para maqueta PHP
-### Versiones 2: Desarrollo de primeros controladores y vistas
-### Versiones 3: Renderer v2, desarrollo de controladores y vistas
-### Versiones 4: Renderer v3, limpieza y ordenamiento
+#### Versiones 0: Estructura base, maqueta HTML
+#### Versiones 1: Aplicación base y soporte para maqueta PHP
+#### Versiones 2: Desarrollo de primeros controladores y vistas
+#### Versiones 3: Renderer v2, desarrollo de controladores y vistas
+#### Versiones 4: Renderer v3, limpieza y ordenamiento
 
 ## Historial de cambios
 
+### Versión 0.4.2: Usuario y Artista
+* Fecha: 06/08/2015
+* Cambios:
+  - Reparaciones al catálogo
+  - Modificación temporal del meú de navegación para uso interno
+  - Adición de perfil de usuario normal, diferente del de artista
+  - Incorporación del breadcrumb
+
 ### Versión 0.4.1: Vista base de Usuarios
-* fecha: 05/08/2015
+* Fecha: 06/08/2015
 * Cambios:
   - Creación de la vista básica del perfil de usuario
   - Ajustes a la librería Assets_manager
