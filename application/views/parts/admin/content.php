@@ -35,11 +35,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     y tienen un carácter as bien informativo. Ejemplo de estas páginas son el
     formulario de contacto, misión-visión, el equipo, etc.</p>
 </div>
-<hr>
+<div class="space-30"></div>
 <h3>Lista de páginas existentes</h3>
-<table class="table">
+<table class="table page-list table-hover">
     <thead>
         <tr>
+            <th></th>
             <th>Página</th>
             <th>Descripción</th>
             <th class="text-center">Posición</th>
@@ -49,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </thead>
     <tbody>
         <tr>
+            <td><input class="text-center" type="checkbox" name="" title="">
+            </td>
             <td>Equipo</td>
             <td>Detalles del equipo</td>
             <td class="text-center">1</td>
@@ -56,6 +59,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <td class="text-center">Opciones</td>
         </tr>
         <tr>
+            <td><input class="text-center" type="checkbox" name="" title="">
+            </td>
             <td>Organización</td>
             <td>Detalles de la organización</td>
             <td class="text-center">2</td>
@@ -63,6 +68,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <td class="text-center">Opciones</td>
         </tr>
         <tr>
+            <td><input class="text-center" type="checkbox" name="" title="">
+            </td>
             <td>Contacto</td>
             <td>Formulario de contacto</td>
             <td class="text-center">3</td>
@@ -74,15 +81,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <br>
 <div class="text-right col-lg-12">
     <button type="button" class="btn btn-primary btn- normal-font">Agregar nueva página</button>
-    <hr>
 </div>
+
 <div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
-<div class="space-30"></div>
+<h3>Configuración de páginas</h3>
+
+<form>
+    <table class="table config">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="right-column"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Mostrar link al "Inicio" en el menu</td>
+            <td class="right-column"><input type="checkbox" name="" title="">
+            </td>
+        </tr>
+        <tr>
+            <td>Nombre del link al "Inicio"</td>
+            <td class="right-column"><input type="text" class="form-control"
+                                            placeholder="Ingrese un nombre">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="right-column">
+                <button type="button" class="btn btn-primary btn- normal-font">
+                    Guardar configuración
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>

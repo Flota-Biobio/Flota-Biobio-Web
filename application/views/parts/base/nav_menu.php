@@ -37,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li id="user/profile/1" class="menu-element">Artista</li>
                     <li id="catalogue" class="menu-element">Catálogo</li>
                     <li id="catalogue/product/1" class="menu-element">Producto</li>
+                    <li id="catalogue/cart" class="menu-element">Carro</li>
                     <li id="admin" class="menu-element">Administrar</li>
                 </ul>
             </div>

@@ -1,0 +1,104 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * cart
+ *
+ * {SHEET-DESCRIPTION}
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.4.3
+ * Since:   0.4.3
+ */
+
+.cart-product {
+    margin-bottom: 15px;
+}
+
+.cart-product img {
+    height: 60px;
+    width: auto;
+    display: inline;
+}
+
+.cart-product .cart-product-title {
+    display: inline;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 60px;
+    font-family: "Helvetica Neue Roman", sans-serif;
+}
+
+.cart-product .cart-product-price {
+    float: right;
+    font-size: 18px;
+    line-height: 60px;
+    font-family: "Helvetica Neue Medium", sans-serif;
+}
+
+.cart-product {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: solid 3px #fefefe;
+    -webkit-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.97);
+    -moz-box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    box-shadow: 1px 2px 5px 0 rgba(91, 91, 91, 0.75);
+    background-color: white;
+}
+
+.cart-products hr {
+    width: 100%;
+    float: left;
+    border-top: 2px solid #aaa;
+    margin-bottom: 0;
+}
+
+.cart-product button {
+    color: white;
+    font-weight: bold;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-right: 20px;
+}
+
+.cart-total {
+    width: 100%;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 15px;
+}
+
+.cart-total .cart-total-title {
+    display: inline;
+    margin-left: 162px;
+    font-size: 18px;
+    line-height: 60px;
+    font-family: "Helvetica Neue Medium", sans-serif;
+}
+
+.cart-total .cart-total-price {
+    float: right;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 60px;
+    font-family: "Helvetica Neue Medium", sans-serif;
+}
+
+.cart-buttons {
+    margin-top: 10px;
+}

@@ -27,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since   0.2.0
  *
  * @var string $title Título de la página
+ * @var string $menu Menu de navegación de administración
  * @var string $resources Recursos a incorporar
  * @var string $admin_menu Menu de administración
  * @var string $content El contenido de la página
@@ -35,20 +36,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head>
     <meta charset="UTF-8">
+    <link
+        href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700'
+        rel='stylesheet' type='text/css'>
     <title><?=$title?></title>
     <?=$resources?>
 </head>
-<body>
-<?=$this->load->view('parts/admin/admin_header', array(), true)?>
+<body class="soft-background">
+<?= $this->load->view('parts/admin/header', array(), true) ?>
 <div class="admin-body">
-    <div class="container">
-        <div class="admin-content row">
-            <div class="admin-menu col-lg-3 secondary-background normal-font">
-                <?=$admin_menu?>
-            </div>
-            <div class="admin-main col-lg-9">
-                <?=$content?>
-            </div>
+    <div class="container-fluid">
+        <div class="menu main-background-dark">
+            <?= $menu ?>
+        </div>
+        <div class="content">
+            <?= $content ?>
         </div>
     </div>
 </div>

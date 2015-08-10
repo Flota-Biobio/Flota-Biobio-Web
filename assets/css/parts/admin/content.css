@@ -1,0 +1,74 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * content
+ *
+ * {SHEET-DESCRIPTION}
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.3.4
+ * Since:   0.3.4
+ */
+
+.admin-body .content {
+    max-width: calc(100% - 500px);
+    display: block;
+    float: left;
+    padding-left: 25px;
+}
+
+.admin-body .table input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.admin-body table.page-list input[type=checkbox] {
+    display: block;
+    margin: 2px auto 0 auto;
+}
+
+.admin-body table.config {
+    display: block;
+    width: inherit;
+}
+
+.admin-body table.config th,
+.admin-body table.config td {
+    border-color: transparent;
+}
+
+.admin-body table.config tbody td {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.admin-body table.config input[type=text] {
+    width: 300px;
+}
+
+.admin-body table.config th.right-column,
+.admin-body table.config td.right-column {
+    padding-left: 30px;
+}
+
+.admin-body table.config button {
+    margin-top: 30px;
+    float: right;
+}

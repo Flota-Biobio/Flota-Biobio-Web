@@ -12,13 +12,22 @@ anteriormente declarada condición.
 Apache License, Version 2.0
 
 ## Resumen de versiones
-#### Versiones 0: Estructura base, maqueta HTML
-#### Versiones 1: Aplicación base y soporte para maqueta PHP
-#### Versiones 2: Desarrollo de primeros controladores y vistas
-#### Versiones 3: Renderer v2, desarrollo de controladores y vistas
-#### Versiones 4: Renderer v3, limpieza y ordenamiento
+* **Versiones 0:** Estructura base, maqueta HTML
+* **Versiones 1:** Aplicación base y soporte para maqueta PHP
+* **Versiones 2:** Desarrollo de primeros controladores y vistas
+* **Versiones 3:** Renderer v2, desarrollo de controladores y vistas
+* **Versiones 4:** Renderer v3, limpieza y desarrollo de controladores y vistas
 
 ## Historial de cambios
+
+### Version 0.4.3: Carro de compra y refactor Admin
+* Fecha: 06/08/2015
+* Cambios:
+  - Revisión exhaustiva de optimizaciones
+  - Reconstrucción de las vistas de administración
+  - Implementación de carro de compras
+  - Ajustes al Render
+  - Refactor nombres de archivo
 
 ### Versión 0.4.2: Usuario y Artista
 * Fecha: 06/08/2015

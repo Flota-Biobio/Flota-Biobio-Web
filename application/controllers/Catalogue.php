@@ -90,6 +90,98 @@ class Catalogue extends CI_Controller
     }
 
     /**
+     * Obtiene los últimos productos añadidos al catálogo.
+     *
+     * @param int $offset Indica el offset de los resultados
+     * @param int $size   Indica la cantidad de elementos a recuperar
+     *
+     * @return array Los últimos productos
+     *
+     * @access     protected
+     * @since      0.3.6
+     * @deprecated Será eliminado cuando se implemente el modelo de base de datos
+     */
+    protected function get_catalogue_feed($offset, $size)
+    {
+
+        return array(
+            array(
+                'image' => 'images/catalogue/p1.png',
+                'title' => 'Noche estrellada fea',
+                'author' => 'Ignacio Cornejo',
+                'price' => '23500',
+                'dummy' => $offset + $size
+            ),
+            array(
+                'image' => 'images/catalogue/p2.png',
+                'title' => 'Memoria',
+                'author' => 'Joaquin Suarez',
+                'price' => '17680'
+            ),
+            array(
+                'image' => 'images/catalogue/p3.png',
+                'title' => 'Nose, fantasías',
+                'author' => 'Adolfo Barria',
+                'price' => '3990'
+            ),
+            array(
+                'image' => 'images/catalogue/p4.png',
+                'title' => 'Que chistoso',
+                'author' => 'Victor Alejandro Medina',
+                'price' => '15400'
+            ),
+            array(
+                'image' => 'images/catalogue/p5.png',
+                'title' => 'Distintos caminos',
+                'author' => 'Complejo',
+                'price' => '23000'
+            ),
+            array(
+                'image' => 'images/catalogue/p6.png',
+                'title' => 'Imposible, no sé',
+                'author' => 'Dante Blanco',
+                'price' => '55500'
+            ),
+            array(
+                'image' => 'images/catalogue/p7.png',
+                'title' => 'Una palabra',
+                'author' => 'Martina Moreno',
+                'price' => '67990'
+            ),
+            array(
+                'image' => 'images/catalogue/p8.png',
+                'title' => 'Gaspar?',
+                'author' => 'Girella Reyes',
+                'price' => '89000'
+            ),
+            array(
+                'image' => 'images/catalogue/p9.png',
+                'title' => 'Necesitas algo más',
+                'author' => 'Vanessa Vargas',
+                'price' => '5500'
+            ),
+            array(
+                'image' => 'images/catalogue/p10.png',
+                'title' => 'Cuantas he dicho',
+                'author' => 'No soy Andrés',
+                'price' => '70650'
+            ),
+            array(
+                'image' => 'images/catalogue/p11.png',
+                'title' => 'I really really really like you',
+                'author' => 'Carly Rae Jepsen',
+                'price' => '63000'
+            ),
+            array(
+                'image' => 'images/catalogue/p12.png',
+                'title' => 'Imaginaciones nocturnas',
+                'author' => 'Brayatan Alejandro',
+                'price' => '11200'
+            )
+        );
+    }
+
+    /**
      * Función product
      * Gestiona recursos para mostrar el resumen de un producto del catálogo
      *
@@ -105,7 +197,8 @@ class Catalogue extends CI_Controller
                 'src' => 'catalogue/p/p.jpg',
                 'shrunk' => 'catalogue/p/pc.png',
                 'title' => 'Foto 1',
-                'caption' => 'Frontal'
+                'caption' => 'Frontal',
+                'dummy' => $id
             ),
             array(
                 'src' => 'catalogue/p/p1.jpg',
@@ -178,94 +271,62 @@ class Catalogue extends CI_Controller
 
     /* --- FUNCIONES AUXILIARES --------------------------------------------- */
 
-    /**
-     * Obtiene los últimos productos añadidos al catálogo.
-     *
-     * @param int $offset Indica el offset de los resultados
-     * @param int $size Indica la cantidad de elementos a recuperar
-     *
-     * @return array Los últimos productos
-     *
-     * @access     protected
-     * @since      0.3.6
-     * @deprecated Será eliminado cuando se implemente el modelo de base de datos
-     */
-    protected function get_catalogue_feed($offset, $size)
+    public function cart()
     {
-        return array(
+        $cart = array(
             array(
-                'image' => 'images/catalogue/p1.png',
-                'title' => 'Noche estrellada fea',
-                'author' => 'Ignacio Cornejo',
-                'price' => '23500'
+                'img' => 'p3.png',
+                'type' => 'artesanía',
+                'title' => 'Camión ciego caminante del norte',
+                'price' => '15230'
             ),
             array(
-                'image' => 'images/catalogue/p2.png',
-                'title' => 'Memoria',
-                'author' => 'Joaquin Suarez',
-                'price' => '17680'
+                'img' => 'p4.png',
+                'type' => 'artesanía',
+                'title' => 'Ventana sucia abierta grande',
+                'price' => '5000'
             ),
             array(
-                'image' => 'images/catalogue/p3.png',
-                'title' => 'Nose, fantasías',
-                'author' => 'Adolfo Barria',
-                'price' => '3990'
-            ),
-            array(
-                'image' => 'images/catalogue/p4.png',
-                'title' => 'Que chistoso',
-                'author' => 'Victor Alejandro Medina',
-                'price' => '15400'
-            ),
-            array(
-                'image' => 'images/catalogue/p5.png',
-                'title' => 'Distintos caminos',
-                'author' => 'Complejo',
-                'price' => '23000'
-            ),
-            array(
-                'image' => 'images/catalogue/p6.png',
-                'title' => 'Imposible, no sé',
-                'author' => 'Dante Blanco',
-                'price' => '55500'
-            ),
-            array(
-                'image' => 'images/catalogue/p7.png',
-                'title' => 'Una palabra',
-                'author' => 'Martina Moreno',
-                'price' => '67990'
-            ),
-            array(
-                'image' => 'images/catalogue/p8.png',
-                'title' => 'Gaspar?',
-                'author' => 'Girella Reyes',
-                'price' => '89000'
-            ),
-            array(
-                'image' => 'images/catalogue/p9.png',
-                'title' => 'Necesitas algo más',
-                'author' => 'Vanessa Vargas',
-                'price' => '5500'
-            ),
-            array(
-                'image' => 'images/catalogue/p10.png',
-                'title' => 'Cuantas he dicho',
-                'author' => 'No soy Andrés',
-                'price' => '70650'
-            ),
-            array(
-                'image' => 'images/catalogue/p11.png',
-                'title' => 'I really really really like you',
-                'author' => 'Carly Rae Jepsen',
-                'price' => '63000'
-            ),
-            array(
-                'image' => 'images/catalogue/p12.png',
-                'title' => 'Imaginaciones nocturnas',
-                'author' => 'Brayatan Alejandro',
-                'price' => '11200'
+                'img' => 'p6.png',
+                'type' => 'diseño',
+                'title' => 'Estatua de Don Cangrejo',
+                'price' => '26300'
             )
         );
+
+        $this->render->add_base();
+        $this->render->add_js('bootstrap-slider.min');
+        $this->render->add_css('bootstrap/bootstrap-slider.min');
+        $this->render->add_css('parts/catalogue/catalogue');
+        $this->render->add_css('parts/catalogue/cart');
+        $this->render->set_title('Detalles de producto - Flota Biobio');
+        $this->render->set_value('cat_title', 'Carro de compras');
+        $this->render->set_value(
+            'breadcrumb_position', array(
+                'position' => array(
+                    array(
+                        'link' => '',
+                        'label' => 'Inicio'
+                    ),
+                    array(
+                        'link' => false,
+                        'label' => 'Catálogo',
+                        'active' => true
+                    )
+                )
+            )
+        );
+
+        $this->render->add_view(
+            'parts/catalogue/catalogue_menu',
+            array(),
+            'menu'
+        );
+        $this->render->add_view(
+            'parts/catalogue/cart',
+            array('cart' => $cart)
+        );
+        $this->render->render('catalogue');
     }
 
 }

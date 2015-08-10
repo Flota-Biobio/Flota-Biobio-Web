@@ -109,12 +109,31 @@ class Render
         $this->packs->admin->css = array(
             'parts/base/footer',
             'base',
-            'parts/admin/admin_header'
+            'parts/admin/header',
+            'parts/admin/content'
         );
     }
 
 
     /* --- FUNCIONES DE RENDERIZADO ----------------------------------------- */
+
+    /**
+     * Restablece los valores internos del objeto.
+     *
+     * Cambia el valor de las propiedades que son usadas para generar vistas a
+     * los valores por defecto que permiten comenzar una nueva vista.
+     *
+     * @access  protected
+     * @since   0.4
+     */
+    protected function reset()
+    {
+        $this->views = array();
+        $this->rendered = array();
+        $this->css = array();
+        $this->js = array();
+        $this->title = "Untitled Page";
+    }
 
     /**
      * Obtiene el HTML asociado al objeto presente.
@@ -140,6 +159,26 @@ class Render
     }
 
     /**
+     * Obtiene el código HTML de los recursos a incluir
+     *
+     * @return string Los recursos en forma de HTML
+     *
+     * @access protected
+     * @since  0.4
+     */
+    protected function render_resources()
+    {
+        $res_html = '';
+        foreach ($this->js as $js) {
+            $res_html .= $this->ci->assets_manager->js($js) . "\n    ";
+        }
+        foreach ($this->css as $css) {
+            $res_html .= $this->ci->assets_manager->css($css) . "\n    ";
+        }
+        return $res_html;
+    }
+
+    /**
      * Obtiene el HTML asociado a las vistas incluidas.
      *
      * Convierte en código HTML las vistas incluidas en el arreglo de vistas y
@@ -155,6 +194,9 @@ class Render
         }
     }
 
+
+    /* --- FUNCIONES DE GESTIÓN DE VISTAS ----------------------------------- */
+
     /**
      * Obtiene el código HTML de una vista y lo agrega al arreglo 'rendered'
      *
@@ -169,44 +211,24 @@ class Render
         if (empty($this->rendered[$view->target])) {
             $this->rendered[$view->target] = '        ';
         }
-        $this->rendered[$view->target] .= $html.'
+        $this->rendered[$view->target] .= $html . '
         ';
     }
 
-    /**
-     * Obtiene el código HTML de los recursos a incluir
-     *
-     * @return string Los recursos en forma de HTML
-     *
-     * @access protected
-     * @since  0.4
-     */
-    protected function render_resources()
-    {
-        $res_html = '';
-        foreach ($this->js as $js) {
-            $res_html .= $this->ci->assets_manager->js($js)."\n    ";
-        }
-        foreach ($this->css as $css) {
-            $res_html .= $this->ci->assets_manager->css($css)."\n    ";
-        }
-        return $res_html;
-    }
 
-
-    /* --- FUNCIONES DE GESTIÓN DE VISTAS ----------------------------------- */
+    /* --- FUNCIONES INTERNAS ----------------------------------------------- */
 
     /**
      * Agrega una vista al objeto.
      *
-     * @param string $name Nombre de la vista a cargar.
-     * @param array  $data Arreglo de variables a utilizar.
+     * @param string $name   Nombre de la vista a cargar.
+     * @param array  $data   Arreglo de variables a utilizar.
      * @param string $target Objetivo de la vista (para templates específicos)
      *
      * @access  public
      * @since   0.4
      */
-    public function add_view($name, $data, $target='content')
+    public function add_view($name, $data, $target = 'content')
     {
         // Crear objeto de vista
         $view = new stdClass();
@@ -216,27 +238,6 @@ class Render
 
         // Agregar objeto de vista
         array_push($this->views, $view);
-    }
-
-
-    /* --- FUNCIONES INTERNAS ----------------------------------------------- */
-
-    /**
-     * Restablece los valores internos del objeto.
-     *
-     * Cambia el valor de las propiedades que son usadas para generar vistas a
-     * los valores por defecto que permiten comenzar una nueva vista.
-     *
-     * @access  protected
-     * @since   0.4
-     */
-    protected function reset()
-    {
-        $this->views = array();
-        $this->rendered = array();
-        $this->css = array();
-        $this->js = array();
-        $this->title = "Untitled Page";
     }
 
 
@@ -277,6 +278,19 @@ class Render
     }
 
     /**
+     * Agrega un recurso CSS a la lista de recursos a incluir.
+     *
+     * @param string $css El nombre del CSS a incluir.
+     *
+     * @access  public
+     * @since   0.4
+     */
+    public function add_css($css)
+    {
+        array_push($this->css, $css);
+    }
+
+    /**
      * Agrega un pack de recursos base para las vistas
      *
      * Las vistas requieren elementos en común, por lo que se permite agregarlos
@@ -288,7 +302,7 @@ class Render
      * @access  public
      * @since   0.4
      */
-    public function add_base($variant='base')
+    public function add_base($variant = 'base')
     {
         $this->add_bootstrap();
         foreach ($this->packs->{$variant}->css as $css) {
@@ -318,19 +332,6 @@ class Render
     public function add_jquery()
     {
         $this->add_js($this->packs->jquery->js);
-    }
-
-    /**
-     * Agrega un recurso CSS a la lista de recursos a incluir.
-     *
-     * @param string $css El nombre del CSS a incluir.
-     *
-     * @access  public
-     * @since   0.4
-     */
-    public function add_css($css)
-    {
-        array_push($this->css, $css);
     }
 
     /**
