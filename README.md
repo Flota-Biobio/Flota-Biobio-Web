@@ -26,7 +26,8 @@ Apache License, Version 2.0
   - Implementación adecuada de las interfaces de administración de páginas
   - Ajustes al motor de renderizado para con las páginas de administración
   - Incorporación de editor de textos con formato
-  - Creación del modelo de administración para delegar responsabilidad
+  - Creación del modelo de administración para delegar responsabilidad 
+* Hotfix 1: Incorporación de despliegue web en shazkho.cl/flota
 
 ### Version 0.4.3: Carro de compra y refactor Admin
 * Fecha: 10/08/2015
