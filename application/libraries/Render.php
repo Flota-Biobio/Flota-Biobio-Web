@@ -26,7 +26,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * vista y, finalmente, generar el código HTML a mostrar.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.4.2
+ * @version     0.4.4
  * @since       0.4
  *
  */
@@ -110,6 +110,7 @@ class Render
             'parts/base/footer',
             'base',
             'parts/admin/header',
+            'parts/admin/menu',
             'parts/admin/content'
         );
     }

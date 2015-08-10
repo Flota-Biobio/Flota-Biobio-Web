@@ -92,9 +92,8 @@
 *  @property CI_DB_query_builder $db              This is the platform-independent base Active Record implementation class.
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
  * @property Assets_manager $assets_manager       Assets manager
- * @property Page_renderer $page_renderer         Page Renderer
- * @property Menu_generator $menu_generator       Menu generator
  * @property Render $render                       New page renderer
+ * @property FBB_Admin_model $admin_model         Modelo de administración
  */
 class CI_Controller
 {
@@ -149,9 +148,8 @@ class CI_Controller
  * @property CI_DB_query_builder $db              This is the platform-independent base Active Record implementation class.
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
  * @property Assets_manager $assets_manager       Assets manager
- * @property Page_renderer $page_renderer         Page Renderer
- * @property Menu_generator $menu_generator       Menu generator
  * @property Render $render                       New page renderer
+ * @property FBB_Admin_model $admin_model         Modelo de administración
  */
 class CI_Model
 {

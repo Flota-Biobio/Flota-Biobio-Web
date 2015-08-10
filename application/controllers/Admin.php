@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Maneja las peticiones al módulo de administración
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.3
+ * @version 0.4.4
  * @since   0.2.0
  */
 class Admin extends CI_Controller
@@ -37,6 +37,7 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('fbb_admin_model', 'admin_model');
     }
 
 
@@ -55,7 +56,6 @@ class Admin extends CI_Controller
         $this->render->set_title('Admin - Flota Biobio');
         $this->render->add_base('admin');
         $this->render->add_template('admin');
-        $this->render->add_css('parts/admin/menu');
         $this->render->add_view(
             'parts/admin/menu', array('menu' => $menu), 'menu'
         );
@@ -63,6 +63,46 @@ class Admin extends CI_Controller
 
         $this->render->render('admin');
     }
+
+    /**
+     * Función pages
+     * Muestra la configuración de las páginas
+     *
+     * @param string $mode
+     * @param string $id
+     *
+     * @access public
+     * @since  0.4.4
+     */
+    public function pages($mode='base', $id='')
+    {
+        $menu = $this->get_context_menu();
+        $this->render->add_base('admin');
+        $this->render->add_template('admin');
+        $this->render->add_view(
+            'parts/admin/menu', array('menu' => $menu), 'menu'
+        );
+
+        // CONFIGURACIÓN DE PÁGINAS, MODO BASE
+        if ($mode == 'base') {
+            $data['pages'] = $this->admin_model->get_pages();
+            $this->render->set_title('Configurar páginas - Flota Biobio');
+            $this->render->add_css('font-awesome.min');
+            $this->render->add_view('parts/admin/pages/config', $data);
+        }
+
+        // EDITAR PÁGINA
+        elseif ($mode == 'edit' && !empty($id)) {
+            $this->render->set_title('Editando página - Flota Biobio');
+            $this->render->add_js('editor');
+            $this->render->add_css('font-awesome.min');
+            $this->render->add_css('libs/editor');
+            $this->render->add_view('parts/admin/pages/edit', array());
+        }
+
+        $this->render->render('admin');
+    }
+
 
     protected function get_context_menu()
     {

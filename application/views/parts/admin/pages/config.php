@@ -24,8 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del cuerpo de la interfaz de administración (sección)
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.2
+ * @version 0.4.4
  * @since   0.2.1
+ *
+ * @var array $pages
  */
 ?>
 <h1>Páginas</h1><br>
@@ -49,41 +51,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </tr>
     </thead>
     <tbody>
+        <?php foreach ($pages as $pos => $page): ?>
         <tr>
             <td><input class="text-center" type="checkbox" name="" title="">
             </td>
-            <td>Equipo</td>
-            <td>Detalles del equipo</td>
-            <td class="text-center">1</td>
-            <td class="text-center">Publicada</td>
-            <td class="text-center">Opciones</td>
+            <td>
+                <?php
+                    if (empty($page['link'])) {
+                        echo '<strong>'.ucfirst($page['page']).'</strong>';
+                    } else {
+                        echo '<a class="styled" href="'.site_url(ucfirst($page['link'])).'">'.ucfirst($page['page']).'</a>';
+                    }
+                ?>
+            </td>
+            <td><?=$page['desc']?></td>
+            <td class="text-center"><?=$pos + 1?></td>
+            <td class="text-center"><?=ucfirst($page['state'])?></td>
+            <td class="text-center">
+                <div class="<?=$page['type']==0?'disabled-icon':'icon icon-up'?>">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+                <div class="<?=$page['type']==0?'disabled-icon':'icon icon-down'?>">
+                    <i class="fa fa-arrow-down"></i>
+                </div>
+                <div class="<?=$page['type']<=1?'disabled-icon':'icon icon-edit'?>">
+                    <i class="fa fa-pencil-square-o"></i>
+                </div>
+                <div class="<?=$page['type']<=1?'disabled-icon':'icon icon-delete'?>">
+                    <i class="fa fa-times-circle"></i>
+                </div>
+            </td>
         </tr>
-        <tr>
-            <td><input class="text-center" type="checkbox" name="" title="">
+        <?php endforeach ?>
+        <tr class="no-hover">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="button" class="btn btn-primary btn- normal-font">Agregar nueva página</button>
             </td>
-            <td>Organización</td>
-            <td>Detalles de la organización</td>
-            <td class="text-center">2</td>
-            <td class="text-center">Publicada</td>
-            <td class="text-center">Opciones</td>
-        </tr>
-        <tr>
-            <td><input class="text-center" type="checkbox" name="" title="">
-            </td>
-            <td>Contacto</td>
-            <td>Formulario de contacto</td>
-            <td class="text-center">3</td>
-            <td class="text-center">Publicada</td>
-            <td class="text-center">Opciones</td>
         </tr>
     </tbody>
 </table>
-<br>
-<div class="text-right col-lg-12">
-    <button type="button" class="btn btn-primary btn- normal-font">Agregar nueva página</button>
-</div>
 
 <div class="space-30"></div>
+
 <h3>Configuración de páginas</h3>
 
 <form>
@@ -97,13 +111,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <tbody>
         <tr>
             <td>Mostrar link al "Inicio" en el menu</td>
-            <td class="right-column"><input type="checkbox" name="" title="">
+            <td class="right-column"><input type="checkbox" name="" title="" checked>
             </td>
         </tr>
         <tr>
             <td>Nombre del link al "Inicio"</td>
-            <td class="right-column"><input type="text" class="form-control"
-                                            placeholder="Ingrese un nombre">
+            <td class="right-column">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Ingrese un nombre"
+                    value="Inicio">
             </td>
         </tr>
         <tr>

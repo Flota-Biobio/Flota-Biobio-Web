@@ -20,8 +20,16 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+## Versión 0.4.4: Administración de páginas
+* Fecha: 10/08/2015
+* Cambios:
+  - Implementación adecuada de las interfaces de administración de páginas
+  - Ajustes al motor de renderizado para con las páginas de administración
+  - Incorporación de editor de textos con formato
+  - Creación del modelo de administración para delegar responsabilidad
+
 ### Version 0.4.3: Carro de compra y refactor Admin
-* Fecha: 06/08/2015
+* Fecha: 10/08/2015
 * Cambios:
   - Revisión exhaustiva de optimizaciones
   - Reconstrucción de las vistas de administración

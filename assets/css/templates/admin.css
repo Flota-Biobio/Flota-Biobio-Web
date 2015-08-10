@@ -22,11 +22,32 @@
  * Hoja de estilos para el template de administración
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.2
+ * Version: 0.4.4
  * Since:   0.3.3
  */
 
 .admin-body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
+}
+
+.admin-body a.styled,
+.admin-body a.styled:link,
+.admin-body a.styled:visited,
+.admin-body a.styled:active,
+.admin-body a.styled:hover {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-body a.styled,
+.admin-body a.styled:link,
+.admin-body a.styled:visited,
+.admin-body a.styled:active {
+    color: #00a0e3;
+}
+
+.admin-body a.styled:hover {
+    color: #015072;
 }

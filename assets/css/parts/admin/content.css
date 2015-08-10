@@ -19,10 +19,10 @@
  * HOJA DE ESTILOS
  * content
  *
- * {SHEET-DESCRIPTION}
+ * Estilos para el contenido de la sección de administración
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.3.4
+ * Version: 0.4.4
  * Since:   0.3.4
  */
 
@@ -33,16 +33,77 @@
     padding-left: 25px;
 }
 
-.admin-body .table input[type=checkbox] {
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - PÁGINAS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.admin-body table.table input[type=checkbox] {
     width: 18px;
     height: 18px;
     margin-top: 2px;
+}
+
+.admin-body table.table button {
+    margin-top: 30px;
+    float: right;
+}
+
+/* Lista de páginas */
+
+.admin-body table.page-list {
+    display: block;
+    width: inherit;
 }
 
 .admin-body table.page-list input[type=checkbox] {
     display: block;
     margin: 2px auto 0 auto;
 }
+
+.admin-body table.page-list .icon,
+.admin-body table.page-list .disabled-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+    padding: 4px;
+    border-radius: 5px;
+    color: white;
+    background-color: #000000;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.admin-body table.page-list .icon {
+    opacity: .3;
+    cursor: pointer;
+}
+
+.admin-body table.page-list .disabled-icon {
+    opacity: .1;
+}
+
+.admin-body table.page-list .icon-up:hover,
+.admin-body table.page-list .icon-down:hover {
+    background-color: #2e5299;
+    opacity: .8;
+}
+
+.admin-body table.page-list .icon-edit:hover {
+    background-color: #31992e;
+    opacity: .8;
+}
+
+.admin-body table.page-list .icon-delete:hover {
+    background-color: #ed1820;
+    opacity: .8;
+}
+
+.admin-body table.page-list tbody tr.no-hover:hover {
+    background-color: transparent;
+}
+
+/* Tabla de configuración */
 
 .admin-body table.config {
     display: block;
@@ -68,7 +129,72 @@
     padding-left: 30px;
 }
 
-.admin-body table.config button {
-    margin-top: 30px;
-    float: right;
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - EDITAR PÁGINA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.admin-body #editor {
+    color: black;
 }
+
+.admin-body .Editor-container {
+    font-family: "Roboto", sans-serif;
+}
+
+.admin-body .container {
+    background-color: transparent;
+}
+
+.admin-body table.page-config {
+    display: block;
+    width: inherit;
+}
+
+.admin-body table.page-config th,
+.admin-body table.page-config td {
+    border-color: transparent;
+}
+
+.admin-body table.page-config tbody td {
+    height: 50px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.admin-body table.page-config input[type=text],
+.admin-body table.page-config select {
+    width: 300px;
+    margin: 0;
+}
+
+.admin-body table.page-config textarea {
+    width: 400px;
+    margin: 0;
+}
+
+.admin-body table.page-config th.right-column,
+.admin-body table.page-config td.right-column {
+    padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

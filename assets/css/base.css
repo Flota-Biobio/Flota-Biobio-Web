@@ -192,14 +192,6 @@ html, body {
 }
 
 
-a,
-a:link,
-a:visited,
-a:active {
-    font-family: "Helvetica Neue Condensed", sans-serif;
-    color: #5b5b5b;
-}
-
 .mb-5 {
     margin-bottom: 5px;
 }
