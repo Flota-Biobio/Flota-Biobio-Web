@@ -30,6 +30,7 @@ Apache License, Version 2.0
   - Re-estructuración de código para uso de los modelos
   - Favicon
   - Ajustes mayores al home
+* Hotfix 1: Solucionado problema con commits
 
 ### Versión 0.4.4: Administración de páginas
 * Fecha: 10/08/2015
