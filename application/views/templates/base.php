@@ -36,12 +36,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="UTF-8">
     <title><?=$title?></title>
+    <?=$this->assets_manager->favicon();?>
     <?=$resources?>
 </head>
+<body>
 <?=$this->load->view('parts/base/header', array(), true)?>
 <?=$this->load->view('parts/base/nav_menu', array(), true)?>
 <?=$this->load->view('parts/base/breadcrumb', $breadcrumb_position, true)?>
-<body>
 <?=$content?>
 <?=$this->load->view('parts/base/footer', array(), true)?>
 </body>

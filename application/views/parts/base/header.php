@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="header-content row main-background">
             <div class="logo-box col-sm-4">
-                <?=$this->assets_manager->img('marca01.png', '', 'Flota Biobio')?>
+                <?=$this->assets_manager->img('marca_2.png', '', 'Flota Biobio')?>
             </div>
             <div class="session-box col-sm-5 col-sm-offset-3 text-right thin-font">
                 <h4>Aníbal Llanos Prado</h4>

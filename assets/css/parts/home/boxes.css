@@ -22,7 +22,7 @@
  * Hoja de estilos para la vista "boxes"
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.6
+ * @version 0.4.5
  * @since   0.1.6
  */
 
@@ -37,6 +37,7 @@
 .boxes-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 .boxes .box-title {

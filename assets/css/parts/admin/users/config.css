@@ -14,28 +14,17 @@
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
  */
-
+ 
 /*
  * HOJA DE ESTILOS
- * content
+ * pages
  *
- * Estilos para el contenido de la sección de administración
+ * {SHEET-DESCRIPTION}
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.4
- * Since:   0.3.4
+ * Version: 0.4.5
+ * Since:   0.4.5
  */
-
-.admin-body .content {
-    max-width: calc(100% - 500px);
-    display: block;
-    float: left;
-    padding-left: 25px;
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* - PÁGINAS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .admin-body table.table input[type=checkbox] {
     width: 18px;
@@ -128,73 +117,3 @@
 .admin-body table.config td.right-column {
     padding-left: 30px;
 }
-
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* - EDITAR PÁGINA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-.admin-body #editor {
-    color: black;
-}
-
-.admin-body .Editor-container {
-    font-family: "Roboto", sans-serif;
-}
-
-.admin-body .container {
-    background-color: transparent;
-}
-
-.admin-body table.page-config {
-    display: block;
-    width: inherit;
-}
-
-.admin-body table.page-config th,
-.admin-body table.page-config td {
-    border-color: transparent;
-}
-
-.admin-body table.page-config tbody td {
-    height: 50px;
-    padding: 0;
-    vertical-align: middle;
-}
-
-.admin-body table.page-config input[type=text],
-.admin-body table.page-config select {
-    width: 300px;
-    margin: 0;
-}
-
-.admin-body table.page-config textarea {
-    width: 400px;
-    margin: 0;
-}
-
-.admin-body table.page-config th.right-column,
-.admin-body table.page-config td.right-column {
-    padding-left: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

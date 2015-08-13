@@ -26,7 +26,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * obtener información relevante de ellos desde cualquier punto de la aplicación.
  *
  * @author      George Shazkho <anibal.llanos.prado@gmail.com>
- * @version     0.4.1
+ * @version     0.4.5
  * @since       0.1.0
  */
 class Assets_manager
@@ -163,6 +163,31 @@ class Assets_manager
     public function asset_url($path)
     {
         return $this->assets_path.$path;
+    }
+
+    public function favicon()
+    {
+        $favicon_root = $this->asset_url('images/favicon');
+        ob_start();?>
+    <link rel="apple-touch-icon" sizes="57x57" href="<?=$favicon_root?>/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?=$favicon_root?>/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?=$favicon_root?>/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?=$favicon_root?>/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?=$favicon_root?>/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?=$favicon_root?>/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?=$favicon_root?>/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?=$favicon_root?>/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=$favicon_root?>/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<?=$favicon_root?>/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?=$favicon_root?>/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?=$favicon_root?>/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?=$favicon_root?>/favicon-16x16.png">
+    <link rel="manifest" href="<?=$favicon_root?>/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<?=$favicon_root?>/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <?php
+        return ob_get_clean();
     }
 
 }

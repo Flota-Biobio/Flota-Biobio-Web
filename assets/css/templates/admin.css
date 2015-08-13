@@ -22,7 +22,7 @@
  * Hoja de estilos para el template de administración
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.4
+ * Version: 0.4.5
  * Since:   0.3.3
  */
 
@@ -50,4 +50,11 @@
 
 .admin-body a.styled:hover {
     color: #015072;
+}
+
+.admin-body .content {
+    max-width: calc(100% - 500px);
+    display: block;
+    float: left;
+    padding-left: 50px;
 }
