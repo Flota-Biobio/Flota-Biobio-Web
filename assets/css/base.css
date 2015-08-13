@@ -22,7 +22,7 @@
  * Hoja de estilos base, la que será cargada en cada vista del sitio.
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.2
+ * Version: 0.4.5
  * Since:   0.1.1
  */
 
@@ -82,6 +82,11 @@ html, body {
     background-color: #eee;
 }
 
+.space-15 {
+    height: 15px;
+    background-color: transparent;
+}
+
 .space-30 {
     height: 30px;
     background-color: transparent;
@@ -91,7 +96,7 @@ html, body {
 /* Backgrounds */
 
 .main-background {
-    background-color: #00a0e3;
+    background-color: #519ff4;
 }
 
 .main-background-light {
@@ -130,7 +135,7 @@ html, body {
 /* COLORS */
 
 .main-color {
-    color: #00a0e3;
+    color: #519ff4;
 }
 
 .main-color-light {
@@ -206,4 +211,54 @@ html, body {
 
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary.focus {
+    background-color: #a351f4;
+    border: solid 1px #a351f4;
+}
+
+.btn-primary:hover {
+    background-color: #884cd4;
+    border: solid 1px #653398;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    background-color: #522a7c;
+    border: solid 1px #653398;
+    outline: #522a7c auto 5px;
+}
+
+.btn-primary:focus {
+    outline: #522a7c auto 5px;
+    outline-offset: -2px;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.no-margin-left {
+    margin-left: 0;
+}
+
+.no-margin-right {
+    margin-right: 0;
 }

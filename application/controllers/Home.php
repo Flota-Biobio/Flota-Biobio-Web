@@ -26,11 +26,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.2
+ * @version 0.4.5
  * @since   0.1.3
  */
 class Home extends CI_Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('fbb_model');
+    }
 
     /**
      * Función index
@@ -38,39 +44,11 @@ class Home extends CI_Controller
      */
     public function index(){
 
-        $data['slider_info'] = array(
-            array(
-                'img' => 'slider-full-1.png',
-                'thumb' => 'slider-thumb-1.png',
-                'link' => '#',
-                'title' => 'Subasta activa',
-                'detail' => 'Una niña que tiene muchos colores en su pelo'
-            ),
-            array(
-                'img' => 'slider-full-2.png',
-                'thumb' => 'slider-thumb-2.png',
-                'link' => '#',
-                'title' => 'Nuevo producto',
-                'detail' => 'Muchas manchas de colores coloridos'
-            ),
-            array(
-                'img' => 'slider-full-3.png',
-                'thumb' => 'slider-thumb-3.png',
-                'link' => '#',
-                'title' => 'Otra cosa, no se qué',
-                'detail' => 'Mujer volá se come la mano'
-            ),
-            array(
-                'img' => 'slider-full-4.png',
-                'thumb' => 'slider-thumb-4.png',
-                'link' => '#',
-                'title' => 'Nuevo concierto',
-                'detail' => 'Flushhh, se fué el agua del baño.'
-            )
-        );
+        $data['slider_info'] = $this->fbb_model->get_home_slider();
+        $blog_data['posts'] = $this->fbb_model->get_blog_posts();
 
-        // Recursos
         $this->render->add_base();
+        $this->render->add_css('font-awesome.min');
         $this->render->add_js('js-image-slider');
         $this->render->add_css('js-image-slider');
         $this->render->add_template('home'); //TODO
@@ -79,14 +57,10 @@ class Home extends CI_Controller
         $this->render->set_title('Home rebuild - Flota Biobio');
         $this->render->set_value('breadcrumb_position', array('position' => false));
 
-        // Vistas
         $this->render->add_view('parts/home/slider', $data);
         $this->render->add_view('parts/home/boxes', array());
-        $this->render->add_view('parts/home/blog_cm', array());
+        $this->render->add_view('parts/home/blog_cm', $blog_data);
 
-
-
-        //Render
         $this->render->render('base');
 
     }

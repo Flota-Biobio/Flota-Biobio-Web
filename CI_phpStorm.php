@@ -93,7 +93,9 @@
  * @property Ion_auth|Ion_auth_model $ion_auth    Ion Auth library
  * @property Assets_manager $assets_manager       Assets manager
  * @property Render $render                       New page renderer
- * @property FBB_Admin_model $admin_model         Modelo de administración
+ * @property Fbb_admin_model $admin_model         Modelo de administración
+ * @property Fbb_model $fbb_model                 Modelo principal
+ * @property Fbb_catalogue_model $catalogue_model Modelo del catálogo
  */
 class CI_Controller
 {
@@ -150,6 +152,8 @@ class CI_Controller
  * @property Assets_manager $assets_manager       Assets manager
  * @property Render $render                       New page renderer
  * @property FBB_Admin_model $admin_model         Modelo de administración
+ * @property Fbb_model $fbb_model                 Modelo principal
+ * @property Fbb_catalogue_model $catalogue_model Modelo del catálogo
  */
 class CI_Model
 {

@@ -20,7 +20,18 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
-## Versión 0.4.4: Administración de páginas
+### Versión 0.4.5: Blog y CM del home, y modelos
+* Fecha: 13/08/2015
+* Cambios:
+  - Desarrollo del template para el blog del inicio
+  - Desarrollo del template para el community management
+  - Re-estructuración de módulo admin
+  - Creación de modelos para administración, catálogo y global
+  - Re-estructuración de código para uso de los modelos
+  - Favicon
+  - Ajustes mayores al home
+
+### Versión 0.4.4: Administración de páginas
 * Fecha: 10/08/2015
 * Cambios:
   - Implementación adecuada de las interfaces de administración de páginas

@@ -24,25 +24,66 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera el blog de inicio y la sección de community management
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.4
+ * @version 0.4.4
  * @since   0.3.4
+ *
+ * @var array $posts
  */
 ?>
 <div class="blog-cm">
+    <div class="space-15"></div>
     <div class="container">
-        <div class="blog-cm-separator row soft-background"></div>
-        <div class="blog-cm-content row soft-background">
-            <div class="blog-box col-sm-9">
-                <h1>Noticias y eventos</h1>
-                <div class="blog-row row">
-                    <div class="blog-row-image col-sm-2"></div>
-                    <h3 class="col-sm-offset-2 col-sm-10">Noticia</h3>
-                    <p class="col-sm-offset-2 col-sm-10">Cuerpo de la nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa nocicioa </p>
+        <div class="blog-cm-content row">
+            <div class="blog col-sm-8">
+                <div class="row soft-background">
+                    <h2 class="blog-title col-sm-12 no-margin-bottom">Actividad reciente</h2>
+                    <?php foreach ($posts as $post): ?>
+                    <div class="post soft-background col-sm-12">
+                        <div class="separator soft-background"></div>
+                        <h3 class="title"><?=$post['title']?></h3>
+                        <span class="author"><i class="fa fa-user"></i> <?=$post['author']?></span>
+                        <span class="time"><i class="fa fa-clock-o"></i> <?=$post['date']?></span>
+                        <div class="separator soft-background"></div>
+                        <?= $this->assets_manager->img($post['img']) ?>
+                        <div class="separator soft-background"></div>
+                        <div class="space-15"></div>
+                        <span class="desc"><?=$post['desc']?></span>
+                        <div class="space-15"></div>
+                        <div class="button-div">
+                            <button class="btn btn-primary">Leer más <i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
-            <div class="cm-box col-sm-3">
-                CM
+
+            <div class="cm col-sm-4">
+                <div class="row">
+
+                    <div class="cm-row col-sm-12">
+                        <div class="cm-row-inner soft-background">
+                            <h2 class="blog-title">Comunidad</h2>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+
+                    <div class="cm-row col-sm-12">
+                        <div class="cm-row-inner soft-background">
+                            <?=$this->assets_manager->img('dummy/facebook_like.png')?>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+
+                    <div class="cm-row col-sm-12">
+                        <div class="cm-row-inner soft-background">
+                            <a class="twitter-timeline" href="https://twitter.com/Anito64" data-widget-id="631849789752279040">Tweets por el @Anito64.</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </div>
     </div>
 </div>

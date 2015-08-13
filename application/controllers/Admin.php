@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Maneja las peticiones al módulo de administración
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.4
+ * @version 0.4.5
  * @since   0.2.0
  */
 class Admin extends CI_Controller
@@ -52,16 +52,7 @@ class Admin extends CI_Controller
     public function index()
     {
 
-        $menu = $this->get_context_menu();
-        $this->render->set_title('Admin - Flota Biobio');
-        $this->render->add_base('admin');
-        $this->render->add_template('admin');
-        $this->render->add_view(
-            'parts/admin/menu', array('menu' => $menu), 'menu'
-        );
-        $this->render->add_view('parts/admin/content', array());
-
-        $this->render->render('admin');
+        $this->pages('base');
     }
 
     /**
@@ -76,7 +67,7 @@ class Admin extends CI_Controller
      */
     public function pages($mode='base', $id='')
     {
-        $menu = $this->get_context_menu();
+        $menu = $this->admin_model->get_menu();
         $this->render->add_base('admin');
         $this->render->add_template('admin');
         $this->render->add_view(
@@ -88,6 +79,7 @@ class Admin extends CI_Controller
             $data['pages'] = $this->admin_model->get_pages();
             $this->render->set_title('Configurar páginas - Flota Biobio');
             $this->render->add_css('font-awesome.min');
+            $this->render->add_css('parts/admin/users/config');
             $this->render->add_view('parts/admin/pages/config', $data);
         }
 
@@ -97,123 +89,11 @@ class Admin extends CI_Controller
             $this->render->add_js('editor');
             $this->render->add_css('font-awesome.min');
             $this->render->add_css('libs/editor');
+            $this->render->add_css('parts/admin/users/edit');
             $this->render->add_view('parts/admin/pages/edit', array());
         }
 
         $this->render->render('admin');
-    }
-
-
-    protected function get_context_menu()
-    {
-        return array(
-            'moderación' => array(
-                'global' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Configurar sitio',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Imágenes de inicio' => '#',
-                        'Cajas de inicio' => '#',
-                        'Páginas' => '#',
-                        'Blog' => '#',
-                        'Configuración general' => '#'
-                    )
-                ),
-                'artists' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Artistas',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Solicitudes' => '#',
-                        'Agregar' => '#',
-                        'Lista' => '#'
-                    )
-                ),
-                'users' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Usuarios',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Contacto' => '#',
-                        'Lista' => '#'
-                    )
-                ),
-                'raffle' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Sorteo',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Actual' => '#',
-                        'Nueva' => '#',
-                        'Historial' => '#'
-                    )
-                ),
-                'catalogue' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Catálogo',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Nuevo producto' => '#',
-                        'Lista de productos' => '#',
-                        'Historial' => '#'
-                    )
-                ),
-                'sales' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Ventas',
-                        'link' => '#'
-                    ),
-                    'children' => array()
-                )
-            ),
-            'administración' => array(
-                'members' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Miembras',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Lista' => '#',
-                        'Historial' => '#'
-                    )
-                ),
-                'maintenance' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Mantenimiento',
-                        'link' => '#'
-                    ),
-                    'children' => array()
-                )
-            ),
-            'servicio al cliente' => array(
-                'tickets' => array(
-                    'info' => array(
-                        'icon' => '',
-                        'label' => 'Tickets de atención',
-                        'link' => '#'
-                    ),
-                    'children' => array(
-                        'Pendientes' => '#',
-                        'Activos' => '#',
-                        'Historial' => '#'
-                    )
-                )
-            )
-        );
     }
 
 }
