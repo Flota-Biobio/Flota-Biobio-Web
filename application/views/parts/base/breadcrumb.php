@@ -31,9 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <?php if ($position): ?>
 <div class="breadcrumb-row">
-    <div class="container">
+    <div class="container shadowed">
         <div class="breadcrumb-row-content row soft-background">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb background-gray-90">
                 <?php foreach ($position as $step): ?>
                     <li<?= empty($step['active']) ? '' : ' class="active"' ?>>
                         <a href="<?= $step['link'] === false ? '#' : base_url('index.php').'/'.$step['link'] ?>">

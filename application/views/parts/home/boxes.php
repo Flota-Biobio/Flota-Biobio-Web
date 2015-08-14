@@ -23,13 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera las cajas del inicio
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.6
+ * @version 0.4.6
  * @since   0.1.6
  */
 ?>
 <div class="boxes">
     <div class="container">
-        <div class="boxes-content row soft-background">
+        <div class="boxes-content row shadowed border-gray-85 background-gray-95 no-border-top">
             <div class="col-sm-4">
                 <div class="box box-1">
                     <div class="box-img">

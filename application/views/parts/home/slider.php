@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que muestra el slider de la página principal.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.5
+ * @version 0.4.6
  * @since   0.1.4
  *
  * @var array $slider_info
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <div class="slider">
     <div class="container">
-        <div class="slider-content row soft-background">
+        <div class="slider-content row shadowed border-gray-85 background-gray-95 no-border-bottom">
             <div id="sliderFrame">
                 <div id="slider">
                     <?php foreach ($slider_info as $slide): ?>

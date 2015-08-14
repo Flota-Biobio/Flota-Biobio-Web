@@ -22,28 +22,34 @@
  * Estilos para el footer global
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.3.5
+ * Version: 0.4.6
  * Since:   0.3.5
  */
-.footer div.container {
+
+.footer .container {
     background-color: transparent;
 }
 
-.footer-content {
-    height: 100px;
-    padding-top: 15px;
+.footer .content {
+    position: relative;
 }
 
-.footer-content img {
-    float: right;
-    height: 50px;
-    width: auto;
-    margin-top: 20px;
-    margin-right: 90px;
+.footer .content .background {
+    background: url('../../../images/marca_2v.png') no-repeat right;
+    background-size: contain;
     opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 100px;
+    position: absolute;
 }
 
-.footer-content span {
+.footer .signature {
+
+}
+
+.footer .signature span {
     padding-bottom: 5px;
     display: block;
     font-size: 13px;
@@ -52,6 +58,15 @@
     letter-spacing: 1px;
 }
 
-.footer-content span strong {
-    font-family: "Helvetica Neue Roman", sans-serif;
+.footer .logo {
+
 }
+
+.footer .logo img {
+    height: 100px;
+    width: auto;
+    opacity: 0.5;
+}
+
+
+
