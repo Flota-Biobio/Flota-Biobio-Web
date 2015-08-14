@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del perfil de un usuario
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.6
+ * @version 0.5
  * @since   0.4.1
  *
  * @var string $name
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @var string $user_variant
  */
 ?>
-<div class="profile">
+<div class="profile color-gray-20">
     <div class="container shadowed border-gray-85">
         <div class="profile-content row background-gray-95">
 
@@ -50,10 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?=$this->assets_manager->img($img, 'user/', ucwords($name), '', 'img-circle shadowed')?>
                     </div>
                     <div class="badge-data">
-                        <span class="user-name condensed-font"><?=ucwords($name)?></span>
-                        <span class="user-sub-name thin-font secondary-color"><?=ucwords($type)?></span>
+                        <span class="user-name font-400 color-gray-20"><?=ucwords($name)?></span>
+                        <span class="user-sub-name font-300 color-gray-20"><?=ucwords($type)?></span>
                         <hr>
-                        <ul class="link-list list-unstyled normal-font">
+                        <ul class="link-list list-unstyled">
                             <?php foreach ($links as $link): ?>
                             <li>
                                 <i class="fa fa-<?=$link['category']?> fa-2x <?=$link['color']?>"></i>&nbsp;&nbsp;&nbsp;
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <br>
-                <div class="user-details light-font shadowed border-gray-85">
+                <div class="user-details font-400 shadowed border-gray-85">
                     <dl>
                         <dt>NOMBRE REAL</dt>
                         <dd><?=ucwords($name)?></dd>
@@ -87,10 +87,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <?php if ($level == 1): ?>
                 <div class="user-points col-sm-12 shadow-post shadowed">
-                    <div class="points-total accent-background">14</div>
+                    <div class="points-total background-accent">14</div>
                     <div class="points-message">
-                        <span class="points-message-title secondary-color-dark">
-                            Has acumulado muchos puntos
+                        <span class="points-message-title color-gray-20 font-300">
+                            Tienes muchos puntos
                         </span>
                         <span class="points-message-subtitle secondary-color">
                             Acumula puntos para acceder a beneficios

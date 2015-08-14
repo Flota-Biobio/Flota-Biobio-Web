@@ -29,6 +29,8 @@ Apache License, Version 2.0
   - Footer global modificado
   - Ajustado el sitio para funcionar con el nuevo sistema de estilos
   - Modificado el slider del home
+* Hotfix 1: Reparadas vistas de usuario
+
 
 ### Versión 0.4.6: Refactor global de estilos
 * Fecha: 14/08/2015

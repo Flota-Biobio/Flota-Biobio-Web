@@ -22,7 +22,7 @@
  * Estilos para el perfil de usuario
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.2
+ * Version: 0.5
  * Since:   0.4.1
  */
 
@@ -79,12 +79,10 @@
 
 .profile .user-badge .badge-data span.user-name {
     font-size: 27px;
-    font-weight: bold;
 }
 
 .profile .user-badge .badge-data span.user-sub-name {
     font-size: 18px;
-    font-weight: bold;
 }
 
 .profile .user-badge .badge-data .link-list {
