@@ -42,11 +42,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title><?=$title?></title>
     <?=$resources?>
 </head>
-<body class="soft-background">
+<body class="background-gray-95">
 <?= $this->load->view('parts/admin/header', array(), true) ?>
 <div class="admin-body">
     <div class="container-fluid">
-        <div class="menu main-background-dark">
+        <div class="menu background-accent">
             <?= $menu ?>
         </div>
         <div class="content">

@@ -24,13 +24,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera el blog de inicio y la sección de community management
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.6
+ * @version 0.5
  * @since   0.3.4
  *
  * @var array $posts
  */
 ?>
-<div class="blog-cm">
+<div class="blog-cm color-gray-20">
     <div class="space-15"></div>
     <div class="container">
         <div class="blog-cm-content row">

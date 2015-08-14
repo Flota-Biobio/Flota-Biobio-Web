@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Template básico
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.6
+ * @version 0.5
  * @since   0.2.3
  *
  * @var string $title Título de la página
@@ -41,7 +41,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body class="background-white">
     <?=$this->load->view('parts/base/header', array(), true)?>
-    <?=$this->load->view('parts/base/nav_menu', array(), true)?>
     <?=$this->load->view('parts/base/breadcrumb', $breadcrumb_position, true)?>
     <?=$content?>
     <?=$this->load->view('parts/base/footer', array(), true)?>

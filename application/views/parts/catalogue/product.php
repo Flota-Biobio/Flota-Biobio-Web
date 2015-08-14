@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Detalle de un producto del catálogo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4
+ * @version 0.5
  * @since   0.3.6
  *
  * @var array $slides Arreglo con las imágenes para mostrar en el slider
@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 
-    <div class="artist-title col-sm-3 secondary-background-dark soft-color text-center thin-font">
+    <div class="artist-title col-sm-3 background-gray-20 color-white font-300 text-center">
         Malaquián Botella
     </div>
 
@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="artist-image col-sm-12">
                 <?=$this->assets_manager->img('catalogue/p/artista.png'); ?>
             </div>
-            <div class="artist-resume col-sm-12">
+            <div class="artist-resume col-sm-12 color-gray-20">
                 <dl>
                     <dt>Localidad</dt>
                     <dd>Curanilahue</dd>

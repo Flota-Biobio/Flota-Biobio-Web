@@ -23,13 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista por defecto del catálogo, feed de los últimos productos
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4
+ * @version 0.5
  * @since   0.3.8
  *
  * @var array $products Arreglo con los productos a mostrar
  */
 ?>
-<div class="catalogue-products col-sm-9 row">
+<div class="catalogue-products col-sm-9 row color-gray-20">
 
     <?php foreach ($products as $product): ?>
         <div class="catalogue-product-box col-sm-4">

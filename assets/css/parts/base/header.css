@@ -22,31 +22,76 @@
  * Hoja de estilos para la vista "header"
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.1.3
+ * @version 0.5
  * @since   0.1.3
  */
 
 .header {
-    height: 100px;
+    height: 110px;
     margin: 0 auto;
     color: #fff;
 }
 
-.header .logo-box {
-    margin: auto 0;
-}
+/* MENÚ DE NAVEGACIÓN */
 
-.header .logo-box h1 {
-    height: 40px;
-    margin: 30px 0 0;
+.header .navbar {
+    height: 50px;
+    margin: 30px 0;
     padding: 0;
-    line-height: 40px;
+    border: none;
 }
 
-.header .logo-box img {
-    height: 70px;
+.header .container-fluid {
+    padding: 0;
+}
+
+.header .navbar .dropdown-toggle,
+.header .navbar .dropdown-toggle:active,
+.header .navbar .dropdown-toggle:visited,
+.header .navbar .link a,
+.header .navbar .link a:active,
+.header .navbar .link a:visited{
+    color: white;
+}
+
+.header .navbar .dropdown-toggle:hover,
+.header .navbar .link a:hover,
+.header .navbar .navbar-nav .open a {
+    color: white;
+    background-color: #498ad7;
+}
+
+.header .navbar .dropdown-menu {
+    background-color: #498ad7;
+}
+
+.header .navbar .dropdown-menu a {
+    font-weight: 300;
+}
+
+.header .navbar .dropdown-menu a:hover {
+    background-color: #3872ae;
+}
+
+.header .navbar .session {
+    margin-right: -15px;
+    border-left: solid 1px rgba(255, 255, 255, 0.4);
+}
+
+
+.header a.logo {
+    height: 100%;
+    padding: 0;
+}
+
+.header div.logo img {
+    height: 100%;
     width: auto;
-    margin-top: 15px;
+}
+
+.header .nav-menu {
+    font-size: 16px;
+    line-height: 50px;
 }
 
 .header .session-box {

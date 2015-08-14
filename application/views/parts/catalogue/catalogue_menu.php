@@ -23,30 +23,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del menú del catálogo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.6
+ * @version 0.5
  * @since   0.3.8
  */
 ?>
-<div class="catalogue-menu col-sm-3 condensed-font soft-background">
-    <ul class="list-unstyled menu-list light-font">
-        <li class="menu-element secondary-color-dark">
+<div class="catalogue-menu col-sm-3 background-gray-95">
+    <ul class="list-unstyled menu-list font-300">
+        <li class="menu-element color-gray-20">
             <button type="button" class="btn btn-default btn-lg">
                 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Carro de compras
             </button>
         </li>
-        <li class="menu-element soft-color">
+        <li class="menu-element color-main-60">
             <button type="button" class="btn btn-default btn-lg">
                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favoritos
             </button>
         </li>
-        <li class="menu-element soft-color">
+        <li class="menu-element color-main-60">
             <button type="button" class="btn btn-default btn-lg">
                 <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Historial de compras
             </button>
         </li>
-        <li class="menu-label">Filtrar búsqueda</li>
+        <li class="menu-label color-black">Filtrar búsqueda</li>
         <li class="menu-flex">
-            <label for="category" class="bold-text">CATEGORÍA DEL PRODUCTO</label>
+            <label for="category" class="color-gray-20 font-600">CATEGORÍA DEL PRODUCTO</label>
             <select class="form-control" id="category">
                 <option>Artesanía</option>
                 <option>Diseño</option>
@@ -54,13 +54,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </select>
         </li>
         <li class="menu-flex row">
-            <label for="price" class="col-sm-12 bold-text">RANGO DE PRECIOS</label>
+            <label for="price" class="col-sm-12 color-gray-20 font-600">RANGO DE PRECIOS</label>
             <div class="col-sm-12">
-                <span class="pull-left">$1.000</span>
-                <span class="pull-right">$100.000</span>
+                <span class="pull-left color-black">$1.000</span>
+                <span class="pull-right color-black">$100.000</span>
             </div>
             <input id="price" type="text" class="span2 col-sm-12" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1000" data-slider-value="[10000,80000]">
         </li>
     </ul>
-    <button type="button" class="btn btn-info pull-right filter-btn normal-font">Buscar productos</button>
+    <button type="button" class="btn btn-info pull-right filter-btn">Buscar productos</button>
 </div>

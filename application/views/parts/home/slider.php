@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que muestra el slider de la página principal.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.6
+ * @version 0.5
  * @since   0.1.4
  *
  * @var array $slider_info
@@ -31,32 +31,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <div class="slider">
     <div class="container">
-        <div class="slider-content row shadowed border-gray-85 background-gray-95 no-border-bottom">
-            <div id="sliderFrame">
-                <div id="slider">
-                    <?php foreach ($slider_info as $slide): ?>
-                    <a href="<?=$slide['link']?>" target="_blank">
-                        <img src="<?=base_url('assets/images/slider/'.$slide['img'])?>"
-                             alt="<?=$slide['title']?>" />
-                    </a>
+        <div class="content row shadowed border-gray-85 background-gray-95 no-border-bottom no-border-top">
+
+            <div id="home-slider" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <?php foreach ($slider_info as $pos => $slide): ?>
+                    <li data-target="#home-slider" <?=$pos==0 ? 'class="active' : ''?> data-slide-to="<?=$pos?>"></li>
                     <?php endforeach; ?>
-                </div>
-                <!--thumbnails-->
-                <div id="thumbs">
-                    <?php foreach ($slider_info as $slide): ?>
-                    <div class="thumb">
-                        <div class="frame">
-                            <img src="<?=base_url('assets/images/slider/'.$slide['thumb'])?>" />
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <?php $count = 0; foreach ($slider_info as $pos => $slide): ?>
+                    <div class="item<?=$pos==0 ? ' active' : ''?>">
+                        <a href="<?=$slide['link']?>" target="_blank">
+                            <?= $this->assets_manager->img($slide['img'], 'slider/', $slide['title'], $slide['title'], 'slide') ?>
+                        </a>
+                        <div class="carousel-caption">
+                            <?=$slide['title']?>
                         </div>
-                        <div class="thumb-content">
-                            <p><?=$slide['title']?></p><?=$slide['detail']?>
-                        </div>
-                        <div style="clear:both;"></div>
                     </div>
                     <?php endforeach; ?>
+
                 </div>
-                <!--clear above float:left elements. It is required if above #slider is styled as float:left. -->
-                <div style="clear:both;height:0;"></div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#home-slider" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#home-slider" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </div>

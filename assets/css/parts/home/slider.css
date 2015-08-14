@@ -1,5 +1,4 @@
-<?php
-/**
+/*
  * Proyecto Flota Biobío
  * Aplicación WEB
  *
@@ -14,25 +13,40 @@
  *
  * @copyright   Copyright 2015 Flota Biobio
  * @license     Apache License, Version 2.0
- * @deprecated  Será eliminado en la versión 0.4
  */
-
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-/**
- * Vista: admin_header
- * Vista del header de administración
+ 
+/*
+ * HOJA DE ESTILOS
+ * slider
  *
- * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.3.0
- * @since   0.3.0
+ * {SHEET-DESCRIPTION}
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.5
+ * Since:   0.5
  */
-?>
 
-<div class="admin-header secondary-background-dark">
-    <div class="container-fluid">
-        FLOTA BIOBIO ::&nbsp;&nbsp;
-        <span class="secondary-color-light">Administración</span>
-    </div>
-</div>
-<div class="admin-header-border background-accent"></div>
+.slider {
+    overflow: hidden;
+}
+
+.slider .home-slider {
+
+}
+
+.slider .slide {
+    width: 100%;
+    height: 400px;
+}
+
+.slider .carousel-caption {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 300;
+}

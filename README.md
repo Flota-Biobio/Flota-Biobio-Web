@@ -17,8 +17,18 @@ Apache License, Version 2.0
 * **Versiones 2:** Desarrollo de primeros controladores y vistas
 * **Versiones 3:** Renderer v2, desarrollo de controladores y vistas
 * **Versiones 4:** Renderer v3, limpieza y desarrollo de controladores y vistas
+* **Versiones 5:** Diseño optimizado, prototipo final fase 1
 
 ## Historial de cambios
+
+### Versión 0.5: Rebuild de estilos
+* Fecha: 14/08/2015
+* Cambios:
+  - Header global re-construido
+  - Menú de navegación incorporado en el header global
+  - Footer global modificado
+  - Ajustado el sitio para funcionar con el nuevo sistema de estilos
+  - Modificado el slider del home
 
 ### Versión 0.4.6: Refactor global de estilos
 * Fecha: 14/08/2015

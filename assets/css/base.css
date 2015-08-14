@@ -22,7 +22,7 @@
  * Hoja de estilos base, la que será cargada en cada vista del sitio.
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.6
+ * Version: 0.5
  * Since:   0.1.1
  */
 
@@ -81,7 +81,7 @@
 .background-gray-80 { background-color: #CDCDCD; }
 .background-gray-85 { background-color: #D9D9D9; }
 .background-gray-90 { background-color: #E5E5E5; }
-.background-gray-95 { background-color: #F2F2F2; }
+.background-gray-95 { background-color: #f7f7f7; }
 .background-white { background-color: white; }
 
 /* Social networks */
