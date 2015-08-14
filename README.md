@@ -20,6 +20,14 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.4.6: Refactor global de estilos
+* Fecha: 14/08/2015
+* cambios:
+  - Modificado el esquema individualizado de estilos
+  - Generalización de numerosos estilos (botones, cajas, etc)
+  - Ajuste de la paleta de colores a la nueva
+  - Re-ajuste del footer global al nuevo estilo a modo de prueba
+
 ### Versión 0.4.5: Blog y CM del home, y modelos
 * Fecha: 13/08/2015
 * Cambios:

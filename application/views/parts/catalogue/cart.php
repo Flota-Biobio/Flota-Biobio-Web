@@ -36,7 +36,7 @@ foreach ($cart as $product) {
 <div class="cart-products col-sm-9">
 
     <?php foreach ($cart as $product): ?>
-        <div class="cart-product">
+        <div class="cart-product shadowed border-gray-30">
             <button type="button" class="btn btn-danger btn-xs"> X</button>
             <?= $this->assets_manager->img($product['img'], 'catalogue/') ?>
             <div class="cart-product-title"><?= $product['title'] ?></div>

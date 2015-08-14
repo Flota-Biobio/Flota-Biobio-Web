@@ -22,7 +22,7 @@
  * Estilos para el módulo de catálogo
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.3.5
+ * Version: 0.4.6
  * Since:   0.3.5
  */
 
@@ -86,13 +86,6 @@
 
 .catalogue .filter-btn {
     margin: 40px 0 20px 0;
-    background-color: #00a0e3;
-    border-color: #0087a8;
-}
-
-.catalogue .filter-btn:hover {
-    background-color: #0088c7;
-    border-color: #0087a8;
 }
 
 .slider.slider-horizontal {

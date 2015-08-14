@@ -23,13 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.1
+ * @version 0.4.6
  * @since   0.1.4
  */
 ?>
-<div class="header main-background">
+<div class="header background-main">
     <div class="container">
-        <div class="header-content row main-background">
+        <div class="header-content row">
             <div class="logo-box col-sm-4">
                 <?=$this->assets_manager->img('marca_2.png', '', 'Flota Biobio')?>
             </div>

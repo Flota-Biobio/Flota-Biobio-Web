@@ -22,209 +22,133 @@
  * Hoja de estilos base, la que será cargada en cada vista del sitio.
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.5
+ * Version: 0.4.6
  * Since:   0.1.1
  */
 
-@font-face {
-    font-family: 'Helvetica Neue Condensed';
-    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Condensed.otf');
-}
 
-@font-face {
-    font-family: 'Helvetica Neue Light';
-    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Light.otf');
-}
+/*
+ * COLORS
+ * main:   #519ff4  
+ * accent: #a351f4
+ */
 
-@font-face {
-    font-family: 'Helvetica Neue Thin';
-    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Thin.otf');
-}
+/* Foreground */
+.color-main-80 { color: #dcecfd; }
+.color-main-60 { color: #b8d8fa; }
+.color-main-40 { color: #96c4f7; }
+.color-main-20 { color: #74b1f5;}
+.color-main { color: #519ff4;}
+.color-accent-80 { color: #ecdbfc; }
+.color-accent-60 { color: #d9b8fa; }
+.color-accent-40 { color: #c796f7; }
+.color-accent-20 { color: #b474f5; }
+.color-accent { color: #a251f3; }
+.color-white { color: white; }
+.color-gray-80 { color: #cbcbcb; }
+.color-gray-60 { color: #989898; }
+.color-gray-40 { color: #666666; }
+.color-gray-20 { color: #333333; }
+.color-black { color: black; }
 
-@font-face {
-    font-family: 'Helvetica Neue Roman';
-    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Roman.otf');
-}
+/* Background */
+.background-main-80 { background-color: #dcecfd; }
+.background-main-60 { background-color: #b8d8fa; }
+.background-main-40 { background-color: #96c4f7; }
+.background-main-20 { background-color: #74b1f5; }
+.background-main { background-color: #519ff4; }
+.background-accent-80 { background-color: #ecdbfc; }
+.background-accent-60 { background-color: #d9b8fa; }
+.background-accent-40 { background-color: #c796f7; }
+.background-accent-20 { background-color: #b474f5; }
+.background-accent { background-color: #a251f3; }
+.background-black { background-color: black; }
+.background-gray-5 { background-color: #0D0D0D; }
+.background-gray-10 { background-color: #1A1A1A; }
+.background-gray-15 { background-color: #262626; }
+.background-gray-20 { background-color: #333333; }
+.background-gray-25 { background-color: #404040; }
+.background-gray-30 { background-color: #4D4D4D; }
+.background-gray-35 { background-color: #595959; }
+.background-gray-40 { background-color: #666666; }
+.background-gray-45 { background-color: #737373; }
+.background-gray-50 { background-color: #808080; }
+.background-gray-55 { background-color: #8C8C8C; }
+.background-gray-60 { background-color: #999999; }
+.background-gray-65 { background-color: #A6A6A6; }
+.background-gray-70 { background-color: #B3B3B3; }
+.background-gray-75 { background-color: #C0C0C0; }
+.background-gray-80 { background-color: #CDCDCD; }
+.background-gray-85 { background-color: #D9D9D9; }
+.background-gray-90 { background-color: #E5E5E5; }
+.background-gray-95 { background-color: #F2F2F2; }
+.background-white { background-color: white; }
 
-@font-face {
-    font-family: 'Helvetica Neue Medium';
-    src: url('../fonts/Helvetica_Neue/HelveticaNeue-Medium.otf');
-}
-
-html, body {
-    background-color: #ddd;
-    color: #2e2e2e;
-}
-
-
-.condensed-font {
-    font-family: "Helvetica Neue Condensed", sans-serif;
-}
-
-.normal-font {
-    font-family: "Helvetica Neue Roman", sans-serif;
-}
-
-.light-font {
-    font-family: "Helvetica Neue Light", sans-serif;
-}
-
-.medium-font {
-    font-family: "Helvetica Neue Medium", sans-serif;
-}
-
-.thin-font {
-    font-family: "Helvetica Neue Thin", sans-serif;
-}
-
-
-.container {
-    background-color: #eee;
-}
-
-.space-15 {
-    height: 15px;
-    background-color: transparent;
-}
-
-.space-30 {
-    height: 30px;
-    background-color: transparent;
-}
-
-
-/* Backgrounds */
-
-.main-background {
-    background-color: #519ff4;
-}
-
-.main-background-light {
-    background-color: #80cff1;
-}
-
-.main-background-dark {
-    background-color: #015072;
-}
-
-.secondary-background {
-    background-color: #5b5b5b;
-}
-
-.secondary-background-light {
-    background-color: #adadad;
-}
-
-.secondary-background-lighter {
-    color: #e5e5e5;
-}
-
-.secondary-background-dark {
-    background-color: #2e2e2e;
-}
-
-.soft-background {
-    background-color: #fefefe;
-}
-
-.overall-background {
-    background-color: #ddd;
-}
+/* Social networks */
+.color-facebook { color: #3b5998; }
+.color-twitter { color: #9AE4E8; }
+.color-google-plus { color: #dc4b39; }
+.color-deviantart { color: #05cb47; }
+.color-linkedin { color: #0077b3; }
 
 
-/* COLORS */
 
-.main-color {
-    color: #519ff4;
-}
+/* BORDERS */
+.border-black,
+.border-gray-5, .border-gray-10, .border-gray-15, .border-gray-20,
+.border-gray-25, .border-gray-30, .border-gray-35, .border-gray-40,
+.border-gray-45, .border-gray-50, .border-gray-55, .border-gray-60,
+.border-gray-65, .border-gray-70, .border-gray-75, .border-gray-80,
+.border-gray-85, .border-gray-90, .border-gray-95, .border-white { border: solid 1px; }
 
-.main-color-light {
-    color: #80cff1;
-}
+.border-black { border-color: black; }
+.border-gray-5 { border-color: #0D0D0D; }
+.border-gray-10 { border-color: #1A1A1A; }
+.border-gray-15 { border-color: #262626; }
+.border-gray-20 { border-color: #333333; }
+.border-gray-25 { border-color: #404040; }
+.border-gray-30 { border-color: #4D4D4D; }
+.border-gray-35 { border-color: #595959; }
+.border-gray-40 { border-color: #666666; }
+.border-gray-45 { border-color: #737373; }
+.border-gray-50 { border-color: #808080; }
+.border-gray-55 { border-color: #8C8C8C; }
+.border-gray-60 { border-color: #999999; }
+.border-gray-65 { border-color: #A6A6A6; }
+.border-gray-70 { border-color: #B3B3B3; }
+.border-gray-75 { border-color: #C0C0C0; }
+.border-gray-80 { border-color: #CDCDCD; }
+.border-gray-85 { border-color: #D9D9D9; }
+.border-gray-90 { border-color: #E5E5E5; }
+.border-gray-95 { border-color: #F2F2F2; }
+.border-white { border-color: white; }
+.no-border-top { border-top: none !important; }
+.no-border-bottom { border-bottom: none !important; }
+.no-border-left { border-left: none !important; }
+.no-border-right { border-right: none !important; }
 
-.main-color-dark {
-    color: #015072;
-}
 
-.secondary-color {
-    color: #5b5b5b;
-}
-
-.secondary-color-light {
-    color: #adadad;
-}
-
-.secondary-color-lighter {
-    color: #e5e5e5;
-}
-
-.secondary-color-dark {
-    color: #2e2e2e;
-}
-
-.soft-color {
-    color: #fefefe;
-}
-
-.non-italics {
-    font-style: normal;
-}
-
-.bold-text {
-    font-family: "Helvetica Neue Medium", sans-serif;
-    font-weight: bold;
-    color: #2e2e2e;
-}
-
-.color-facebook {
-    color: #3b5998;
-}
-
-.color-twitter {
-    color: #9AE4E8;
-}
-
-.color-google-plus {
-    color: #dc4b39;
-}
-
-.color-deviantart {
-    color: #05cb47;
-}
-
-.color-linkedin {
-    color: #0077b3;
+/* SHADOWS */
+.shadowed {
+    -webkit-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
 
-.mb-5 {
-    margin-bottom: 5px;
-}
+/* BUTTONS */
 
-.mb-10 {
-    margin-bottom: 10px;
-}
-
-.mb-15 {
-    margin-bottom: 15px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
+/* Primary */
 .btn-primary,
 .btn-primary:focus,
 .btn-primary.focus {
     background-color: #a351f4;
     border: solid 1px #a351f4;
 }
-
 .btn-primary:hover {
     background-color: #884cd4;
     border: solid 1px #653398;
 }
-
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary,
@@ -241,24 +165,60 @@ html, body {
     border: solid 1px #653398;
     outline: #522a7c auto 5px;
 }
-
 .btn-primary:focus {
     outline: #522a7c auto 5px;
     outline-offset: -2px;
 }
 
-.no-margin-top {
-    margin-top: 0;
+/* Secondary */
+.btn-info,
+.btn-info:focus,
+.btn-info.focus {
+    background-color: #74b1f5;
+    border: solid 1px #74b1f5;
+}
+.btn-info:hover {
+    background-color: #519ff4;
+    border: solid 1px #4986d3;
+}
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info,
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open > .dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open > .dropdown-toggle.btn-info.focus {
+    background-color: #376ba6;
+    border: solid 1px #2a5582;
+    outline: #2c5181 auto 5px;
+}
+.btn-info:focus {
+    outline: #519ff4 auto 5px;
+    outline-offset: -2px;
 }
 
-.no-margin-bottom {
-    margin-bottom: 0;
-}
+/* LAYOUT */
 
-.no-margin-left {
-    margin-left: 0;
-}
+.space-15, .pace-30 { background-color: transparent; }
+.space-15 { height: 15px; }
+.space-30 { height: 30px; }
 
-.no-margin-right {
-    margin-right: 0;
-}
+
+/* TEXT */
+
+html, body { font-family: "Roboto", sans-serif; }
+.non-italics { font-style: normal; }
+.font-100 { font-weight: 100; }
+.font-200 { font-weight: 200; }
+.font-300 { font-weight: 300; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }

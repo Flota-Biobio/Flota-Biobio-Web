@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del perfil de un usuario
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.2
+ * @version 0.4.6
  * @since   0.4.1
  *
  * @var string $name
@@ -40,14 +40,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 ?>
 <div class="profile">
-    <div class="container">
-        <div class="profile-content row soft-background">
+    <div class="container shadowed border-gray-85">
+        <div class="profile-content row background-gray-95">
 
             <div class="user-col col-sm-4">
 
-                <div class="user-badge">
+                <div class="user-badge shadowed">
                     <div class="badge-img">
-                        <?=$this->assets_manager->img($img, 'user/', ucwords($name), '', 'img-circle')?>
+                        <?=$this->assets_manager->img($img, 'user/', ucwords($name), '', 'img-circle shadowed')?>
                     </div>
                     <div class="badge-data">
                         <span class="user-name condensed-font"><?=ucwords($name)?></span>
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <br>
-                <div class="user-details light-font">
+                <div class="user-details light-font shadowed border-gray-85">
                     <dl>
                         <dt>NOMBRE REAL</dt>
                         <dd><?=ucwords($name)?></dd>
@@ -86,8 +86,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="main-col row col-sm-8">
 
                 <?php if ($level == 1): ?>
-                <div class="user-points col-sm-12 shadow-post">
-                    <div class="points-total main-background">14</div>
+                <div class="user-points col-sm-12 shadow-post shadowed">
+                    <div class="points-total accent-background">14</div>
                     <div class="points-message">
                         <span class="points-message-title secondary-color-dark">
                             Has acumulado muchos puntos
@@ -109,19 +109,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h3>Obras populares</h3>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p9.png')?>');"></div>
+                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p9.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p8.png')?>');"></div>
+                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p8.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p7.png')?>');"></div>
+                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p7.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p6.png')?>');"></div>
+                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p6.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p4.png')?>');"></div>
+                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p4.png')?>');"></div>
                 </div>
 
                 <div class="space-30 col-sm-12"></div>
@@ -136,14 +136,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <?php foreach ($feed as $post): ?>
-                <div class="feed-post col-sm-12 shadow-post">
+                <div class="feed-post col-sm-12 shadow-post shadowed border-gray-15">
                     <?=$this->assets_manager->img($post['category'].'.png', 'user/feed/', '')?>
                     <div class="feed-post-body<?=$user_variant?>">
                         <span class="feed-post-date"><?=$post['date']?></span>
                         <span class="feed-post-message"><?=$post['message']?></span>
                     </div>
                     <?php if ($level == 1): ?>
-                    <div class="feed-points main-color">+<?=$post['points']?></div>
+                    <div class="feed-points color-accent-20">+<?=$post['points']?></div>
                     <?php endif; ?>
                 </div>
                 <?php endforeach ?>

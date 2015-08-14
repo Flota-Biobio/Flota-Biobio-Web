@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del menú del catálogo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4
+ * @version 0.4.6
  * @since   0.3.8
  */
 ?>
@@ -62,5 +62,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <input id="price" type="text" class="span2 col-sm-12" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1000" data-slider-value="[10000,80000]">
         </li>
     </ul>
-    <button type="button" class="btn btn-primary pull-right filter-btn normal-font">Buscar productos</button>
+    <button type="button" class="btn btn-info pull-right filter-btn normal-font">Buscar productos</button>
 </div>

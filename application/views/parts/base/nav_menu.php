@@ -23,13 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del menu de navegación. Se utiliza en la mayoría de las vistas.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.2
+ * @version 0.4.6
  * @since   0.3.4
  */
 ?>
 <div class="nav-menu">
-    <div class="container">
-        <div class="nav-menu-content row secondary-background-dark soft-color light-font">
+    <div class="container shadowed">
+        <div class="nav-menu-content row background-gray-20 color-gray-80">
             <div class="logo-box col-sm-12">
                 <ul class="list-unstyled menu-lista list-inline">
                     <li id="" class="menu-element">Home</li>
