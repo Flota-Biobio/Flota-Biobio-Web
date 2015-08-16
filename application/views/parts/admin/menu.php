@@ -35,7 +35,7 @@ $links = array();
 
 <ul class="menu-list list-unstyled">
     <?php foreach ($menu as $category => $elements): ?>
-        <li class="category secondary-background-dark"
+        <li class="category"
             id="<?= $category ?>"><?= $category ?></li>
         <?php foreach ($elements as $element => $data): ?>
             <li
@@ -50,7 +50,7 @@ $links = array();
                 ><?= $data['info']['label'] ?></li>
             <?php foreach ($data['children'] as $label => $link): ?>
                 <li
-                    class="sub-element <?= $element ?> secondary-background-light secondary-color-dark"
+                    class="sub-element <?= $element ?>"
                     <?php
                     if ($link != '#') {
                         echo 'id="link_' . $link_count++ . '"';

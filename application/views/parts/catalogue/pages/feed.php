@@ -23,27 +23,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista por defecto del catálogo, feed de los últimos productos
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.3.8
  *
  * @var array $products Arreglo con los productos a mostrar
  */
 ?>
-<div class="catalogue-products col-sm-9 row color-gray-20">
+<div class="feed col-sm-9 row color-gray-20">
 
     <?php foreach ($products as $product): ?>
         <div class="catalogue-product-box col-sm-4">
-            <div class="catalogue-product soft-background" style="background-image: url('<?=$this->assets_manager->asset_url($product['image'])?>');">
-                <span class="product-title medium-font"><?=$product['title']?></span>
-                <span class="product-author medium-font"><?=$product['author']?></span>
-                <span class="product-price thin-font"><?='$'.strrev(substr(chunk_split(strrev($product['price']), 3, '.'), 0, -1));?></span>
+            <div class="product soft-background" style="background-image: url('<?=$this->assets_manager->asset_url($product['image'])?>');">
+                <span class="title medium-font"><?=$product['title']?></span>
+                <span class="author medium-font"><?=$product['author']?></span>
+                <span class="price thin-font"><?='$'.strrev(substr(chunk_split(strrev($product['price']), 3, '.'), 0, -1));?></span>
             </div>
         </div>
     <?php endforeach ?>
 
-</div>
-<div class="catalogue-pagination col-sm-9 col-sm-offset-3">
-    <nav class="pagination-nav">
+    <nav class="pagination-nav col-sm-12 center-block">
         <ul class="pagination">
             <li class="disabled">
                 <a href="#" aria-label="Previous">
@@ -66,4 +64,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </li>
         </ul>
     </nav>
+
 </div>

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera el catálogo completo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.3.5
  *
  * @var string $title Título de la página
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     );
 </script>
 <div class="catalogue">
-    <div class="container background-gray-95 shadowed border-gray-95">
+    <div class="container">
         <div class="catalogue-content row">
             <div class="catalogue-title col-sm-12">
                 <h1 class="color-gray-20 font-300">Catálogo :: <?=$cat_title?></h1>

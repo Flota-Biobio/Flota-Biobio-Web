@@ -23,14 +23,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Detalle de un producto del catálogo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.3.6
  *
  * @var array $slides Arreglo con las imágenes para mostrar en el slider
+ * @var array $user Arreglo con los datos del artista
  */
 ?>
 
-<div class="catalogue-product-detail col-sm-9 row">
+<div class="product col-sm-9 row">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -62,69 +63,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </a>
     </div>
 
-    <div class="product-buttons col-sm-12">
-        <div class="product-buttons-inner pull-right">
-            <div class="product-price-detail">Valor del producto: <strong>$52.200</strong></div>
+    <div class="actions col-sm-12">
+        <div class="inner pull-right">
+            <div class="price">Valor del producto: <strong>$52.200</strong></div>
             <button type="button" class="btn btn-default">Agregar a favoritos</button>
             <button type="button" class="btn btn-danger">Agregar al carro</button>
         </div>
     </div>
 
-    <div class="product-detail col-sm-9">
-        <div class="product-detail-inner secondary-background-lighter light-font">
-            <table class="table product-detail-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>DETALLES DEL PRODUCTO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="criteria medium-font">Materiales</td>
-                        <td>Diskette en desuso, cinta adhesiva transparente, sacapuntas verde</td>
-                    </tr>
-                    <tr>
-                        <td class="criteria medium-font">Dimensiones</td>
-                        <td>17cm alto, 15cm largo, 0.3cm ancho (1cm en la base)</td>
-                    </tr>
-                    <tr>
-                        <td class="criteria medium-font">Soporte</td>
-                        <td>No se especifica</td>
-                    </tr>
-                    <tr>
-                        <td class="criteria medium-font">Descripción</td>
-                        <td>Composición neoliberal suicídica con elementos
-                            tecnológicos de antaño. Expone los matices dolorosos
-                            de los años tempranos de la computación. Alegoría
-                            social capitalista.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="detail col-sm-8">
+        <h2 class="font-300 head">Detalles del producto</h2>
+        <div class="inner secondary-background-lighter light-font border-gray-90">
+
+            <span class="field font-500">materiales</span>
+            <span class="value">diskette en desuso, cinta adhesiva transparente, sacapuntas verde</span>
+
+            <span class="field font-500">dimensiones</span>
+            <span class="value">17cm alto, 15cm largo, 0.3cm ancho (1cm en la base)</span>
+
+            <span class="field font-500">soporte</span>
+            <span class="value">no se especifica</span>
+
+            <span class="field font-500">descripción</span>
+            <span class="value">Composición neoliberal suicídica con elementos tecnológicos de antaño. Expone los matices dolorosos de los años tempranos de la computación. Alegoría social capitalista.</span>
+
         </div>
     </div>
 
-    <div class="artist-title col-sm-3 background-gray-20 color-white font-300 text-center">
-        Malaquián Botella
-    </div>
-
-    <div class="artist-detail col-sm-3">
-        <div class="artist-detail-inner row">
-            <div class="artist-image col-sm-12">
-                <?=$this->assets_manager->img('catalogue/p/artista.png'); ?>
-            </div>
-            <div class="artist-resume col-sm-12 color-gray-20">
-                <dl>
-                    <dt>Localidad</dt>
-                    <dd>Curanilahue</dd>
-                    <dt>Técnica</dt>
-                    <dd>Diskettes y pendrives</dd>
-                    <dt>Obras publicadas</dt>
-                    <dd>5</dd>
-                </dl>
-                <button type="button" class="btn btn-default btn-sm pull-right">Ver perfil</button>
-            </div>
+    <div class="artist border-gray-90 col-sm-4">
+        <div class="photo">
+            <?=$this->assets_manager->img($user['img'], 'user/', '', '', 'img-circle shadowed'); ?>
+        </div>
+        <div class="details">
+            <span class="name font-400 color-gray-20"><?=$user['name']?></span>
+            <button class="btn btn-info btn-sm center-block">Ver perfil</button>
+            <hr>
+            <ul class="links list-unstyled">
+                <?php foreach ($user['links'] as $link): ?>
+                    <li>
+                        <i class="fa fa-<?=$link['category']?> fa-2x <?=$link['color']?>"></i>&nbsp;&nbsp;&nbsp;
+                        <a href="<?=$link['link']?>"><?=$link['label']?></a>
+                    </li>
+                <?php endforeach ?>
+            </ul>
         </div>
     </div>
 

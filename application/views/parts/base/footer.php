@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Footer global.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.6
+ * @version 0.5.1
  * @since   0.3.5
  */
 ?>
@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="space-30"></div>
 <div class="footer background-gray-20">
     <div class="container">
+        <div class="space-30"></div>
         <div class="space-30"></div>
         <div class="content row">
             <div class="background"></div>
@@ -44,6 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="space-15 col-sm-12"></div>
         </div>
+        <div class="space-30"></div>
         <div class="space-30"></div>
     </div>
 </div>

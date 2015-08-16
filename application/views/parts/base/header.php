@@ -23,39 +23,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.1.4
  */
 ?>
 <div class="header background-main">
     <div class="container">
-
         <div class="content">
-
             <nav class="navbar navbar-default background-main font-300">
 
                 <div class="container-fluid">
                     <div class="navbar-header logo">
                         <a class="navbar-brand logo" href="#">
-                            <?=$this->assets_manager->img('marca_2.png', '', 'Flota Biobio')?>
+                            <?=$this->assets_manager->img('logo_horizontal.png', '', 'Flota Biobio')?>
                         </a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                        <ul class="session nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Aníbal Llanos Prado <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
+                        <div class="session btn-group navbar-right" role="group" aria-label="session">
+                            <button type="button" class="btn btn-info navbar-btn">Aníbal Llanos Prado</button>
+                            <button type="button" class="btn btn-info navbar-btn">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                                <button id="user-options" type="button" class="btn btn-info navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="user-options">
                                     <li><a href="<?=site_url('user/profile/1')?>">Usuario</a></li>
                                     <li><a href="<?=site_url('user/profile/2')?>">Artista</a></li>
+                                    <li><a href="<?=site_url('admin')?>">Administrar</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#">Salir</a></li>
                                 </ul>
-                            </li>
-                        </ul>
+                        </div>
 
                         <ul class="nav navbar-nav navbar-right">
                             <li class="link"><a href="<?=site_url()?>">Home</a></li>
@@ -70,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </ul>
                             </li>
                             <li class="link"><a href="#">Sorteos</a></li>
-                            <li class="link"><a href="<?=site_url('admin')?>">Administrar</a></li>
+
                             <li class="dropdown">
                                 <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     Nosotros <span class="caret"></span>
@@ -88,34 +89,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 </div>
             </nav>
-
-<!--
-            <div class="nav-menu pull-right">
-                <ul class="list-inline font-300">
-                    <li>Home</li>
-                    <li>Catálogo</li>
-                    <li>Sorteos</li>
-                    <li>Nosotros</li>
-                    <li>Contacto</li>
-                </ul>
-            </div>
-
-            <div class="session pull-right">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Aníbal Llanos Prado
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </div>
-
         </div>
-
--->
-
     </div>
 </div>

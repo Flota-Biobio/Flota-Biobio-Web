@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera el blog de inicio y la sección de community management
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.3.4
  *
  * @var array $posts
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="space-15"></div>
     <div class="container">
         <div class="blog-cm-content row">
-            <div class="blog col-sm-8 background-gray-95 shadowed border-gray-85">
+            <div class="blog col-sm-8 background-gray-95 border-gray-90">
                 <div class="row">
                     <h2 class="blog-title col-sm-12 no-margin-bottom">Actividad reciente</h2>
                     <?php foreach ($posts as $post): ?>
@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="cm col-sm-4">
                 <div class="row">
-                    <div class="cm-col col-sm-12 shadowed background-gray-95 border-gray-85">
+                    <div class="cm-col col-sm-12 background-gray-95 border-gray-90">
 
                         <div class="cm-row">
                             <div class="cm-row-inner">

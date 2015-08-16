@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Se encarga de manejar la información referente al catálogo.
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.5
+ * @version 0.5.1
  * @since   0.3.5
  */
 class Catalogue extends CI_Controller
@@ -40,6 +40,7 @@ class Catalogue extends CI_Controller
     {
         parent::__construct();
         $this->load->model('fbb_catalogue_model', 'catalogue_model');
+        $this->load->model('fbb_model');
     }
 
 
@@ -59,9 +60,10 @@ class Catalogue extends CI_Controller
         $productos = $this->catalogue_model->get_feed(0, 9);
 
         $this->render->add_base();
+        $this->render->add_css('parts/catalogue/pages/feed');
+        $this->render->add_css('parts/catalogue/menu');
         $this->render->add_js('bootstrap-slider.min');
         $this->render->add_css('bootstrap/bootstrap-slider.min');
-        $this->render->add_css('parts/catalogue/catalogue');
         $this->render->set_title('Detalles de producto - Flota Biobio');
         $this->render->set_value('cat_title','Últimos productos');
         $this->render->set_value('breadcrumb_position', array(
@@ -79,14 +81,15 @@ class Catalogue extends CI_Controller
         ));
 
         $this->render->add_view(
-            'parts/catalogue/catalogue_menu',
+            'parts/catalogue/menu',
             array(),
             'menu'
         );
         $this->render->add_view(
-            'parts/catalogue/catalogue_feed',
+            'parts/catalogue/pages/feed',
             array('products' => $productos)
         );
+        $this->render->add_template('catalogue');
         $this->render->render('catalogue');
     }
 
@@ -104,9 +107,11 @@ class Catalogue extends CI_Controller
     public function product($id)
     {
         $slides = $this->catalogue_model->get_product_slider($id);
+        $user = $this->fbb_model->get_user(1);
 
         $this->render->add_base();
-        $this->render->add_css('parts/catalogue/catalogue');
+        $this->render->add_css('parts/catalogue/pages/product');
+        $this->render->add_css('parts/catalogue/menu');
         $this->render->add_js('bootstrap-slider.min');
         $this->render->add_css('bootstrap/bootstrap-slider.min');
         $this->render->set_title('Detalles de producto - Flota Biobio');
@@ -130,14 +135,15 @@ class Catalogue extends CI_Controller
         ));
 
         $this->render->add_view(
-            'parts/catalogue/catalogue_menu',
+            'parts/catalogue/menu',
             array(),
             'menu'
         );
         $this->render->add_view(
-            'parts/catalogue/product',
-            array('slides' => $slides)
+            'parts/catalogue/pages/product',
+            array('slides' => $slides, 'user' => $user)
         );
+        $this->render->add_template('catalogue');
         $this->render->render('catalogue');
     }
 
@@ -154,10 +160,10 @@ class Catalogue extends CI_Controller
         $cart = $this->catalogue_model->get_cart();
 
         $this->render->add_base();
+        $this->render->add_css('parts/catalogue/pages/cart');
+        $this->render->add_css('parts/catalogue/menu');
         $this->render->add_js('bootstrap-slider.min');
         $this->render->add_css('bootstrap/bootstrap-slider.min');
-        $this->render->add_css('parts/catalogue/catalogue');
-        $this->render->add_css('parts/catalogue/cart');
         $this->render->set_title('Detalles de producto - Flota Biobio');
         $this->render->set_value('cat_title', 'Carro de compras');
         $this->render->set_value(
@@ -177,14 +183,15 @@ class Catalogue extends CI_Controller
         );
 
         $this->render->add_view(
-            'parts/catalogue/catalogue_menu',
+            'parts/catalogue/menu',
             array(),
             'menu'
         );
         $this->render->add_view(
-            'parts/catalogue/cart',
+            'parts/catalogue/pages/cart',
             array('cart' => $cart)
         );
+        $this->render->add_template('catalogue');
         $this->render->render('catalogue');
     }
 

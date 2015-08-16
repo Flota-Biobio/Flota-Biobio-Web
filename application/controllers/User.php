@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Gestiona el acceso y uso al módulo de usuarios
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.5
+ * @version 0.5.1
  * @since   0.2.3
  */
 class User extends CI_Controller

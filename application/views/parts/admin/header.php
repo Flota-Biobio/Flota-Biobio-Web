@@ -35,4 +35,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <span class="secondary-color-light">Administración</span>
     </div>
 </div>
-<div class="admin-header-border background-accent"></div>
+<div class="admin-header-border background-main"></div>

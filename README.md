@@ -21,6 +21,16 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.5.1: Rebuild y limpieza (Cambio mayor)
+* Fecha: 15/08/2015
+* Cambios:
+  - Remodelado header, footer y boxes
+  - Limpieza de imágenes y javascript
+  - Re-ordenamiento y re-clasificación de hojas de estilo
+  - Cambio en el patron de estilo "cajas"
+  - Limpieza de código
+  - Cambios internos mayores en el catálogo
+
 ### Versión 0.5: Rebuild de estilos
 * Fecha: 14/08/2015
 * Cambios:

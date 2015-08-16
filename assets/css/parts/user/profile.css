@@ -22,7 +22,7 @@
  * Estilos para el perfil de usuario
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.5
+ * Version: 0.5.1
  * Since:   0.4.1
  */
 
@@ -36,7 +36,6 @@
     height: 135px;
     padding: 15px;
     margin-bottom: 15px;
-    background-color: white;
 }
 
 .profile .row-title h3 {
@@ -106,7 +105,6 @@
 
 .profile .user-details dt {
     font-size: 13px;
-    font-family: "Helvetica Neue Medium", sans-serif;
     color: #1d1d1d;
 }
 
@@ -120,8 +118,6 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: solid 3px #fefefe;
-    background-color: white;
 }
 
 .profile .feed-post-body {
@@ -138,7 +134,6 @@
 }
 
 .profile .feed-post span {
-    font-family: "Helvetica Neue Light", sans-serif;
     display: block;
 }
 
@@ -150,7 +145,6 @@
 .profile span.feed-post-message {
     font-size: 16px;
     line-height: 16px;
-    font-family: "Helvetica Neue Light", sans-serif;
 }
 
 .profile .feed-post-body {
@@ -163,7 +157,6 @@
 
 .profile .feed-points {
     font-size: 25px;
-    font-family: "Helvetica Neue Medium", sans-serif;
     display: inline-block;
     float: right;
 }
@@ -177,7 +170,7 @@
 .profile .user-points .points-total {
     width: 100px;
     height: 100px;
-    margin: -13px -15px -17px -15px;
+    margin: 0 -15px -17px -15px;
     float: left;
 }
 
@@ -194,11 +187,7 @@
 
 .profile .user-points .points-message .points-message-title {
     font-size: 28px;
-    font-family: "Helvetica Neue Condensed", sans-serif;
-}
-
-.profile .user-points .points-message .points-message-subtitle {
-    font-family: "Helvetica Neue Light", sans-serif;
+    margin-top: 15px;
 }
 
 .profile .user-points .points-message span {
@@ -209,10 +198,14 @@
 .profile .user-points .points-buttons {
     float: right;
     width: 120px;
+    margin-top: 20px;
 }
 
 .profile .user-points .points-buttons button {
     display: block;
     float: right;
-    font-family: "Helvetica Neue Light", sans-serif;
+}
+
+.profile .feed .inner {
+    padding: 15px;
 }

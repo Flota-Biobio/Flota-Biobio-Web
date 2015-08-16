@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del carro de compras
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.4.3
  *
  * @var array $cart
@@ -33,14 +33,15 @@ foreach ($cart as $product) {
     $total += $product['price'];
 }
 ?>
-<div class="cart-products col-sm-9">
+<div class="cart col-sm-9 ">
+    <div class="inner background-gray-98 border-gray-90">
 
     <?php foreach ($cart as $product): ?>
-        <div class="cart-product shadowed border-gray-85 color-gray-20">
+        <div class="product">
             <button type="button" class="btn btn-danger btn-xs"> X</button>
             <?= $this->assets_manager->img($product['img'], 'catalogue/') ?>
-            <div class="cart-product-title"><?= $product['title'] ?></div>
-            <div class="cart-product-price"><?= '$' . strrev(
+            <div class="title"><?= $product['title'] ?></div>
+            <div class="price"><?= '$' . strrev(
                     substr(
                         chunk_split(strrev($product['price']), 3, '.'), 0, -1
                     )
@@ -50,14 +51,14 @@ foreach ($cart as $product) {
 
     <hr class="background-gray-85">
 
-    <div class="cart-total color-gray-20">
-        <div class="cart-total-title">Total a pagar</div>
-        <div class="cart-total-price"><?= '$' . strrev(
+    <div class="total color-gray-20">
+        <div class="title">Total a pagar</div>
+        <div class="price"><?= '$' . strrev(
                 substr(chunk_split(strrev($total), 3, '.'), 0, -1)
             ); ?></div>
     </div>
 
-    <div class="cart-buttons pull-right">
+    <div class="actions">
         <button type="button" class="btn btn-default">Vaciar carro</button>
         <button type="button" class="btn btn-primary">Confirmar y pagar</button>
     </div>
@@ -65,4 +66,5 @@ foreach ($cart as $product) {
     <div class="space-30 col-sm-12"></div>
     <div class="space-30 col-sm-12"></div>
 
+    </div>
 </div>

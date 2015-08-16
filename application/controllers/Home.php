@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.1.3
  */
 class Home extends CI_Controller
@@ -48,9 +48,6 @@ class Home extends CI_Controller
         $blog_data['posts'] = $this->fbb_model->get_blog_posts();
 
         $this->render->add_base();
-        $this->render->add_css('font-awesome.min');
-        $this->render->add_js('js-image-slider');
-        $this->render->add_css('js-image-slider');
         $this->render->add_template('home'); //TODO
         $this->render->add_css('parts/home/boxes');
         $this->render->add_css('parts/home/slider');

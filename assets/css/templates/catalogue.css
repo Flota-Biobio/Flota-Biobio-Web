@@ -1,0 +1,35 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+ 
+/*
+ * HOJA DE ESTILOS
+ * catalogue
+ *
+ * Hoja de estilos del template catalogo
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.5.1
+ * Since:   0.5.1
+ */
+
+.catalogue .catalogue-title {
+    margin: 30px 0;
+}
+
+.catalogue .catalogue-title h1 {
+    margin: 0;
+}

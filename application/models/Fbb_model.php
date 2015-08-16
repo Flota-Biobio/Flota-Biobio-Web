@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Modelo principal de la aplicación
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.5
+ * @version 0.5.1
  * @since   0.4.5
  */
 class Fbb_model extends CI_Model
@@ -38,31 +38,23 @@ class Fbb_model extends CI_Model
         return array(
             array(
                 'img' => 'slider-full-1.png',
-                'thumb' => 'slider-thumb-1.png',
                 'link' => '#',
-                'title' => 'Subasta activa',
-                'detail' => 'Una niña que tiene muchos colores en su pelo'
+                'title' => 'Subasta activa'
             ),
             array(
                 'img' => 'slider-full-2.png',
-                'thumb' => 'slider-thumb-2.png',
                 'link' => '#',
-                'title' => 'Nuevo producto',
-                'detail' => 'Muchas manchas de colores coloridos'
+                'title' => 'Nuevo producto'
             ),
             array(
                 'img' => 'slider-full-3.png',
-                'thumb' => 'slider-thumb-3.png',
                 'link' => '#',
-                'title' => 'Otra cosa, no se qué',
-                'detail' => 'Mujer volá se come la mano'
+                'title' => 'Otra cosa, no se qué'
             ),
             array(
                 'img' => 'slider-full-4.png',
-                'thumb' => 'slider-thumb-4.png',
                 'link' => '#',
-                'title' => 'Nuevo concierto',
-                'detail' => 'Flushhh, se fué el agua del baño.'
+                'title' => 'Nuevo concierto'
             )
         );
     }

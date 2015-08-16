@@ -23,17 +23,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del indicador de posición en la navegación
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.2
+ * @version 0.5.1
  * @since   0.4.2
  *
  * @var array $position
  */
 ?>
 <?php if ($position): ?>
-<div class="breadcrumb-row">
-    <div class="container shadowed">
-        <div class="breadcrumb-row-content row soft-background">
-            <ol class="breadcrumb background-gray-90">
+<div class="breadcrumb-row background-gray-95">
+    <div class="container">
+        <div class="content row">
+            <ol class="breadcrumb no-border-bottom background-gray-95">
                 <?php foreach ($position as $step): ?>
                     <li<?= empty($step['active']) ? '' : ' class="active"' ?>>
                         <a href="<?= $step['link'] === false ? '#' : base_url('index.php').'/'.$step['link'] ?>">

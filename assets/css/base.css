@@ -22,7 +22,7 @@
  * Hoja de estilos base, la que será cargada en cada vista del sitio.
  *
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.5
+ * Version: 0.5.1
  * Since:   0.1.1
  */
 
@@ -38,14 +38,16 @@
 .color-main-60 { color: #b8d8fa; }
 .color-main-40 { color: #96c4f7; }
 .color-main-20 { color: #74b1f5;}
-.color-main { color: #519ff4;}
+.color-main { color: #019fe3;}
 .color-accent-80 { color: #ecdbfc; }
 .color-accent-60 { color: #d9b8fa; }
 .color-accent-40 { color: #c796f7; }
 .color-accent-20 { color: #b474f5; }
 .color-accent { color: #a251f3; }
 .color-white { color: white; }
+.color-gray-90 { color: #e0e0e0; }
 .color-gray-80 { color: #cbcbcb; }
+.color-gray-70 { color: #b2b2b2; }
 .color-gray-60 { color: #989898; }
 .color-gray-40 { color: #666666; }
 .color-gray-20 { color: #333333; }
@@ -56,7 +58,7 @@
 .background-main-60 { background-color: #b8d8fa; }
 .background-main-40 { background-color: #96c4f7; }
 .background-main-20 { background-color: #74b1f5; }
-.background-main { background-color: #519ff4; }
+.background-main { background-color: #019fe3; }
 .background-accent-80 { background-color: #ecdbfc; }
 .background-accent-60 { background-color: #d9b8fa; }
 .background-accent-40 { background-color: #c796f7; }
@@ -82,6 +84,7 @@
 .background-gray-85 { background-color: #D9D9D9; }
 .background-gray-90 { background-color: #E5E5E5; }
 .background-gray-95 { background-color: #f7f7f7; }
+.background-gray-98 { background-color: #fefefe; }
 .background-white { background-color: white; }
 
 /* Social networks */
@@ -170,16 +173,16 @@
     outline-offset: -2px;
 }
 
-/* Secondary */
+/* Info (Secondary) */
 .btn-info,
 .btn-info:focus,
 .btn-info.focus {
-    background-color: #74b1f5;
-    border: solid 1px #74b1f5;
+    background-color: #019ae2;
+    border: solid 1px #008edd;
 }
 .btn-info:hover {
-    background-color: #519ff4;
-    border: solid 1px #4986d3;
+    background-color: #0187d2;
+    border: solid 1px #0181c4;
 }
 .btn-info:active,
 .btn-info.active,
@@ -193,12 +196,12 @@
 .btn-info:active.focus,
 .btn-info.active.focus,
 .open > .dropdown-toggle.btn-info.focus {
-    background-color: #376ba6;
-    border: solid 1px #2a5582;
-    outline: #2c5181 auto 5px;
+    background-color: #0190c4;
+    border: solid 1px #017fb5;
+    outline: #016fb3 auto 5px;
 }
 .btn-info:focus {
-    outline: #519ff4 auto 5px;
+    outline: #019ae2 auto 5px;
     outline-offset: -2px;
 }
 

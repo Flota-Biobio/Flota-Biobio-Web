@@ -23,29 +23,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del menú del catálogo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.3.8
  */
 ?>
-<div class="catalogue-menu col-sm-3 background-gray-95">
+<div class="menu col-sm-3 background-gray-95">
     <ul class="list-unstyled menu-list font-300">
-        <li class="menu-element color-gray-20">
-            <button type="button" class="btn btn-default btn-lg">
+        <li class="element color-gray-20">
+            <button type="button" class="btn btn-default btn-lg ">
                 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Carro de compras
             </button>
         </li>
-        <li class="menu-element color-main-60">
+        <li class="element color-main-60">
             <button type="button" class="btn btn-default btn-lg">
                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favoritos
             </button>
         </li>
-        <li class="menu-element color-main-60">
+        <li class="element color-main-60">
             <button type="button" class="btn btn-default btn-lg">
                 <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Historial de compras
             </button>
         </li>
-        <li class="menu-label color-black">Filtrar búsqueda</li>
-        <li class="menu-flex">
+        <li class="label color-black">Filtrar búsqueda</li>
+        <li class="filter">
             <label for="category" class="color-gray-20 font-600">CATEGORÍA DEL PRODUCTO</label>
             <select class="form-control" id="category">
                 <option>Artesanía</option>
@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="pull-left color-black">$1.000</span>
                 <span class="pull-right color-black">$100.000</span>
             </div>
-            <input id="price" type="text" class="span2 col-sm-12" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1000" data-slider-value="[10000,80000]">
+            <input id="price" type="text" class="slider span2 col-sm-12" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1000" data-slider-value="[10000,80000]">
         </li>
     </ul>
     <button type="button" class="btn btn-info pull-right filter-btn">Buscar productos</button>

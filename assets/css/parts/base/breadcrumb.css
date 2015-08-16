@@ -22,16 +22,17 @@
  * {SHEET-DESCRIPTION}
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.4.6
+ * Version: 0.5.1
  * Since:   0.4.2
  */
 
-.breadcrumb-row .breadcrumb-row-content {
-    border-bottom: solid 1px #ccc;
+.breadcrumb-row {
     margin-bottom: 0;
-    padding-bottom: 0
+    padding-bottom: 0;
+    border-bottom: solid 1px #dadada;
 }
 
 .breadcrumb-row ol.breadcrumb {
     margin-bottom: 0;
+    border-radius: 0;
 }

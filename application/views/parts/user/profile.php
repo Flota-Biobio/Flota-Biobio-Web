@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del perfil de un usuario
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5
+ * @version 0.5.1
  * @since   0.4.1
  *
  * @var string $name
@@ -40,12 +40,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 ?>
 <div class="profile color-gray-20">
-    <div class="container shadowed border-gray-85">
-        <div class="profile-content row background-gray-95">
+    <div class="container">
+        <div class="profile-content row">
 
             <div class="user-col col-sm-4">
 
-                <div class="user-badge shadowed">
+                <div class="user-badge background-gray-98 border-gray-90">
                     <div class="badge-img">
                         <?=$this->assets_manager->img($img, 'user/', ucwords($name), '', 'img-circle shadowed')?>
                     </div>
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <br>
-                <div class="user-details font-400 shadowed border-gray-85">
+                <div class="user-details font-400 background-gray-98 border-gray-90">
                     <dl>
                         <dt>NOMBRE REAL</dt>
                         <dd><?=ucwords($name)?></dd>
@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="main-col row col-sm-8">
 
                 <?php if ($level == 1): ?>
-                <div class="user-points col-sm-12 shadow-post shadowed">
+                <div class="user-points col-sm-12 background-gray-98 border-gray-90">
                     <div class="points-total background-accent">14</div>
                     <div class="points-message">
                         <span class="points-message-title color-gray-20 font-300">
@@ -106,47 +106,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <?php if ($level == 10): ?>
                 <div class="row-title col-sm-12">
-                    <h3>Obras populares</h3>
+                    <h3 class="font-300">Obras populares</h3>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p9.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p9.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p8.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p8.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p7.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p7.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p6.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p6.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box soft-background shadowed border-gray-30" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p4.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p4.png')?>');"></div>
                 </div>
 
                 <div class="space-30 col-sm-12"></div>
                 <?php endif; ?>
 
-                <div class="row-title col-sm-12">
-                    <?php if ($user_variant): ?>
-                    <h3>Últimos logros obtenidos</h3>
-                    <?php else: ?>
-                    <h3>Actividad reciente</h3>
-                    <?php endif ?>
-                </div>
+                <div class="feed col-sm-12">
 
-                <?php foreach ($feed as $post): ?>
-                <div class="feed-post col-sm-12 shadow-post shadowed border-gray-15">
-                    <?=$this->assets_manager->img($post['category'].'.png', 'user/feed/', '')?>
-                    <div class="feed-post-body<?=$user_variant?>">
-                        <span class="feed-post-date"><?=$post['date']?></span>
-                        <span class="feed-post-message"><?=$post['message']?></span>
+                    <div class="row-title">
+                        <?php if ($user_variant): ?>
+                            <h3 class="font-300">Últimos logros obtenidos</h3>
+                        <?php else: ?>
+                            <h3 class="font-300">Actividad reciente</h3>
+                        <?php endif ?>
                     </div>
-                    <?php if ($level == 1): ?>
-                    <div class="feed-points color-accent-20">+<?=$post['points']?></div>
-                    <?php endif; ?>
+
+                    <div class="inner background-gray-98 border-gray-90">
+                        <?php foreach ($feed as $post): ?>
+                        <div class="feed-post shadow-post">
+                            <?=$this->assets_manager->img($post['category'].'.png', 'user/feed/', '')?>
+                            <div class="feed-post-body<?=$user_variant?>">
+                                <span class="feed-post-date"><?=$post['date']?></span>
+                                <span class="feed-post-message"><?=$post['message']?></span>
+                            </div>
+                            <?php if ($level == 1): ?>
+                            <div class="feed-points color-accent-20">+<?=$post['points']?></div>
+                            <?php endif; ?>
+                        </div>
+                        <?php endforeach ?>
+                    </div>
                 </div>
-                <?php endforeach ?>
 
             </div>
 

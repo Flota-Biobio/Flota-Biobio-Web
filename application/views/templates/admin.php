@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Template para las páginas de administración
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4
+ * @version 0.5.1
  * @since   0.2.0
  *
  * @var string $title Título de la página
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?= $this->load->view('parts/admin/header', array(), true) ?>
 <div class="admin-body">
     <div class="container-fluid">
-        <div class="menu background-accent">
+        <div class="menu background-main">
             <?= $menu ?>
         </div>
         <div class="content">
