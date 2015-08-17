@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del carro de compras
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.5.2
  * @since   0.4.3
  *
  * @var array $cart
@@ -60,7 +60,7 @@ foreach ($cart as $product) {
 
     <div class="actions">
         <button type="button" class="btn btn-default">Vaciar carro</button>
-        <button type="button" class="btn btn-primary">Confirmar y pagar</button>
+        <a href="<?=site_url('checkout/billing')?>" role="button" class="btn btn-primary">Confirmar y pagar</a>
     </div>
 
     <div class="space-30 col-sm-12"></div>

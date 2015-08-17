@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.5.2
  * @since   0.1.4
  */
 ?>
@@ -43,19 +43,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <div class="session btn-group navbar-right" role="group" aria-label="session">
                             <button type="button" class="btn btn-info navbar-btn">Aníbal Llanos Prado</button>
-                            <button type="button" class="btn btn-info navbar-btn">
+                            <button type="button" class="btn btn-info navbar-btn" onclick="location.href='<?=site_url('catalogue/cart')?>';">
                                 <i class="fa fa-shopping-cart"></i>
                             </button>
-                                <button id="user-options" type="button" class="btn btn-info navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="user-options">
-                                    <li><a href="<?=site_url('user/profile/1')?>">Usuario</a></li>
-                                    <li><a href="<?=site_url('user/profile/2')?>">Artista</a></li>
-                                    <li><a href="<?=site_url('admin')?>">Administrar</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Salir</a></li>
-                                </ul>
+                            <button id="user-options" type="button" class="btn btn-info navbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="user-options">
+                                <li><a href="<?=site_url('user/profile/1')?>">Usuario</a></li>
+                                <li><a href="<?=site_url('user/profile/2')?>">Artista</a></li>
+                                <li><a href="<?=site_url('admin')?>">Administrar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Salir</a></li>
+                            </ul>
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">

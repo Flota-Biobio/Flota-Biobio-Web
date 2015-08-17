@@ -21,6 +21,12 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.5.2: Confirmación de compra
+* fecha: 16/08/2015
+* Cambios:
+  - Agregadas las vistas de confirmación de compra
+  - Agregados links para navegar por ellas
+
 ### Versión 0.5.1: Rebuild y limpieza (Cambio mayor)
 * Fecha: 15/08/2015
 * Cambios:
