@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera las cajas del inicio
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.5.4
  * @since   0.1.6
  */
 ?>
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-4">
                 <div class="box box-1">
                     <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-circle fa-stack-2x color-gray-killa"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x color-white"></i>
                     </span>
                     <span class="title font-600">Compra</span>
@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-4">
                 <div class="box box-2">
                     <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-circle fa-stack-2x color-gray-killa"></i>
                         <i class="fa fa-ticket fa-stack-1x color-white"></i>
                     </span>
                     <span class="title font-600">Participa</span>
@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-4">
                 <div class="box box-3">
                     <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-circle fa-stack-2x color-gray-killa"></i>
                         <i class="fa fa-gift fa-stack-1x color-white"></i>
                     </span>
                     <span class="title font-600">Acumula puntos</span>

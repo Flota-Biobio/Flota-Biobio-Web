@@ -1,0 +1,99 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+ 
+/*
+ * HOJA DE ESTILOS
+ * event
+ *
+ * Hoja de estilos para la vista del evento activo
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.5.4
+ * Since:   0.5.4
+ */
+
+/* IMAGEN DE PORTADA */
+
+.active h2 {
+    font-size: 25px;
+}
+
+.active .cover {
+    position: relative;
+}
+
+.active .cover img {
+    width: 100%;
+    height: auto;
+}
+
+.active .cover .legend {
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    bottom: 65px;
+    padding: 4px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.active .cover .legend span {
+    display: block;
+    text-align: right;
+}
+
+.active .cover button {
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    opacity: .8;
+}
+
+.active .cover button:hover {
+    opacity: 1;
+}
+
+/* COLUMNA DE INFORMACIÓN */
+
+.active .info table {
+    font-size: 14px;
+}
+
+/* COLUMNA DE DETALLES */
+
+.active .details .inner {
+    padding: 15px;
+}
+
+.active .details span {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

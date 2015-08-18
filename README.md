@@ -21,6 +21,13 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+## Versión 0.5.4: Sorteos
+* Fecha: 18/08/2015
+* Cambios:
+  - Desarrollo del módulo "eventos" (sorteos)
+  - Desarrollo de las vistas "evento activo" y "elegir número"
+  - Cambios en la estructura de archivos
+
 ### Versión 0.5.3: Ajustes al diseño
 * Fecha: 17/08/2015
 * Cambios:

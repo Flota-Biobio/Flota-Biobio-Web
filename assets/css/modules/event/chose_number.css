@@ -1,0 +1,60 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+ 
+/*
+ * HOJA DE ESTILOS
+ * chose_number
+ *
+ * {SHEET-DESCRIPTION}
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.5.4
+ * Since:   0.5.4
+ */
+
+.chose-number table .available:hover,
+.chose-number table .chosen:hover {
+    cursor: pointer;
+}
+
+.chose-number table .available:hover {
+    background-color: #f0ad4e;
+}
+
+.chose-number table .chosen,
+.chose-number table .chosen:hover {
+    font-weight: 500;
+    background-color: #68d15c;
+}
+
+.chose-number table .unavailable {
+    color: #ccc;
+}
+
+.chose-number .actions {
+    display: block;
+}
+
+.chose-number .actions span,
+.chose-number .actions button {
+    display: inline-block;
+}
+
+.chose-number .actions span {
+    font-size: 18px;
+    margin-right: 15px;
+}

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.3
+ * @version 0.5.4
  * @since   0.1.4
  */
 ?>
@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <li><a href="<?=site_url('catalogue/cart')?>">Carro</a></li>
                                 </ul>
                             </li>
-                            <li class="link"><a class="nav-link" href="#">Sorteos</a></li>
+                            <li class="link"><a class="nav-link" href="<?=site_url('evento/actual')?>">Sorteos</a></li>
 
                             <li class="dropdown">
                                 <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
