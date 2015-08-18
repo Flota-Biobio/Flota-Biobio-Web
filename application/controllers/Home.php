@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * de los visitantes, así como mostrar la página de inicio del sitio.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.5.3
  * @since   0.1.3
  */
 class Home extends CI_Controller

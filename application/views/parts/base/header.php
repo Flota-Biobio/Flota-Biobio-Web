@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.2
+ * @version 0.5.3
  * @since   0.1.4
  */
 ?>
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="container-fluid">
                     <div class="navbar-header logo">
-                        <a class="navbar-brand logo" href="#">
+                        <a class="navbar-brand logo" href="<?=site_url()?>">
                             <?=$this->assets_manager->img('logo_horizontal.png', '', 'Flota Biobio')?>
                         </a>
                     </div>
@@ -59,9 +59,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="link"><a href="<?=site_url()?>">Home</a></li>
                             <li class="dropdown">
-                                <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     Catálogo <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -70,10 +69,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <li><a href="<?=site_url('catalogue/cart')?>">Carro</a></li>
                                 </ul>
                             </li>
-                            <li class="link"><a href="#">Sorteos</a></li>
+                            <li class="link"><a class="nav-link" href="#">Sorteos</a></li>
 
                             <li class="dropdown">
-                                <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     Nosotros <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -82,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <li><a href="#">Legal</a></li>
                                 </ul>
                             </li>
-                            <li class="link"><a href="#">Contacto</a></li>
+                            <li class="link"><a class="nav-link" href="#">Contacto</a></li>
                         </ul>
 
                     </div>

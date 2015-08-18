@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista por defecto del catálogo, feed de los últimos productos
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.5.3
  * @since   0.3.8
  *
  * @var array $products Arreglo con los productos a mostrar
@@ -33,10 +33,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <?php foreach ($products as $product): ?>
         <div class="catalogue-product-box col-sm-4">
+            <div class="product-hover">
+                <span class="title medium-font text-center color-gray-20 font-500"><i>"<?=$product['title']?>"</i></span>
+                <span class="author medium-font text-center color-gray-20 font-700"><?=$product['author']?></span>
+                <button class="btn btn-warning btn-sm center-block button-shadow" type="button">Ver detalles</button>
+            </div>
             <div class="product soft-background" style="background-image: url('<?=$this->assets_manager->asset_url($product['image'])?>');">
-                <span class="title medium-font"><?=$product['title']?></span>
-                <span class="author medium-font"><?=$product['author']?></span>
-                <span class="price thin-font"><?='$'.strrev(substr(chunk_split(strrev($product['price']), 3, '.'), 0, -1));?></span>
+                <span class="price font-400"><?='$'.strrev(substr(chunk_split(strrev($product['price']), 3, '.'), 0, -1));?></span>
             </div>
         </div>
     <?php endforeach ?>

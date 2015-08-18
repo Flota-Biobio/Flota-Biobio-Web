@@ -21,11 +21,18 @@ Apache License, Version 2.0
 
 ## Historial de cambios
 
+### Versión 0.5.3: Ajustes al diseño
+* Fecha: 17/08/2015
+* Cambios:
+  - Modificada estructura del header global
+  - Modificación al preview de productos en el catálogo
+
 ### Versión 0.5.2: Confirmación de compra
 * fecha: 16/08/2015
 * Cambios:
   - Agregadas las vistas de confirmación de compra
   - Agregados links para navegar por ellas
+  - Cambios en el aspecto y estructura del home
 
 ### Versión 0.5.1: Rebuild y limpieza (Cambio mayor)
 * Fecha: 15/08/2015

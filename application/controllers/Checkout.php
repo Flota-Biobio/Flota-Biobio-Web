@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Se encarga de gestionar las acciones necesarias para realizar un pago.
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.2
+ * @version 0.5.3
  * @since   0.5.2
  */
 class Checkout extends CI_Controller
