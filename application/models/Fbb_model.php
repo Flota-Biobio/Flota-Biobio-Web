@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Modelo principal de la aplicación
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.6
  * @since   0.4.5
  */
 class Fbb_model extends CI_Model
@@ -37,24 +37,24 @@ class Fbb_model extends CI_Model
     {
         return array(
             array(
-                'img' => 'slider-full-1.png',
+                'img' => 'slider_full_dummy.png',
                 'link' => '#',
-                'title' => 'Subasta activa'
+                'title' => 'Descripción del slide'
             ),
             array(
-                'img' => 'slider-full-2.png',
+                'img' => 'slider_full_dummy.png',
                 'link' => '#',
-                'title' => 'Nuevo producto'
+                'title' => 'Descripción del slide'
             ),
             array(
-                'img' => 'slider-full-3.png',
+                'img' => 'slider_full_dummy.png',
                 'link' => '#',
-                'title' => 'Otra cosa, no se qué'
+                'title' => 'Descripción del slide'
             ),
             array(
-                'img' => 'slider-full-4.png',
+                'img' => 'slider_full_dummy.png',
                 'link' => '#',
-                'title' => 'Nuevo concierto'
+                'title' => 'Descripción del slide'
             )
         );
     }
@@ -68,77 +68,68 @@ class Fbb_model extends CI_Model
         if ($id == 1) {
             $user['level'] = 10;
             $user['user_variant'] = '';
-            $user['name'] = 'jennifer lawrance';
-            $user['nickname'] = 'La loquita del arco';
-            $user['profession'] = 'Soldadora de alambres';
-            $user['lives_in'] = 'Penco chico';
-            $user['auto_desc'] = 'Soy latina de corazón, me agrada jugar con el
-            aire para provocar terror en el aire, el tiempo me ha encontrado
-            jugando con su hijo, por lo que ahora mato gente en un programa de
-            la tele.';
-            $user['img'] = 'perfil.png';
-            $user['type'] = 'artesana';
+            $user['name'] = 'artista de ejemplo';
+            $user['nickname'] = 'apodo';
+            $user['profession'] = 'profesión';
+            $user['lives_in'] = 'residencia';
+            $user['auto_desc'] = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.';
+            $user['img'] = 'user_dummy.png';
+            $user['type'] = 'Artesano';
             $user['links'] = array(
                 array(
                     'category' => 'facebook-official',
                     'color' => 'color-facebook',
-                    'label' => 'jenny_lapulenta',
+                    'label' => 'Ejemplo de Facebook',
                     'link' => 'http://www.google.com/search?q=penita'
                 ),
                 array(
                     'category' => 'twitter',
                     'color' => 'color-twitter',
-                    'label' => '@jenny_lapulenta',
+                    'label' => '@ejemplo_de_twitter',
                     'link' => 'http://www.google.com/search?q=guaripolo'
                 ),
                 array(
                     'category' => 'globe',
                     'color' => '',
-                    'label' => 'Página personal',
+                    'label' => 'Ejemplo genérico',
                     'link' => 'http://www.google.com/search?q=trafampulli'
                 )
             );
             $user['feed'] = array(
                 array(
                     'date' => '05 de Junio de 2015',
-                    'message' => 'Se ha concretado una venta
-                        por el artículo <strong>Estampida de roedores</strong>.',
+                    'message' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing <strong>elit.</strong>',
                     'category' => 'sold',
                     'points' => 10
                 ),
                 array(
                     'date' => '01 de Junio de 2015',
-                    'message' => 'Se agregaron fotografías para
-                            el artículo <strong>Miguel me cae mal</strong>.',
+                    'message' => 'Aenean commodo ligula eget <strong>dolor.</strong>.',
                     'category' => 'new-photos',
                     'points' => 10
                 ),
                 array(
                     'date' => '21 de Mayo de 2015',
-                    'message' => 'Se ha publicado un nuevo
-                            artículo en el catálogo con el nombre
-                            <strong>Estampida de roedores</strong>.',
+                    'message' => 'Cum sociis natoque penatibus et magnis dis <strong>parturient montes</strong>.',
                     'category' => 'new-product',
                     'points' => 10
                 ),
                 array(
                     'date' => '01 de Mayo de 2015',
-                    'message' => 'Se ha alcanzado los
-                            <strong>100</strong> favoritos para todos los productos
-                            del artista (en total).',
+                    'message' => 'Donec quam
+                            <strong>felis</strong>, ultricies nec, pellentesque eu, pretium quis.',
                     'category' => 'star',
                     'points' => 10
                 ),
                 array(
                     'date' => '22 de Abril de 2015',
-                    'message' => 'Se ha publicado una nueva
-                            entrada en el blog de Flota Biobío.',
+                    'message' => 'Nulla consequat massa quis enim.',
                     'category' => 'published',
                     'points' => 10
                 ),
                 array(
                     'date' => '31 de Diciembre de 2014',
-                    'message' => 'Se ha creado el artista.',
+                    'message' => 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.',
                     'category' => 'created',
                     'points' => 10
                 )
@@ -146,66 +137,65 @@ class Fbb_model extends CI_Model
         } elseif ($id == 2) {
             $user['level'] = 1;
             $user['user_variant'] = ' feed-variant';
-            $user['name'] = 'bruno godoy';
-            $user['lives_in'] = 'Curanilahue';
-            $user['auto_desc'] = 'Caminante nocturno y blanco, me gusta vaciar
-            mi escopeta con algunos bueyes salvajes y con conejos domésticos.';
-            $user['img'] = 'perfil2.png';
+            $user['name'] = 'usuario de ejemplo';
+            $user['lives_in'] = 'residencia';
+            $user['auto_desc'] = 'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.';
+            $user['img'] = 'user_dummy.png';
             $user['type'] = 'usuario';
             $user['links'] = array(
                 array(
                     'category' => 'facebook-official',
                     'color' => 'color-facebook',
-                    'label' => 'el_bruno_loco',
+                    'label' => 'Ejemplo_de_Facebook',
                     'link' => 'http://www.google.com/search?q=cachupin'
                 ),
                 array(
                     'category' => 'google-plus-square',
                     'color' => 'color-google-plus',
-                    'label' => '+BrunoGodoy',
+                    'label' => '+EjemploGooglePlus',
                     'link' => 'http://www.google.com/search?q=pachamama'
                 ),
                 array(
                     'category' => 'deviantart',
                     'color' => 'color-deviantart',
-                    'label' => 'brunin-chevere',
+                    'label' => 'ejemplo-de-deviatart',
                     'link' => 'http://www.google.com/search?q=banana'
                 ),
                 array(
                     'category' => 'linkedin-square',
                     'color' => 'color-linkedin',
-                    'label' => 'elbruno',
+                    'label' => 'ejemplo_de_linkedin',
                     'link' => 'http://www.google.com/search?q=sylvanas'
                 )
             );
             $user['feed'] = array(
                 array(
                     'date' => '05 de Junio de 2015',
-                    'message' => 'Concretar una compra en la tienda',
+                    'message' => 'Evento que otorga puntos #1',
                     'category' => 'sold',
                     'points' => 10
                 ),
                 array(
                     'date' => '01 de Junio de 2015',
-                    'message' => 'Establecer una foto de perfil.',
+                    'message' => 'Evento que otorga puntos #2',
                     'category' => 'new-photos',
                     'points' => 2
                 ),
                 array(
                     'date' => '21 de Mayo de 2015',
-                    'message' => 'Agregar un producto a favoritos.',
+                    'message' => 'Evento que otorga puntos #3',
                     'category' => 'star',
                     'points' => 2
                 ),
                 array(
                     'date' => '22 de Abril de 2015',
-                    'message' => 'Comentar un post del blog',
+                    'message' => 'Evento que otorga puntos #4',
                     'category' => 'published',
                     'points' => 1
                 ),
                 array(
                     'date' => '31 de Diciembre de 2014',
-                    'message' => 'Registrar una cuenta en Flota Biobío.',
+                    'message' => 'Evento que otorga puntos #5',
                     'category' => 'created',
                     'points' => 4
                 )
@@ -221,30 +211,30 @@ class Fbb_model extends CI_Model
     {
         return array(
             array(
-                'title' => 'Premiación e Inauguración Concurso de Pintura "Derechos Humanos e Infancia"',
-                'author' => 'Anibal Llanos',
+                'title' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.',
+                'author' => 'Flota Bio-Bío',
                 'date' => '15 de Julio de 2015 a las 12:41',
-                'img' => 'catalogue/p/p1c.png',
-                'desc' => 'El cuento es compartido tanto por vía oral como escrita; aunque en un principio,
-                        lo más común era por tradición oral. Además, puede dar cuenta de hechos reales o fantásticos pero siempre
-                        partiendo de la base de ser un acto de ficción, o mezcla de ficción con hechos reales y personajes reales.'
+                'img' => 'dummy/home_post1_dummy.png',
+                'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat
+                        ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis
+                        rerum.'
             ),
             array(
-                'title' => 'Exposición “Colección Palacio Vergara” Muestra Pictorica del Museo de Bellas Artes de Viña del Mar, Chile',
-                'author' => 'Anibal Llanos',
+                'title' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.',
+                'author' => 'Flota Bio-Bío',
                 'date' => '15 de Julio de 2015 a las 12:41',
-                'img' => 'catalogue/p/p3c.png',
-                'desc' => 'Suele contener pocos personajes que participan en una sola acción central, y hay quienes opinan
-                        que un final impactante es requisito indispensable de este género. Su objetivo es despertar una
-                        reacción emocional impactante en el lector. Aunque puede ser escrito en verso, total o
-                        parcialmente, de forma general se da en prosa. Se realiza mediante la intervención de un narrador,
-                        y con preponderancia de la narración sobre el monólogo, el diálogo, o la descripción.'
+                'img' => 'dummy/home_post2_dummy.png',
+                'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat
+                        ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis
+                        rerum.'
             ),
             array(
-                'title' => 'Se estrena la exosición "Tiempos de cosas inputiles" en la sala VIP del palacio Llanos',
-                'author' => 'Anibal Llanos',
+                'title' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.',
+                'author' => 'Flota Bio-Bío',
                 'date' => '15 de Julio de 2015 a las 12:41',
-                'img' => 'catalogue/p/p5c.png',
+                'img' => 'dummy/home_post3_dummy.png',
                 'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat
                         ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis

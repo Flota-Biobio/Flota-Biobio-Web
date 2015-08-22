@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del header global a ser utilizado en la mayoría de las vistas
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.4
+ * @version 0.6
  * @since   0.1.4
  */
 ?>
@@ -35,14 +35,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="container-fluid">
                     <div class="navbar-header logo">
                         <a class="navbar-brand logo" href="<?=site_url()?>">
-                            <?=$this->assets_manager->img('logo_horizontal.png', '', 'Flota Biobio')?>
+                            <!-- ToDo revertir dummy -->
+                            <?=$this->assets_manager->img('logo_horizontal_dummy.png', 'dummy/', 'Flota Biobio')?>
                         </a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <div class="session btn-group navbar-right" role="group" aria-label="session">
-                            <button type="button" class="btn btn-info navbar-btn">Aníbal Llanos Prado</button>
+                            <button type="button" class="btn btn-info navbar-btn">Nombre Usuario Conectado</button>
                             <button type="button" class="btn btn-info navbar-btn" onclick="location.href='<?=site_url('catalogue/cart')?>';">
                                 <i class="fa fa-shopping-cart"></i>
                             </button>
@@ -64,9 +65,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     Catálogo <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?=site_url('catalogue')?>">Novedades</a></li>
-                                    <li><a href="<?=site_url('catalogue/product/2')?>">Detalle</a></li>
-                                    <li><a href="<?=site_url('catalogue/cart')?>">Carro</a></li>
+                                    <li><a href="<?=site_url('catalogue')?>">Últimos productos</a></li>
+                                    <li><a href="<?=site_url('catalogue/product/2')?>">Productos destacados</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="<?=site_url('catalogue/cart')?>">Favoritos</a></li>
+                                    <li><a href="<?=site_url('catalogue/cart')?>">Carro de compras</a></li>
                                 </ul>
                             </li>
                             <li class="link"><a class="nav-link" href="<?=site_url('evento/actual')?>">Sorteos</a></li>

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista de edición de una página
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.4
+ * @version 0.6
  * @since   0.4.4
  */
 ?>
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
         <div class="col-lg-12">
             <div class="space-30"></div>
-            <button class="btn btn-primary pull-right">Guardar cambios</button>
+            <button class="btn btn-danger pull-right">Guardar cambios</button>
         </div>
     </div>
 </div>
@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <tr>
                 <td></td>
                 <td class="right-column">
-                    <button type="button" class="btn btn-primary btn- normal-font">
+                    <button type="button" class="btn btn-danger btn- normal-font">
                         Guardar configuración
                     </button>
                 </td>

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del carro de compras
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.2
+ * @version 0.6
  * @since   0.4.3
  *
  * @var array $cart
@@ -39,7 +39,7 @@ foreach ($cart as $product) {
     <?php foreach ($cart as $product): ?>
         <div class="product">
             <button type="button" class="btn btn-danger btn-xs"> X</button>
-            <?= $this->assets_manager->img($product['img'], 'catalogue/') ?>
+            <?= $this->assets_manager->img($product['img'], 'dummy/') ?>
             <div class="title"><?= $product['title'] ?></div>
             <div class="price"><?= '$' . strrev(
                     substr(
@@ -60,7 +60,7 @@ foreach ($cart as $product) {
 
     <div class="actions">
         <button type="button" class="btn btn-default">Vaciar carro</button>
-        <a href="<?=site_url('checkout/billing')?>" role="button" class="btn btn-primary">Confirmar y pagar</a>
+        <a href="<?=site_url('checkout/billing')?>" role="button" class="btn btn-danger">Confirmar y pagar</a>
     </div>
 
     <div class="space-30 col-sm-12"></div>

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que muestra el slider de la página principal.
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.6
  * @since   0.1.4
  *
  * @var array $slider_info
@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php $count = 0; foreach ($slider_info as $pos => $slide): ?>
                     <div class="item<?=$pos==0 ? ' active' : ''?>">
                         <a href="<?=$slide['link']?>" target="_blank">
-                            <?= $this->assets_manager->img($slide['img'], 'home/slider/', $slide['title'], $slide['title'], 'slide') ?>
+                            <?= $this->assets_manager->img($slide['img'], 'dummy/', $slide['title'], $slide['title'], 'slide') ?>
                         </a>
                         <div class="carousel-caption">
                             <?=$slide['title']?>

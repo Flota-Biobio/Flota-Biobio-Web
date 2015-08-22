@@ -78,7 +78,6 @@ class Admin extends CI_Controller
         if ($mode == 'base') {
             $data['pages'] = $this->admin_model->get_pages();
             $this->render->set_title('Configurar páginas - Flota Biobio');
-            $this->render->add_css('font-awesome.min');
             $this->render->add_css('parts/admin/users/config');
             $this->render->add_view('parts/admin/pages/config', $data);
         }
@@ -87,7 +86,6 @@ class Admin extends CI_Controller
         elseif ($mode == 'edit' && !empty($id)) {
             $this->render->set_title('Editando página - Flota Biobio');
             $this->render->add_js('editor');
-            $this->render->add_css('font-awesome.min');
             $this->render->add_css('libs/editor');
             $this->render->add_css('parts/admin/users/edit');
             $this->render->add_view('parts/admin/pages/edit', array());

@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Se encarga de manejar la información referente al catálogo.
  * 
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.6
  * @since   0.3.5
  */
 class Catalogue extends CI_Controller
@@ -115,7 +115,7 @@ class Catalogue extends CI_Controller
         $this->render->add_js('bootstrap-slider.min');
         $this->render->add_css('bootstrap/bootstrap-slider.min');
         $this->render->set_title('Detalles de producto - Flota Biobio');
-        $this->render->set_value('cat_title','Diskette roto con scotch sobre sacapuntas');
+        $this->render->set_value('cat_title','Título de la obra');
         $this->render->set_value('breadcrumb_position', array(
             'position' => array(
                 array(

@@ -60,6 +60,8 @@
     padding-left: 50px;
     font-size: 14px;
     line-height: 30px;
+    background-color: #535f64;
+    font-weight: 300;
 }
 
 .menu .sub-element,
@@ -74,5 +76,5 @@
 
 .menu .sub-element-hover {
     border-right: solid 15px #80cff1;
-    background-color: #bbb;
+    background-color: #777;
 }

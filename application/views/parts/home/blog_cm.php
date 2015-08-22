@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista que genera el blog de inicio y la sección de community management
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.6
  * @since   0.3.4
  *
  * @var array $posts
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span class="desc"><?=$post['desc']?></span>
                         <div class="space-15"></div>
                         <div class="button-div">
-                            <button class="btn btn-primary">Leer más <i class="fa fa-chevron-right"></i></button>
+                            <button class="btn btn-info">Leer más <i class="fa fa-chevron-right"></i></button>
                         </div>
                     </div>
                     <?php endforeach ?>
@@ -70,15 +70,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <div class="cm-row">
                             <div class="cm-row-inner">
-                                <?=$this->assets_manager->img('dummy/facebook_like.png')?>
+                                <?=$this->assets_manager->img('dummy/home_facebook_dummy.png')?>
                                 <div class="separator"></div>
                             </div>
                         </div>
 
                         <div class="cm-row">
                             <div class="cm-row-inner">
-                                <a class="twitter-timeline" href="https://twitter.com/Anito64" data-widget-id="631849789752279040">Tweets por el @Anito64.</a>
-                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                <?=$this->assets_manager->img('dummy/home_twitter_dummy.png')?>
+                                <div class="separator"></div>
                             </div>
                         </div>
 

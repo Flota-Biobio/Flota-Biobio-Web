@@ -22,7 +22,7 @@
  * Estilos para el footer global
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.5.1
+ * Version: 0.6
  * Since:   0.3.5
  */
 
@@ -35,7 +35,7 @@
 }
 
 .footer .content .background {
-    background: url('../../../images/logo_vertical.png') no-repeat right;
+    background: url('../../../images/dummy/logo_vertical_dummy.png') no-repeat right;
     background-size: contain;
     opacity: 0.5;
     top: 0;

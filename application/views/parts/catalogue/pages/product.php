@@ -76,23 +76,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="inner secondary-background-lighter light-font border-gray-90">
 
             <span class="field font-500">materiales</span>
-            <span class="value">diskette en desuso, cinta adhesiva transparente, sacapuntas verde</span>
+            <span class="value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
 
             <span class="field font-500">dimensiones</span>
-            <span class="value">17cm alto, 15cm largo, 0.3cm ancho (1cm en la base)</span>
+            <span class="value">Aenean commodo ligula eget dolor.</span>
 
             <span class="field font-500">soporte</span>
-            <span class="value">no se especifica</span>
+            <span class="value">Aenean massa.</span>
 
             <span class="field font-500">descripción</span>
-            <span class="value">Composición neoliberal suicídica con elementos tecnológicos de antaño. Expone los matices dolorosos de los años tempranos de la computación. Alegoría social capitalista.</span>
+            <span class="value">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span>
 
         </div>
     </div>
 
     <div class="artist border-gray-90 col-sm-4">
         <div class="photo">
-            <?=$this->assets_manager->img($user['img'], 'user/', '', '', 'img-circle shadowed'); ?>
+            <?=$this->assets_manager->img($user['img'], 'dummy/', '', '', 'img-circle shadowed'); ?>
         </div>
         <div class="details">
             <span class="name font-400 color-gray-20"><?=$user['name']?></span>

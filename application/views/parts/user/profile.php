@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del perfil de un usuario
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.1
+ * @version 0.6
  * @since   0.4.1
  *
  * @var string $name
@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="user-badge background-gray-98 border-gray-90">
                     <div class="badge-img">
-                        <?=$this->assets_manager->img($img, 'user/', ucwords($name), '', 'img-circle shadowed')?>
+                        <?=$this->assets_manager->img($img, 'dummy/', ucwords($name), '', 'img-circle shadowed')?>
                     </div>
                     <div class="badge-data">
                         <span class="user-name font-400 color-gray-20"><?=ucwords($name)?></span>
@@ -87,10 +87,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <?php if ($level == 1): ?>
                 <div class="user-points col-sm-12 background-gray-98 border-gray-90">
-                    <div class="points-total background-accent">14</div>
+                    <div class="points-total background-accent">19</div>
                     <div class="points-message">
                         <span class="points-message-title color-gray-20 font-300">
-                            Tienes muchos puntos
+                            Ya tienes <strong>19</strong> puntos.
                         </span>
                         <span class="points-message-subtitle secondary-color">
                             Acumula puntos para acceder a beneficios
@@ -109,19 +109,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h3 class="font-300">Obras populares</h3>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p9.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/dummy/obra_thumb1_dummy.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p8.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/dummy/obra_thumb2_dummy.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p7.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/dummy/obra_thumb3_dummy.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p6.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/dummy/obra_thumb4_dummy.png')?>');"></div>
                 </div>
                 <div class="trend-product col-sm-4">
-                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/catalogue/p4.png')?>');"></div>
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/dummy/obra_thumb5_dummy.png')?>');"></div>
+                </div>
+                <div class="trend-product col-sm-4">
+                    <div class="shadow-box background-gray-98 border-gray-90" style="background-image: url('<?=$this->assets_manager->asset_url('images/dummy/obra_thumb6_dummy.png')?>');"></div>
                 </div>
 
                 <div class="space-30 col-sm-12"></div>

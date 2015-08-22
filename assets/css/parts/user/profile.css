@@ -22,7 +22,7 @@
  * Estilos para el perfil de usuario
  * 
  * Author:  George Shazkho <shazkho@gmail.com>
- * Version: 0.5.1
+ * Version: 0.6
  * Since:   0.4.1
  */
 
@@ -156,9 +156,10 @@
 }
 
 .profile .feed-points {
+    position: absolute;
     font-size: 25px;
     display: inline-block;
-    float: right;
+    right: 40px;
 }
 
 /* PUNTOS */

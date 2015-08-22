@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del evento activo
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.5.4
+ * @version 0.6
  * @since   0.5.4
  */
 ?>
@@ -34,10 +34,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h1 class="font-300 col-sm-12">Sorteo #45</h1>
 
             <div class="cover col-sm-12">
-                <?= $this->assets_manager->img('slider-full-3.png', 'home/slider/', '', '', 'border-gray-90') ?>
+                <?= $this->assets_manager->img('sorteo_full_dummy.png', 'dummy/', '', '', 'border-gray-90') ?>
                 <div class="legend">
-                    <span class="price font-300"><i>"Colorido patriarca, sueño de Cambodia"</i></span>
-                    <span class="price font-400">Miguel de Cervantes</span>
+                    <span class="price font-300"><i>"Título de la obra"</i></span>
+                    <span class="price font-400">Autor</span>
                 </div>
                 <button class="btn btn-danger button-shadow" type="button">Ver detalle en el catálogo</button>
             </div>
@@ -73,8 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="details col-sm-8">
                 <div class="space-30"></div>
                 <div class="inner">
-                    <p class="text-justify">La fina pieza del artista <strong>Miguel de Cervantes</strong> presentada para ser sorteada corresponde
-                    a la primera pieza de la colección "El Chuña", que será presentada el 15 de Julio en los Giocco.</p>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
                     <span class="color-red font-500 text-right">Participar del sorteo acumula 10 puntos Flota</span>
                     <div class="space-15"></div>
                     <h3 class="font-400 text-right">Valor número $1.000</h3>

@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Vista del cuerpo de la interfaz de administración (sección)
  *
  * @author  George Shazkho <shazkho@gmail.com>
- * @version 0.4.4
+ * @version 0.6
  * @since   0.2.1
  *
  * @var array $pages
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <td></td>
             <td></td>
             <td>
-                <button type="button" class="btn btn-primary btn- normal-font">Agregar nueva página</button>
+                <button type="button" class="btn btn-danger btn- normal-font">Agregar nueva página</button>
             </td>
         </tr>
     </tbody>
@@ -127,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <tr>
             <td></td>
             <td class="right-column">
-                <button type="button" class="btn btn-primary btn- normal-font">
+                <button type="button" class="btn btn-danger btn- normal-font">
                     Guardar configuración
                 </button>
             </td>
