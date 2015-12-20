@@ -1,6 +1,6 @@
 # Proyecto Flota Biobío - Aplicación WEB
 
-### Prototipo por Aníbal Llanos Prado, basado en el trabajo del equipo de Flota Biobío
+### Aplicación por Aníbal Llanos Prado, basado en el trabajo del equipo de Flota Biobío
 
 Los archivos incluidos en el presente proyecto, si bien fueron implementados
 y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
@@ -12,14 +12,34 @@ anteriormente declarada condición.
 Apache License, Version 2.0
 
 ## Resumen de versiones
-* **Versiones 0:** Estructura base, maqueta HTML
-* **Versiones 1:** Aplicación base y soporte para maqueta PHP
-* **Versiones 2:** Desarrollo de primeros controladores y vistas
-* **Versiones 3:** Renderer v2, desarrollo de controladores y vistas
-* **Versiones 4:** Renderer v3, limpieza y desarrollo de controladores y vistas
-* **Versiones 5:** Diseño optimizado, prototipo final fase 1
+* **Versiones 0.0:** Migración a Laravel
+
+## Versiones programadas
+* **Versiones 0.1:** Optimización para nueva plataforma
 
 ## Historial de cambios
+
+## Versión 0.0.1: Instalación de la nueva plataforma
+* Fecha: 20/12/2015
+* Cambios:
+  - Cambio de framework, de CodeIgniter a Laravel.
+  - Instalación de dependencias mínimas (bootstrap, collective, ide-helper)
+  - Re-definición del versionado. Se definen versiones antiguas y versiones nuevas.
+  
+------------------------------------------------------------------------------
+
+
+## Resumen de versiones (antiguas)
+* **Versiones 6:** Migración a Laravel
+* **Versiones 5:** Diseño optimizado, prototipo final fase 1
+* **Versiones 4:** Renderer v3, limpieza y desarrollo de controladores y vistas
+* **Versiones 3:** Renderer v2, desarrollo de controladores y vistas
+* **Versiones 2:** Desarrollo de primeros controladores y vistas
+* **Versiones 1:** Aplicación base y soporte para maqueta PHP
+* **Versiones 0:** Estructura base, maqueta HTML
+
+
+## Historial de cambios (antiguos)
 
 ## Versión 0.5.4: Sorteos
 * Fecha: 18/08/2015
