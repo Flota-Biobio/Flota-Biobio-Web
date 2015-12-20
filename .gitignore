@@ -2,16 +2,14 @@
 
 /flota_app/storage
 /flota_app/_ide_helper.php
-vendor/
+/flota_app/vendor/
 node_modules/
 
 # Laravel 5 & Lumen specific
 bootstrap/cache/
-# storage/
-.env.*.php
-.env.php
-.env
+/flota_app/.env
 /flota_app/vendor
-.env.example
-/.idea
-/old
+/flota_app/.env.example
+
+## Directory-based project format:
+.idea/
